@@ -38,7 +38,7 @@ google_analitycs_id : "" # your id
 # contact form action
 contact_form_action : "#" # contact form works with : https://formspree.io
 # copyright
-copyright : "Copyright &copy; 2020 Made with &#10084;&#65039; by [Akash Hadagali](https://themefisher.com) <br> Theme is taken from [Themefisher](https://github.com/themefisher/northendlab-jekyll)"
+copyright : "Copyright &copy; 2020 Made with &#10084;&#65039; by [Akash Hadagali](https://www.linkedin.com/in/akashhadagali/) <br> Theme is taken from [Themefisher](https://github.com/themefisher/northendlab-jekyll)"
 
 # preloader
 preloader:
@@ -57,12 +57,12 @@ social:
     
   - name : "twitter"
     icon : "ti-twitter-alt" # themify icon pack https://themify.me/themify-icons
-    link : "#"
+    link : "https://twitter.com/akashc777"
 
   - name : "github"
     icon : "ti-github" # themify icon pack https://themify.me/themify-icons
-    link : "#"
+    link : "https://github.com/akashc777"
 
   - name : "linkedin"
     icon : "ti-linkedin" # themify icon pack https://themify.me/themify-icons
-    link : "#"
+    link : "https://www.linkedin.com/in/akashhadagali/"
