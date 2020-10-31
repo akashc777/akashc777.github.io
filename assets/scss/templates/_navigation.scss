@@ -1,5 +1,6 @@
 .navigation {
   transition: .3s ease;
+
   &.fixed-top{
     @include desktop {
       position: sticky !important;
@@ -31,14 +32,23 @@
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
+  display: block;
+  align-items: center;
   padding: 20px;
-}
 
+  
+}
+.navbar-brand{
+  img{
+    border-radius: 50%;
+  }
+}
 
 /* search */
 .search-btn {
   border: 0;
   background: transparent;
+  font-size: 26px;
 }
 
 .search-wrapper {

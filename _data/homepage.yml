@@ -1,18 +1,27 @@
 ####################### banner #######################################
 banner:
   enable : true
-  title : "Hi, I'm John Smith Doe. <br> I help people make the  worlds best software"
-  image : "/assets/images/banner/illustration.svg"
-  bg_image : "/assets/images/banner/banner-bg.svg"
+  title : "Hi, I'm Akash a engineering student with love for technology"
+  image : "https://avatars0.githubusercontent.com/u/32003795?s=460&u=80a93697dc85a7c49078821780a5adcd7aaaac83&v=4"
+  bg_image : ""
+  resume_link : ""
 
 
 ######################## call to action ###############################
 call_to_action:
-  enable : true
-  title : "Get the best hugo templates"
-  image : "/assets/images/hugo-muscot.svg"
-  description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
-  button:
-    enable : true
-    label : "Visit Here"
-    link : "https://gethugothemes.com/shop/"
+  - title : "Project 1"
+    image : "/assets/images/hugo-muscot.svg"
+    description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+    button:
+      enable : true
+      label : "know more"
+      link : "https://gethugothemes.com/shop/"
+
+  - title : "Project 2"
+    image : "/assets/images/hugo-muscot.svg"
+    description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+    button:
+      enable : true
+      label : "know more"
+      link : "https://gethugothemes.com/shop/"
+  

@@ -14,8 +14,27 @@
     padding: 100px 0 0;
   }
 
+  img{
+    height: 200px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+    
+    
+  }
+
+  .profile{
+    
+    margin: auto;
+  }
+
+  ul{
+    padding: 20px;
+  }
+
   .illustration {
-    position: absolute;
+    
     bottom: 0;
     right: 30px;
     @include desktop-xl {
@@ -24,13 +43,20 @@
     @include desktop {
       display: none;
     }
+    
   }
   .illustration-mobile{
     display: none;
     @include desktop {
       display: block;
     }
+    padding-bottom: 10px;
   }
+  h1{
+    text-align: center;
+  }
+
+  
 }
 
 /* blog */

@@ -6,27 +6,82 @@ layout: default
 {% if site.data.homepage.banner.enable %}
 <section class="banner bg-cover"
   style="background-image: url('{{ site.data.homepage.banner.bg_image | relative_url }}');">
-  <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid illustration" alt="">
+  
   <div class="container">
     <div class="row">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <h1>{{ site.data.homepage.banner.title }}</h1>
+      <div class="profile">
+        <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid illustration" alt="">
+        <div class="col-lg-6 illustration-mobile">
+          <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid" alt="">
+        </div>
+        <ul class="list-inline social-icon mb-0">
+          {% for social in site.data.parameters.social %}
+          <li class="list-inline-item"><a href="{{ social.link | relative_url }}"><i class="{{ social.icon }}"></i></a></li>
+          {% endfor %}
+        </ul>
       </div>
-      <div class="col-lg-6 illustration-mobile">
-        <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid" alt="">
+      
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <h1>{{ site.data.homepage.banner.title }}<br><br><a href="{{ site.data.homepage.banner.resume_link | relative_url }}" class="btn btn-primary">Get my Resume</a></h1>
+        
+        
       </div>
+      
+      
     </div>
+    
   </div>
 </section>
 {% endif %}
 <!-- /banner -->
 
+
+
+<!-- call_to_action -->
+
+<section class="section pt-0">
+
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>Projects</h2>
+        {% for project in site.data.homepage.call_to_action%}
+        <div class="row shadow bg-white p-5">
+          
+          <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
+            
+            <img src="{{ project.image | relative_url }}" class="mr-4" alt=""></div>
+          <div class="col-md-8 text-center text-md-left">
+            <h3 class="mt-0">{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            {% if project.button.enable %}
+            <a href="{{ project.button.link | relative_url }}"
+              class="btn btn-primary">{{ project.button.label }}</a>
+            {% endif %}
+            
+          </div>
+          
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!-- /call_to_action -->
+
+
 <!-- blog -->
 <section class="section">
+  
   <div class="container">
     <div class="row">
       <div class="col-lg-8 mx-auto px-0">
+        
         <div class="bg-white shadow block">
+          <h2>Posts</h2><br>
           {% for post in paginator.posts %}
           {% include post.html %}
           {% endfor %}
@@ -38,28 +93,3 @@ layout: default
   </div>
 </section>
 <!-- /blog -->
-
-<!-- call_to_action -->
-{% if site.data.homepage.call_to_action.enable %}
-<section class="section pt-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto">
-        <div class="row shadow bg-white p-5">
-          <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
-            <img src="{{ site.data.homepage.call_to_action.image | relative_url }}" class="mr-4" alt=""></div>
-          <div class="col-md-8 text-center text-md-left">
-            <h3 class="mt-0">{{ site.data.homepage.call_to_action.title }}</h3>
-            <p>{{ site.data.homepage.call_to_action.description }}</p>
-            {% if site.data.homepage.call_to_action.button.enable %}
-            <a href="{{ site.data.homepage.call_to_action.button.link | relative_url }}"
-              class="btn btn-primary">{{ site.data.homepage.call_to_action.button.label }}</a>
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{% endif %}
-<!-- /call_to_action -->
