@@ -23,7 +23,7 @@ menu:
   footer:
   - {name: Home, url: '/'}
   - {name: Contact, url: '/contact'}
-  - {name: Blog, url: '/Blog'}
+  - {name: Blog, url: '/blog'}
 
 
 ######################### Default Parameters ###########################
