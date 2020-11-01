@@ -1,7 +1,5 @@
 ---
 layout: default
-pagination: 
-  enabled: true
 
 ---
 
@@ -19,13 +17,13 @@ pagination:
         </div>
         <ul class="list-inline social-icon mb-0">
           {% for social in site.data.parameters.social %}
-          <li class="list-inline-item"><a href="{{ social.link | relative_url }}"><i class="{{ social.icon }}"></i></a></li>
+          <li class="list-inline-item"><a href="{{ social.link | relative_url }}" target="_blank"><i class="{{ social.icon }}"></i></a></li>
           {% endfor %}
         </ul>
       </div>
       
       <div class="col-lg-8 mb-5 mb-lg-0">
-        <h1>{{ site.data.homepage.banner.title }}<br><br><a href="{{ site.data.homepage.banner.resume_link | relative_url }}" class="btn btn-primary">Get my Resume</a></h1>
+        <h1>{{ site.data.homepage.banner.title }}<br><br><a href="{{ site.data.homepage.banner.resume_link | relative_url }}" target="_blank" class="btn btn-primary">Get my Resume</a></h1>
         
         
       </div>
