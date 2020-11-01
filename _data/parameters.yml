@@ -5,7 +5,7 @@ menu:
   - {name: Home, url: '/'}
   - {name: contact, url: '/contact'}
   - {name: Projects, url: '/'}
-  - {name: Blogs, url: '/'}
+  - {name: Blog, url: '/blog'}
   # - {name: Blogs, url: '/tools'}
 
 ##### Dropdown menu ######
@@ -23,7 +23,7 @@ menu:
   footer:
   - {name: Home, url: '/'}
   - {name: Contact, url: '/contact'}
-  - {name: Tools, url: '/tools'}
+  - {name: Blog, url: '/Blog'}
 
 
 ######################### Default Parameters ###########################

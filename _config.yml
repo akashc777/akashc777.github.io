@@ -1,4 +1,4 @@
-baseurl: "/northendlab-jekyll/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 title: Akash Hadagali | Personal Blog
@@ -23,8 +23,9 @@ plugins:
   - jekyll-sitemap
   - jekyll/tagging
 
-paginate: 6
+paginate: 3
 paginate_path: "/page/:num"
+
 
 # include
 include:
