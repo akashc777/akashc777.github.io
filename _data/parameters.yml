@@ -39,7 +39,7 @@ google_analitycs_id : "" # your id
 # contact form action
 contact_form_action : "https://formspree.io/f/xeqpkkbn" # contact form works with : https://formspree.io
 # copyright
-copyright : "Copyright &copy; 2020 Made with ![alt text](/assets/images/gif-heart.gif) by [Akash Hadagali](https://www.linkedin.com/in/akashhadagali/) <br> Theme is taken from [Themefisher](https://github.com/themefisher/northendlab-jekyll)"
+copyright : "Made with ![alt text](/assets/images/gif-heart.gif) by [Akash Hadagali](https://www.linkedin.com/in/akashhadagali/) <br> Theme is taken from [Themefisher](https://github.com/themefisher/northendlab-jekyll)"
 
 # preloader
 preloader:
