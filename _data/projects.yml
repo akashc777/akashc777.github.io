@@ -1,0 +1,28 @@
+######################## projects ###############################
+all_projects:
+    - title : "Project 1"
+      image : "/assets/images/hugo-muscot.svg"
+      main: true
+      description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+      button:
+        enable : true
+        label : "know more"
+        link : "/"
+  
+    - title : "Project 2"
+      image : "/assets/images/hugo-muscot.svg"
+      description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+      button:
+        enable : true
+        label : "know more"
+        link : "/"
+
+    - title : "Project 3"
+      image : "/assets/images/hugo-muscot.svg"
+      description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+      button:
+        enable : true
+        label : "know more"
+        link : "/"
+  
+

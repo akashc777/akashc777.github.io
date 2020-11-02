@@ -1,8 +1,8 @@
 ---
 layout: contact
-title: "Contact Us"
+title: "Contact Me"
 description : "this is meta description"
 image: "/assets/images/contact.svg"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor.
+Fill this form to reach out to me !

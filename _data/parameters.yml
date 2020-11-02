@@ -4,7 +4,7 @@ menu:
   main:
   - {name: Home, url: '/'}
   - {name: contact, url: '/contact'}
-  - {name: Projects, url: '/'}
+  - {name: Projects, url: '/projects'}
   - {name: Blog, url: '/blog'}
   # - {name: Blogs, url: '/tools'}
 
@@ -22,7 +22,8 @@ menu:
   # Footer menu
   footer:
   - {name: Home, url: '/'}
-  - {name: Contact, url: '/contact'}
+  - {name: contact, url: '/contact'}
+  - {name: Projects, url: '/projects'}
   - {name: Blog, url: '/blog'}
 
 
@@ -38,7 +39,7 @@ google_analitycs_id : "" # your id
 # contact form action
 contact_form_action : "https://formspree.io/f/xeqpkkbn" # contact form works with : https://formspree.io
 # copyright
-copyright : "Copyright &copy; 2020 Made with &#10084;&#65039; by [Akash Hadagali](https://www.linkedin.com/in/akashhadagali/) <br> Theme is taken from [Themefisher](https://github.com/themefisher/northendlab-jekyll)"
+copyright : "Copyright &copy; 2020 Made with ![alt text](/assets/images/gif-heart.gif) by [Akash Hadagali](https://www.linkedin.com/in/akashhadagali/) <br> Theme is taken from [Themefisher](https://github.com/themefisher/northendlab-jekyll)"
 
 # preloader
 preloader:

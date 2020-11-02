@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<!-- projects -->
+
+
+<section class="section pt-0">
+
+    <div class="container">
+      
+      <div class="row">
+  
+        <div class="col-lg-8 mx-auto">
+          
+          
+          <div class="row shadow bg-white p-5">
+            <h2 >My Projects</h2>
+            {% for project in site.data.projects.all_projects%}
+  
+            <div class="row p-5">
+            <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
+              
+              <img src="{{ project.image | relative_url }}" class="mr-4" alt="">
+              
+            
+            </div>
+            <div class="col-md-8 text-center text-md-left">
+              <h3 class="mt-0 text-primary" >{{ project.title }}</h3>
+              
+              
+              <p>{{ project.description }}</p>
+              {% if project.button.enable %}
+              <a href="{{ project.button.link | relative_url }}"
+                class="btn btn-primary">{{ project.button.label }}</a>
+              {% endif %}
+              <span class="list-inline social-icon mb-0" style="margin-left: 20px;">
+              
+                <span class="list-inline-item"><a href="{{ social.link | relative_url }}" target="_blank"><i class="ti-github"></i></a></span>
+               
+              </span>
+              
+            </div>
+          </div>
+            {% endfor %}
+            
+          </div>
+          
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    
+  </section>
+  
+  
+  <!-- plojects -->
