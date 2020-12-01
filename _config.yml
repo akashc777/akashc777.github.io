@@ -17,6 +17,9 @@ sass:
   
 # Build settings
 markdown: kramdown
+kramdown:
+  syntax_highlighter: true
+  syntax_highlighter_opts: true
 permalink: pretty
 plugins:
   - jekyll-paginate
