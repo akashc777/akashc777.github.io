@@ -1,7 +1,7 @@
 ################ CSS Plugins #####################
 css:
   - "/assets/plugins/bootstrap/bootstrap.min.css"
-  - "/assets/plugins/themify-icons/themify-icons.css"
+  - "/assets/plugins/themify-icons/themify-icons.css" ##https://themify.me/themify-icons##
 
 
 ################ JS Plugins ######################
