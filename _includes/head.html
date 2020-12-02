@@ -9,6 +9,7 @@
   <meta name="author" content="{{ . }}">
   {% endif %}
 
+
   {% for css in site.data.plugins.css %}
   <link rel="stylesheet" href="{{ css | relative_url }}">
   {% endfor %}
@@ -23,6 +24,10 @@
   <!-- google-analytics -->
   {% if site.google-analytics %}
     {% include google-analytics.html %}
+  {% endif %}
+
+  {% if site.tags != "" %}
+  {% include collecttags.html %}
   {% endif %}
 
 </head>
