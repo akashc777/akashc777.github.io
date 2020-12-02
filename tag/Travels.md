@@ -1,5 +1,5 @@
 ---
-layout: tags
+layout: tagpage
 title: "Tag: hololens"
 tag: Travels
 ---

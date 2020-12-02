@@ -10,7 +10,7 @@ layout: default
         <h2 class="mb-4">Posts are showing from <span class="text-primary">{{ page.tag }}</span></h2>
         <div class="bg-white shadow block">
             
-          {% for post in site.tags[page.tag %}
+          {% for post in site.tags[page.tag] %}
           {% include post.html %}
           {% endfor %}
         </div>
