@@ -1,7 +1,7 @@
 ---
 title : "My awesome blog post"
 image : "/assets/images/post/post-3.jpg"
-author : "John Doe"
+author : "Akash Hadagali"
 date: 2020-08-08 11:12:58 +0600
 description : "This is meta description"
 tags : ["SEO Learning"]

@@ -17,9 +17,12 @@ sass:
   
 # Build settings
 markdown: kramdown
+highlighter: rouge
 kramdown:
-  syntax_highlighter: true
-  syntax_highlighter_opts: true
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+
 permalink: pretty
 plugins:
   - jekyll-paginate

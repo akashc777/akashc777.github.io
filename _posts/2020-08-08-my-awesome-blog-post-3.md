@@ -1,7 +1,7 @@
 ---
 title : "My awesome second blog post"
 image : "/assets/images/post/post-1.jpg"
-author : "Mark Dinn"
+author : "Akash Hadagali"
 date: 2020-08-08 11:12:58 +0600
 description : "This is meta description"
 tags : ["Development Tools"]
