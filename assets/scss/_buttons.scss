@@ -4,7 +4,7 @@
   font-family: $primary-font;
   text-transform: capitalize;
   padding: 12px 20px;
-  border-radius: 5px;
+  border-radius: 5rem;
   border: 1px solid;
   position: relative;
   z-index: 1;
@@ -14,7 +14,7 @@
   &:active,
   &:focus {
     outline: 0;
-    box-shadow: none !important;
+    box-shadow: none;
   }
 }
 
@@ -28,13 +28,16 @@
   color: $white;
   border-color: $primary-color;
 
-  &:active,
-  &:hover,
-  &.focus,
-  &.active {
-    background: $primary-color !important;
-    border-color: $primary-color !important;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($black,.2);
+
+    &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
   }
+  
 }
 
 .btn-outline-primary {
