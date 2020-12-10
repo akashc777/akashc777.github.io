@@ -657,9 +657,7 @@ pre code {
     .container {
         max-width: 540px
     }
-    .p-5 {
-        padding: 1.5rem!important
-    }
+    
 }
 
 @media (min-width:768px) {
@@ -667,17 +665,16 @@ pre code {
         max-width: 720px
     }
     .p-5 {
-        padding: 2rem!important
+        padding: 3rem
     }
+    
 }
 
 @media (min-width:992px) {
     .container {
         max-width: 960px
     }
-    .p-5 {
-        padding: 2rem!important
-    }
+    
 }
 
 @media (min-width:1200px) {
@@ -7180,7 +7177,7 @@ button.bg-dark:hover {
 }
 
 .p-5 {
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .pt-5,
