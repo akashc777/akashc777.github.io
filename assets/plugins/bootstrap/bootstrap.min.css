@@ -7177,7 +7177,8 @@ button.bg-dark:hover {
 }
 
 .p-5 {
-    padding: 2rem;
+    padding: 1rem;
+    padding-top: 2rem;
 }
 
 .pt-5,
