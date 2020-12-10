@@ -1,25 +1,39 @@
 ######################## projects ###############################
 all_projects:
-    - title : "Project 1"
-      image : "/assets/images/hugo-muscot.svg"
+    - title : "Server Health Monitor Using Raft Algo"
+      image : "/assets/images/server_cluster.svg"
       main: true
-      description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+      github: "https://github.com/akashc777/miniproj.akash.page"
+      description : "Achieving Fault Tolerance in Monitoring Distributed Systems.The Leader Node checks the CPU and Memory Utilization of each Server and Commits this data into every Server."
       button:
         enable : true
         label : "know more"
         link : "/"
   
-    - title : "Project 2"
-      image : "/assets/images/hugo-muscot.svg"
-      description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+    - title : "Check Server Health using Pure NodeJS App"
+      image : "/assets/images/server.svg"
+      main: true
+      github: "https://github.com/akashc777/first_nodejs"
+      description : "The app is a REST API for Making Health Checks and Notifies the User if there is Any Change in the Status of the response code."
       button:
         enable : true
         label : "know more"
         link : "/"
 
-    - title : "Project 3"
-      image : "/assets/images/hugo-muscot.svg"
-      description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
+    - title : "Blockchain Use Case: Coffee Supply Chain"
+      image : "/assets/images/eth1.svg"
+      main: true
+      github: "https://github.com/akashc777/CoffeeSupplyChain"
+      description : "Used by Customer/Buyer to verify the Authenticity of the Coffee Beans by knowing Location of Growth using Blockchain."
+      button:
+        enable : true
+        label : "know more"
+        link : "/"
+
+    - title : "Simplifying Real State Title Registration Using Ethereum Blockchain"
+      image : "/assets/images/eth2.svg"
+      github: "https://github.com/akashc777/Capstone"
+      description : "Created ERC 721 token for Real State Registration. Posted at opensea"
       button:
         enable : true
         label : "know more"

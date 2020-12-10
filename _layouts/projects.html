@@ -34,12 +34,16 @@ layout: default
               <a href="{{ project.button.link | relative_url }}"
                 class="btn btn-primary">{{ project.button.label }}</a>
               {% endif %}
-              <span class="list-inline social-icon mb-0" style="margin-left: 20px;">
               
-                <span class="list-inline-item"><a href="{{ social.link | relative_url }}" target="_blank"><i class="ti-github"></i></a></span>
+              
+            </div>
+            <div class="col-md-8 text-center text-md-left" style="margin-top: 10px;">
+              <span class="list-inline social-icon mb-0">
+              
+                <span class="list-inline-item"><a href="{{ project.github}}" target="_blank"><i class="ti-github"></i></a></span>
                
               </span>
-              
+
             </div>
           </div>
             {% endfor %}

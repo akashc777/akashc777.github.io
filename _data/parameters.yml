@@ -6,6 +6,7 @@ menu:
   - {name: contact, url: '/contact'}
   - {name: Projects, url: '/projects'}
   - {name: Blog, url: '/blog'}
+  - {name: About, url: '/about/akash-hadagali'}
   # - {name: Blogs, url: '/tools'}
 
 ##### Dropdown menu ######
@@ -25,6 +26,7 @@ menu:
   - {name: contact, url: '/contact'}
   - {name: Projects, url: '/projects'}
   - {name: Blog, url: '/blog'}
+  - {name: About, url: '/about/akash-hadagali'}
 
 
 ######################### Default Parameters ###########################
