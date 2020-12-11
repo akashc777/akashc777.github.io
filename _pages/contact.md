@@ -1,8 +1,8 @@
 ---
 layout: contact
-title: "Contact Me"
+title: "Contact Me 📬"
 description : "this is meta description"
 image: "/assets/images/blogging.svg"
 ---
 
-Fill this form to reach out to me !
+✍🏻 Fill this form to reach out to me ! 

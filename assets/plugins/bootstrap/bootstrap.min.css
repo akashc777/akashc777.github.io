@@ -665,7 +665,7 @@ pre code {
         max-width: 720px
     }
     .p-5 {
-        padding: 3rem
+        padding: 3rem !important
     }
     
 }

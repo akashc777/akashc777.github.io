@@ -54,7 +54,7 @@ layout: default
         
         
         <div class="row shadow bg-white p-5">
-          <h2 >Main Projects</h2>
+          <h2 >Main Projects 👨🏽‍💻</h2>
           {% for project in site.data.projects.all_projects%}
           {% if project.main %}
 
@@ -85,7 +85,9 @@ layout: default
         {% endif %}
           {% endfor %}
 
-          <a href="/projects" class="btn btn-sm btn-transparent pl-0">View all projects</a>
+
+   
+          <a href="/projects" class="btn btn-sm btn-transparent pl-0 mt-2">View all projects</a>
           
         </div>
         
@@ -111,7 +113,7 @@ layout: default
       <div class="col-lg-8 mx-auto px-0">
         
         <div class="bg-white shadow block">
-          <h2>Posts</h2><br>
+          <h2>Posts 📝</h2><br>
           {% for post in paginator.posts %}
           {% include post.html %}
           {% endfor %}

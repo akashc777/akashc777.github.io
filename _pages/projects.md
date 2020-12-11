@@ -1,5 +1,5 @@
 ---
 layout: projects
-title: "My Projects"
+title: "My Projects 👨🏽‍💻"
 
 ---
