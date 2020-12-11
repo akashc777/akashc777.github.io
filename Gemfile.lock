@@ -271,6 +271,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-sitemap
   jekyll-tagging
+  jemoji
   wdm (>= 0.1.0)
 
 BUNDLED WITH

@@ -6,3 +6,4 @@ gem 'jekyll-tagging'
 gem "jekyll-sitemap"
 gem 'wdm', '>= 0.1.0'
 gem 'github-pages'
+gem 'jemoji'

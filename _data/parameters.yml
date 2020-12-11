@@ -32,7 +32,7 @@ menu:
 ######################### Default Parameters ###########################
 
 # logo
-logo : "https://avatars0.githubusercontent.com/u/32003795?s=40&v=4"
+logo : "/assets/images/logo.svg"
 # meta data
 author : "Akash Hadagali"
 description : "This is meta description"
