@@ -13,7 +13,7 @@ Github link : [Click here to see the GitHub repo]{:target="_blank"}
 
 I have used the same tech as mentioned in [my previous blockchain blog]{:target="_blank"}
 
-We store the data of an item. So, what is an iterm here 🤔 ?
+We store the data of an item. So, what is an item here 🤔 ?
 
 {% highlight solidity %}
 enum State 
@@ -55,21 +55,20 @@ Let's talk about the roles
 
 **🧑🏼‍🌾 Farmer's Role :**  A farmer harvests the coffee beans, packs it and gives it a Universal Product Code (UPC). Farmer processes the item before packting it then sell it to distributers
 
-<br>
 
 **🧑🏼‍ Distributor's Role :** It can buy item from the farmer and ship it to the retailer.
-<br>
+
 
 ***‍🏬 Retailer's Role :** It can buy item from the Distributer and sell it to the consumer.
-<br>
+
 
 **☕️👦🏻 Consumer's Role :** It can buy item from the Retailer.
-<br>
+
 
 **Note** \
 The ownership of the item keeps changing in the supply chain until it reaches the consumer.
-<br>
+
 
 
 [Click here to see the GitHub repo]: https://github.com/akashc777/CoffeeSupplyChain
-[my previous blockchain blog]: https://akash.page/post/Real-State-Title-ETH-Blockchain-Project.html
+[my previous blockchain blog]: /post/Real-State-Title-ETH-Blockchain-Project.html

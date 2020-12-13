@@ -8,7 +8,7 @@ all_projects:
       button:
         enable : true
         label : "know more"
-        link : "/"
+        link : "/post/Server-Health-Monitor-Raft-Project-copy.html"
   
     - title : "Check Server Health using Pure NodeJS App"
       image : "/assets/images/server.svg"
@@ -18,7 +18,7 @@ all_projects:
       button:
         enable : true
         label : "know more"
-        link : "/"
+        link : "/post/Server-Health-Monitor-NodeJS-Project.html"
 
     - title : "Blockchain Use Case: Coffee Supply Chain"
       image : "/assets/images/eth1.svg"
@@ -28,7 +28,7 @@ all_projects:
       button:
         enable : true
         label : "know more"
-        link : "/"
+        link : "/post/Coffee-Supply-Chain-Project.html"
 
     - title : "Simplifying Real State Title Registration Using Ethereum Blockchain"
       image : "/assets/images/eth2.svg"
@@ -37,6 +37,6 @@ all_projects:
       button:
         enable : true
         label : "know more"
-        link : "/"
+        link : "/post/Real-State-Title-ETH-Blockchain-Project.html"
   
 
