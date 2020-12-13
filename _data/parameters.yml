@@ -37,7 +37,7 @@ logo : "/assets/images/logo.svg"
 author : "Akash Hadagali"
 description : "This is meta description"
 # google analitycs ID
-google_analitycs_id : "2204943064" # your id
+google_analitycs_id : "G-PEV0XKD8YF" # your id
 # contact form action
 contact_form_action : "https://formspree.io/f/xeqpkkbn" # contact form works with : https://formspree.io
 # copyright
