@@ -4,7 +4,7 @@ image : "/assets/images/post/raft.png"
 author : "Akash Hadagali"
 date: 2020-02-20 11:12:58 +0530
 description : "server health monitoring using raft algorithm also submitted as mini project in my college assignment. Raft algorithm for distributed systems."
-tags : ["Project", "GoLang"]
+tags : ["Project", "Go"]
 
 ---
 I have been learning about docker engine for past 2 months and I got to know that docker swarm uses Raft algorithm which has been implemented natively without other services like etcd. I made a simple project which monitors server health in a distributed system to understand Raft algorithm.
