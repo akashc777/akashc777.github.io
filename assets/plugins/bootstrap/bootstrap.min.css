@@ -3113,6 +3113,10 @@ fieldset:disabled a.btn {
     content: ""
 }
 
+.bradius{
+    border-radius: 1.5rem;
+}
+
 .fade {
     transition: opacity .15s linear
 }
@@ -7036,6 +7040,11 @@ button.bg-dark:hover {
 .mt-5,
 .my-5 {
     margin-top: 3rem!important
+}
+
+.mt-8,
+.my-8 {
+    margin-top: 7rem!important
 }
 
 .mr-5,
