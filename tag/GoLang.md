@@ -1,4 +1,4 @@
 ---
 layout: tagpage
-tag: GoLang
+tag: Golang
 ---
