@@ -102,7 +102,10 @@
 
 .author-thumb{
   height: 300px;
-  width: 300px;
+  @include mobile{
+    height: 200px;
+  }
+  width: auto;
   object-fit: cover;
 }
 
