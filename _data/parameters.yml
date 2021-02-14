@@ -39,7 +39,7 @@ description : "This is meta description"
 # google analitycs ID
 google_analitycs_id : "G-PEV0XKD8YF" # your id
 # contact form action
-contact_form_action : "https://formspree.io/f/xeqpkkbn" # contact form works with : https://formspree.io
+contact_form_action : "https://send.pageclip.co/jchtAGVYlwyiFbID88OX6R3iwYtWl6pL" # contact form works with : https://formspree.io
 # copyright
 copyright : "Made with ![alt text](/assets/images/gif-heart.gif) by [Akash Hadagali](https://www.linkedin.com/in/akashhadagali/)"
 
