@@ -1,5 +1,5 @@
 ---
-title : "Simplifying Real State Title Registration Using Ethereum Blockchain"
+title : "Simplifying Real Estate Title Registration Using Ethereum Blockchain"
 image : "/assets/images/post/eth-bl.png"
 author : "Akash Hadagali"
 date: 2020-05-15 22:12:58 +0530
