@@ -2,13 +2,13 @@
 fname : "Akash Hadagali"
 title : "Hi 👋, I'm Akash Hadagali"
 image : "https://avatars0.githubusercontent.com/u/32003795?s=460&u=80a93697dc85a7c49078821780a5adcd7aaaac83&v=4"
-description : "Engineering student with love for technology"
+description : "Human with love for technology"
 ---
 
 <!-- Hi <span class="emoji-m">👋</span>, 
 <br> -->
 
-I'm a final year engineering student <span>👨🏼‍🎓</span>
+I'm a tech enthusiast <span>🧑‍💻</span>
 <br>
 <br>
 <b>I have project experience in:</b><br>
