@@ -13,7 +13,7 @@ Github link : [Click here to see the GitHub repo]{:target="_blank"}
 
 IT'S LIVE AT: [live page]{:target="_blank"}
 
-It's a very use of websockets to implement chat and whiteboard.
+It's a very simple use of websockets to implement chat and whiteboard.
 
 **NOTE** \
 Just a fun project so it does NOT include any DB or any kind of security
