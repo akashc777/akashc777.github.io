@@ -9,6 +9,7 @@ all_projects:
             enable : true
             label : "know more"
             link : "/post/Multiuser-Whiteboard.html"
+            
     - title : "Server Health Monitor Using Raft Algo"
       image : "/assets/images/server_cluster.svg"
       main: true
