@@ -1,15 +1,15 @@
 ######################## projects ###############################
 all_projects:
     - title : "Multiuser Whiteboard"
-          image : "/assets/images/whiteboard.svg"
-          main: true
-          github: "https://github.com/akashc777/hackX_whiteboard_collab"
-          description : "Multiuser whiteboard and chat with not DB and secuirty"
-          button:
-            enable : true
-            label : "know more"
-            link : "/post/Multiuser-Whiteboard.html"
-            
+      image : "/assets/images/whiteboard.svg"
+      main: true
+      github: "https://github.com/akashc777/hackX_whiteboard_collab"
+      description : "Multiuser whiteboard and chat with not DB and secuirty"
+        button:
+          enable : true
+          label : "know more"
+          link : "/post/Multiuser-Whiteboard.html"
+
     - title : "Server Health Monitor Using Raft Algo"
       image : "/assets/images/server_cluster.svg"
       main: true
