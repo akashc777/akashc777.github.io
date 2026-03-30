@@ -1,6 +1,16 @@
 ######################## projects ###############################
 all_projects:
 
+    - title : "OneCamp — Self-Hosted Workspace (Chat, Tasks, Docs, AI, Video)"
+      image : "/assets/images/server_cluster.svg"
+      main: true
+      github: "https://github.com/OneMana-Soft/OneCamp-fe"
+      description : "The anti-SaaS workspace. Chat, kanban boards, collaborative docs, video meetings, calendar sync, and a local AI assistant — all running on your own server. Pay once, own it forever. No per-seat pricing."
+      button:
+        enable : true
+        label : "Check it out"
+        link : "https://onemana.dev/onecamp-product"
+
     - title : "Multiuser Whiteboard"
       image : "/assets/images/whiteboard.svg"
       main: true
