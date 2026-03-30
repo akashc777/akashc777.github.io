@@ -3,13 +3,13 @@ title : "Why OneCamp Uses Both Postgres AND Dgraph (And Whether That Was a Mista
 image : "/assets/images/post/onecamp-hero.png"
 author : "Akash Hadagali"
 date: 2025-12-10 12:00:00 +0530
-description : "Most apps get away with one database. OneCamp uses two — Postgres for users and config, Dgraph for the social graph. Here's the reasoning, the tradeoffs, the distributed write problem, and whether I'd do it again."
+description : "Most apps get away with one database. OneCamp uses two  -  Postgres for users and config, Dgraph for the social graph. Here's the reasoning, the tradeoffs, the distributed write problem, and whether I'd do it again."
 tags : ["Go", "PostgreSQL", "Dgraph", "Database", "Architecture", "OneCamp", "GraphDB"]
 ---
 
 When I mention that OneCamp uses both PostgreSQL and Dgraph, I get one of two reactions:
 
-**Developers:** "Interesting — what's the query pattern that drove that?"
+**Developers:** "Interesting  -  what's the query pattern that drove that?"
 
 **Everyone else:** "You used two databases for a chat app?"
 
@@ -111,7 +111,7 @@ In Dgraph (DQL), the equivalent is roughly:
 
 One query. The database traverses graph edges. No multi-table joins. No aggregate subqueries.
 
-I've maintained SQL queries like the first example in production at Zomato — handling 75k+ daily inquiries on message tables. I've watched them get progressively more painful as data grows: more denormalization, more index tuning, query planner surprises when table statistics drift. The Dgraph approach is a real difference in how readable and maintainable the data access layer stays over time.
+I've maintained SQL queries like the first example in production at Zomato  -  handling 75k+ daily inquiries on message tables. I've watched them get progressively more painful as data grows: more denormalization, more index tuning, query planner surprises when table statistics drift. The Dgraph approach is a real difference in how readable and maintainable the data access layer stays over time.
 
 ---
 
@@ -119,11 +119,11 @@ I've maintained SQL queries like the first example in production at Zomato — h
 
 Because Dgraph is bad at things SQL is great at.
 
-**User authentication** — checking credentials, session management, JWT invalidation. These are point lookups on indexed columns. Dgraph's query model is optimized for traversal and aggregation, not "give me the row where email = X."
+**User authentication**  -  checking credentials, session management, JWT invalidation. These are point lookups on indexed columns. Dgraph's query model is optimized for traversal and aggregation, not "give me the row where email = X."
 
-**Workspace config** — feature flags, billing state, workspace settings. Key-value lookups. Using a graph database here is like using a bulldozer to hang a picture frame.
+**Workspace config**  -  feature flags, billing state, workspace settings. Key-value lookups. Using a graph database here is like using a bulldozer to hang a picture frame.
 
-**Team membership logic** — "is this user a member of this workspace and do they have permission level X?" Three indexed lookups in Postgres, covered by indexes, sub-millisecond. As a Dgraph traversal with edge property predicates — more verbose, harder to optimize, no meaningful advantage.
+**Team membership logic**  -  "is this user a member of this workspace and do they have permission level X?" Three indexed lookups in Postgres, covered by indexes, sub-millisecond. As a Dgraph traversal with edge property predicates  -  more verbose, harder to optimize, no meaningful advantage.
 
 The principle we settled on:
 
@@ -134,7 +134,7 @@ The principle we settled on:
 
 ## The Painful Part: Distributed Writes
 
-This is the thing nobody tells you about polyglot persistence upfront. With two databases, every write that affects both requires a **distributed operation** — and distributed operations fail partially.
+This is the thing nobody tells you about polyglot persistence upfront. With two databases, every write that affects both requires a **distributed operation**  -  and distributed operations fail partially.
 
 Consider creating a DM conversation between User A and User B:
 
@@ -156,9 +156,9 @@ In OneCamp, we handle this with:
 2. Compensating operations where possible (if step 2 fails, attempt to roll back step 1)
 3. Comprehensive logging so inconsistencies are detectable
 
-Is it perfect? No. Is it a source of complexity that lives in the codebase forever? Yes. The distributed write problem doesn't have a clean solution — it has tradeoffs. Two-phase commit exists. It's also brutal to implement and adds latency. For a self-hosted workspace with hundreds of users, we accept that inconsistency is rare and detectable, and that's good enough.
+Is it perfect? No. Is it a source of complexity that lives in the codebase forever? Yes. The distributed write problem doesn't have a clean solution  -  it has tradeoffs. Two-phase commit exists. It's also brutal to implement and adds latency. For a self-hosted workspace with hundreds of users, we accept that inconsistency is rare and detectable, and that's good enough.
 
-If I were building a SaaS product responsible for thousands of tenants' data, I would think much harder about this before choosing polyglot persistence. For an open-source self-hosted tool, the operational risk is lower — and the query performance gains are real.
+If I were building a SaaS product responsible for thousands of tenants' data, I would think much harder about this before choosing polyglot persistence. For an open-source self-hosted tool, the operational risk is lower  -  and the query performance gains are real.
 
 ---
 
@@ -178,9 +178,9 @@ The group ID for a DM between User A (`abc-123`) and User B (`xyz-789`) is alway
 
 Why does this matter?
 
-Without deterministic IDs, every time User A wants to send a message to User B, you'd need to look up "does a DM group exist for these two users, and if so, what's its ID?" — a round trip to Dgraph just to find the group ID before you can write the message.
+Without deterministic IDs, every time User A wants to send a message to User B, you'd need to look up "does a DM group exist for these two users, and if so, what's its ID?"  -  a round trip to Dgraph just to find the group ID before you can write the message.
 
-With deterministic IDs, that lookup is a pure function. No database round trip. No race condition between "check if exists" and "create if not exists." Creating a DM group that already exists is idempotent — you arrive at the same ID and Dgraph's upsert semantics handle the rest.
+With deterministic IDs, that lookup is a pure function. No database round trip. No race condition between "check if exists" and "create if not exists." Creating a DM group that already exists is idempotent  -  you arrive at the same ID and Dgraph's upsert semantics handle the rest.
 
 The pattern generalizes to group chats: hash of sorted participant UUIDs. More participants = same principle, slightly larger input. New participant added? New group ID computed from the new participant set. Adding a participant to a group chat is actually *creating a new group* that includes the old participants plus the new one.
 
@@ -204,7 +204,7 @@ This is the real cost of polyglot persistence: **operational complexity scales w
 
 For a self-hosted application deployed via Docker Compose, this is manageable. Docker handles the orchestration. The `onemana` CLI handles the configuration. Users get the full stack in one command.
 
-For a SaaS with 1000 tenants where you're on call for every outage — I would weigh this more carefully. The query performance advantages of Dgraph are real, but five data stores means five things that can page you at 3am.
+For a SaaS with 1000 tenants where you're on call for every outage  -  I would weigh this more carefully. The query performance advantages of Dgraph are real, but five data stores means five things that can page you at 3am.
 
 ---
 
@@ -214,7 +214,7 @@ For the graph queries: **yes**. The message retrieval queries in Dgraph are clea
 
 What I'd change: **invest in a better abstraction layer earlier**. Right now, some controllers call Dgraph query functions and Postgres model functions in the same handler. A unified data access layer that presents a consistent interface over both databases would make the distributed write problem more explicit, more testable, and easier to reason about.
 
-The technical debt being: the databases are excellent at their separate jobs, but the seam between them lives in application code — and application code is where complex invariants go to get violated.
+The technical debt being: the databases are excellent at their separate jobs, but the seam between them lives in application code  -  and application code is where complex invariants go to get violated.
 
 ---
 

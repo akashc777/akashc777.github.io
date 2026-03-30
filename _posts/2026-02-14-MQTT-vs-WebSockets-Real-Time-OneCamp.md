@@ -1,9 +1,9 @@
 ---
-title : "Why I Used MQTT for Team Chat (Not WebSockets) — And What That Taught Me About Broker-Based Architectures"
+title : "Why I Used MQTT for Team Chat (Not WebSockets)  -  And What That Taught Me About Broker-Based Architectures"
 image : "/assets/images/post/onecamp-hero.png"
 author : "Akash Hadagali"
 date: 2026-02-14 12:00:00 +0530
-description : "Deep dive into OneCamp's real-time messaging layer — why MQTT beat raw WebSockets, how topics map to workspace entities, the Redux pattern that keeps UI and transport completely decoupled, and the scroll position problem that made me sob."
+description : "Deep dive into OneCamp's real-time messaging layer  -  why MQTT beat raw WebSockets, how topics map to workspace entities, the Redux pattern that keeps UI and transport completely decoupled, and the scroll position problem that made me sob."
 tags : ["OneCamp", "MQTT", "WebSockets", "Go", "Real-Time", "Architecture", "Redux"]
 ---
 
@@ -19,7 +19,7 @@ Yes. Also no. Let me explain.
 
 When I started building the real-time layer for OneCamp, the obvious choice was WebSockets. Open a socket per user, broadcast messages, done.
 
-Except — *not done*. Here's what "obvious" actually looks like in practice:
+Except  -  *not done*. Here's what "obvious" actually looks like in practice:
 
 ```
 User A connects → ws://server/chat
@@ -39,7 +39,7 @@ Server 1 has no idea where User B's connection is
 ❌ 
 ```
 
-The moment you think about horizontal scaling, you realize raw WebSockets are just a transport — you still need pub/sub. So you bolt Redis Pub/Sub on top. Now you have WebSockets *and* Redis pub/sub. And you still have to write all the topic routing, subscription management, and fan-out logic yourself.
+The moment you think about horizontal scaling, you realize raw WebSockets are just a transport  -  you still need pub/sub. So you bolt Redis Pub/Sub on top. Now you have WebSockets *and* Redis pub/sub. And you still have to write all the topic routing, subscription management, and fan-out logic yourself.
 
 **Problem 2: Topic routing is all manual.** In a team chat app, every channel is a "room". Every DM is a "conversation". Every group chat is another namespace. With raw WebSockets, you're constantly writing logic like "find all connections subscribed to channel X, iterate over them, send the message, handle dead connections, clean up." That's just pub/sub implemented badly in your application layer.
 
@@ -49,7 +49,7 @@ The moment you think about horizontal scaling, you realize raw WebSockets are ju
 
 ## Enter MQTT 🤖
 
-MQTT (Message Queuing Telemetry Transport) is a lightweight pub/sub protocol originally designed for low-bandwidth sensor networks transmitting temperature readings from unmanned oil pipelines in the middle of nowhere. It runs over TCP, has a tiny protocol overhead, and — crucially — **the broker handles everything**.
+MQTT (Message Queuing Telemetry Transport) is a lightweight pub/sub protocol originally designed for low-bandwidth sensor networks transmitting temperature readings from unmanned oil pipelines in the middle of nowhere. It runs over TCP, has a tiny protocol overhead, and  -  crucially  -  **the broker handles everything**.
 
 Here's how OneCamp's topic structure looks:
 
@@ -99,7 +99,7 @@ export enum MqttMessageType {
 }
 ```
 
-Twenty event types. Every single real-time thing that happens in OneCamp — new message, someone typing, emoji reaction, video call started, user went offline — flows through **one MQTT connection per browser tab**.
+Twenty event types. Every single real-time thing that happens in OneCamp  -  new message, someone typing, emoji reaction, video call started, user went offline  -  flows through **one MQTT connection per browser tab**.
 
 The frontend parses the `type` integer, routes it to the correct Redux slice, and updates UI. No separate WebSocket per feature. No polling. No long-polling (please, nobody use long-polling in 2026).
 
@@ -139,7 +139,7 @@ If the REST response and the MQTT event both carry the same message (which can h
 
 ## The Reconnection Invalidation Pattern
 
-When the MQTT connection drops and reconnects — mobile switching networks, laptop waking from sleep — there's a window where events were missed. No amount of "resume from last event" logic fully closes this gap cleanly.
+When the MQTT connection drops and reconnects  -  mobile switching networks, laptop waking from sleep  -  there's a window where events were missed. No amount of "resume from last event" logic fully closes this gap cleanly.
 
 OneCamp's approach: **on reconnect, nuke the in-memory message cache and re-fetch from the API**.
 
@@ -160,7 +160,7 @@ Users notice a brief "loading" flash when they reconnect. Users do not notice re
 
 Here is a real edge case I did not anticipate at all: **scroll position restoration**.
 
-When you leave a chat room and come back, you want to see where you left off — not get dumped at the bottom like nothing happened. Sounds easy.
+When you leave a chat room and come back, you want to see where you left off  -  not get dumped at the bottom like nothing happened. Sounds easy.
 
 It is not easy.
 
@@ -188,9 +188,9 @@ This took me an embarrassingly long afternoon to figure out. I sat with it, drew
 
 ## Honest Tradeoffs
 
-**MQTT doesn't solve persistence across disconnect.** QoS 1 (at-least-once delivery) means EMQX will retry delivery to connected clients. Offline clients miss it. That's fine — reconnect triggers an API refetch. But don't go in expecting MQTT to be a durable message queue. It's not.
+**MQTT doesn't solve persistence across disconnect.** QoS 1 (at-least-once delivery) means EMQX will retry delivery to connected clients. Offline clients miss it. That's fine  -  reconnect triggers an API refetch. But don't go in expecting MQTT to be a durable message queue. It's not.
 
-**The broker is a dependency.** EMQX runs in Docker with restart policies. If it goes down, real-time stops (REST API still works — users can still load data, they just won't get live updates). For a self-hosted team of 50 people, this is acceptable. For "we need five-nines real-time", you'd want EMQX in cluster mode.
+**The broker is a dependency.** EMQX runs in Docker with restart policies. If it goes down, real-time stops (REST API still works  -  users can still load data, they just won't get live updates). For a self-hosted team of 50 people, this is acceptable. For "we need five-nines real-time", you'd want EMQX in cluster mode.
 
 **MQTT.js (the browser client) has... quirks.** Connection state management in browser environments requires some defensive coding. The good news: once you've got the reconnect handling right, it's rock solid.
 
@@ -198,7 +198,7 @@ This took me an embarrassingly long afternoon to figure out. I sat with it, drew
 
 ## Would I Do It Again?
 
-Absolutely. The entire real-time layer — 20 event types, DMs, channels, groups, typing indicators, call status, presence — is handled by ~450 lines of TypeScript in `mqttService.ts` and a broker config in Docker Compose.
+Absolutely. The entire real-time layer  -  20 event types, DMs, channels, groups, typing indicators, call status, presence  -  is handled by ~450 lines of TypeScript in `mqttService.ts` and a broker config in Docker Compose.
 
 The alternative was writing all of that fan-out logic myself. No thanks.
 
@@ -206,4 +206,4 @@ If you're building a self-hosted collaboration tool, give MQTT serious considera
 
 ---
 
-*[OneCamp's frontend](https://github.com/OneMana-Soft/OneCamp-fe) is open source — `services/mqttService.ts` has the full client implementation. The self-hosted stack at [onemana.dev](https://onemana.dev/onecamp-product) includes a pre-configured EMQX instance.*
+*[OneCamp's frontend](https://github.com/OneMana-Soft/OneCamp-fe) is open source  -  `services/mqttService.ts` has the full client implementation. The self-hosted stack at [onemana.dev](https://onemana.dev/onecamp-product) includes a pre-configured EMQX instance.*

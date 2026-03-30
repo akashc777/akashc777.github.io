@@ -3,7 +3,7 @@ title : "Streaming AI in Go: SSE, Circuit Breakers, and the nginx Buffering Bug 
 image : "/assets/images/post/onecamp-hero.png"
 author : "Akash Hadagali"
 date: 2026-01-20 12:00:00 +0530
-description : "The real technical details behind OneCamp's streaming AI feature — Server-Sent Events in Go's net/http, a fast-path optimization for conversational inputs, post-stream tool call parsing, circuit breakers, and the React batching gotcha that will catch you eventually."
+description : "The real technical details behind OneCamp's streaming AI feature  -  Server-Sent Events in Go's net/http, a fast-path optimization for conversational inputs, post-stream tool call parsing, circuit breakers, and the React batching gotcha that will catch you eventually."
 tags : ["Go", "AI", "SSE", "Ollama", "OneCamp", "LLM", "CircuitBreaker", "Architecture"]
 ---
 
@@ -21,7 +21,7 @@ POST /ai/ask
 
 Your users think the app crashed. Three people refresh. Two file bug reports. One leaves.
 
-OneCamp's AI streams responses token-by-token via Server-Sent Events. The first token appears in ~500ms. The UI updates in real time as the model generates. Users feel like they're watching someone type — which is exactly what's happening, except the "someone" is a local LLM running on their own server.
+OneCamp's AI streams responses token-by-token via Server-Sent Events. The first token appears in ~500ms. The UI updates in real time as the model generates. Users feel like they're watching someone type  -  which is exactly what's happening, except the "someone" is a local LLM running on their own server.
 
 Here's the full technical story of how that actually works.
 
@@ -29,7 +29,7 @@ Here's the full technical story of how that actually works.
 
 ## Why SSE, Not WebSockets?
 
-WebSockets are bidirectional. LLM streaming is one-directional — tokens flow from server to client, never the other way. SSE (Server-Sent Events) is half-duplex HTTP: the server keeps the connection open and pushes events. The browser handles reconnection automatically. It works over HTTP/1.1. It doesn't need any special infrastructure.
+WebSockets are bidirectional. LLM streaming is one-directional  -  tokens flow from server to client, never the other way. SSE (Server-Sent Events) is half-duplex HTTP: the server keeps the connection open and pushes events. The browser handles reconnection automatically. It works over HTTP/1.1. It doesn't need any special infrastructure.
 
 The wire format is almost comically simple:
 
@@ -53,7 +53,7 @@ Go's `net/http` returns when the handler function returns. For SSE, you need the
 
 ```go
 func AskAIStream(w http.ResponseWriter, r *http.Request) {
-    // 2-minute hard limit — prevents zombie SSE goroutines
+    // 2-minute hard limit  -  prevents zombie SSE goroutines
     ctx, cancel := context.WithTimeout(r.Context(), 2*time.Minute)
     defer cancel()
 
@@ -92,7 +92,7 @@ Go's `ResponseWriter` buffers writes. Without explicit flushing, the runtime hol
 I wasted an entire afternoon on this. SSE worked perfectly on localhost. In production behind nginx, it batched the entire response and delivered it all at once. nginx buffers upstream responses by default. This header tells it to stop. I found it at 11pm, added one line, it worked, and I sat in silence for a moment.
 
 **3. Context with timeout.**
-Without a deadline, a stalled LLM request holds a goroutine and an open HTTP connection indefinitely. Multiply by concurrent users hitting a slow model, and you've got a goroutine leak. 2 minutes is generous — most responses finish in 10-30 seconds — but it's the difference between "AI is slow" and "entire server is unresponsive."
+Without a deadline, a stalled LLM request holds a goroutine and an open HTTP connection indefinitely. Multiply by concurrent users hitting a slow model, and you've got a goroutine leak. 2 minutes is generous  -  most responses finish in 10-30 seconds  -  but it's the difference between "AI is slow" and "entire server is unresponsive."
 
 ---
 
@@ -105,9 +105,9 @@ Building workspace context is expensive:
 3. Assemble the top results into a context window
 4. Send everything to the LLM
 
-For a substantive question — "summarize what we decided about the API design last Tuesday" — this 300-600ms overhead is worth it. The context makes the answer meaningfully better.
+For a substantive question  -  "summarize what we decided about the API design last Tuesday"  -  this 300-600ms overhead is worth it. The context makes the answer meaningfully better.
 
-For "hi", "thanks", "lol" — it's pure overhead. You're building a vector search over all your team's data to answer a two-character greeting.
+For "hi", "thanks", "lol"  -  it's pure overhead. You're building a vector search over all your team's data to answer a two-character greeting.
 
 ```go
 // Fast-path: skip expensive context building for conversational inputs.
@@ -120,22 +120,22 @@ if !isConversational {
 }
 ```
 
-`IsConversational` is a small classifier — regex patterns and common short phrases. When it fires, we skip the embedding entirely and go straight to the LLM with a "casual conversation" system prompt at higher temperature (0.8 vs 0.3 for factual RAG queries).
+`IsConversational` is a small classifier  -  regex patterns and common short phrases. When it fires, we skip the embedding entirely and go straight to the LLM with a "casual conversation" system prompt at higher temperature (0.8 vs 0.3 for factual RAG queries).
 
-The temperature difference is intentional. Factual retrieval should be deterministic — lower temperature keeps the model from improvising when it should be citing sources. Casual conversation should feel human — higher temperature adds natural variation so you're not talking to a robot that gives the exact same response to "how's it going?" every single time.
+The temperature difference is intentional. Factual retrieval should be deterministic  -  lower temperature keeps the model from improvising when it should be citing sources. Casual conversation should feel human  -  higher temperature adds natural variation so you're not talking to a robot that gives the exact same response to "how's it going?" every single time.
 
 ---
 
 ## Post-Stream: The Tool Call Parsing Problem
 
-OneCamp AI is agentic — it can propose workspace actions. The LLM is prompted with a set of available tools (create task, search docs, schedule event, etc.) and embeds structured tool calls in its response:
+OneCamp AI is agentic  -  it can propose workspace actions. The LLM is prompted with a set of available tools (create task, search docs, schedule event, etc.) and embeds structured tool calls in its response:
 
 ```
 Sure! I'll create that task for you.
 <tool_call>{"name": "create_task", "params": {"title": "Fix login bug", "due": "tomorrow"}}</tool_call>
 ```
 
-We stream the raw text as it arrives — including the `<tool_call>` block. After the stream finishes, we parse the complete response:
+We stream the raw text as it arrives  -  including the `<tool_call>` block. After the stream finishes, we parse the complete response:
 
 ```go
 // Post-stream: parse tool calls and sanitize
@@ -160,9 +160,9 @@ if len(proposedActions) > 0 {
 ```
 
 The frontend handles three event types:
-- `content` — append to display text
-- `replace` — swap entire display text (cleans up the leaked `<tool_call>` XML)
-- `actions` — render as interactive confirmation cards
+- `content`  -  append to display text
+- `replace`  -  swap entire display text (cleans up the leaked `<tool_call>` XML)
+- `actions`  -  render as interactive confirmation cards
 
 **Critical design decision: actions are never auto-executed.** The user sees a card: "Create task: Fix login bug, due tomorrow. Confirm?" They click confirm. Only then does the frontend call `/ai/action/execute`. 
 
@@ -172,12 +172,12 @@ An AI that silently creates calendar events or tasks without explicit user appro
 
 ## The Circuit Breaker (Or: Don't Let the AI Take Down Your Chat)
 
-Local LLMs (Ollama) can be slow, fail to load, run out of GPU memory, or just crash. Without protection, every AI request during an outage waits for a timeout — tying up goroutines and degrading the entire service, not just the AI endpoints.
+Local LLMs (Ollama) can be slow, fail to load, run out of GPU memory, or just crash. Without protection, every AI request during an outage waits for a timeout  -  tying up goroutines and degrading the entire service, not just the AI endpoints.
 
 OneCamp wraps every LLM call in a circuit breaker with three states: **Closed** (normal), **Open** (tripped, fail fast with 503), **Half-open** (probing, let one request through to test recovery).
 
 ```go
-// Check resiliency before streaming — fail fast if circuit is open
+// Check resiliency before streaming  -  fail fast if circuit is open
 if err := ai.Service.Resiliency.PreCheck(ctx, userInfo.UserDgraphInfo.Uuid); err != nil {
     statusCode := http.StatusTooManyRequests
     if err == ai.ErrCircuitOpen {
@@ -195,7 +195,7 @@ ai.Service.Resiliency.CB.RecordFailure()  // on any LLM error
 ai.Service.Resiliency.CB.RecordSuccess()  // after stream completes cleanly
 ```
 
-Without this, I tested what happens when Ollama is slow: the server spawns goroutines faster than the model responds, memory climbs, and eventually everything is slow — not just the AI. The circuit breaker means AI degradation stays contained.
+Without this, I tested what happens when Ollama is slow: the server spawns goroutines faster than the model responds, memory climbs, and eventually everything is slow  -  not just the AI. The circuit breaker means AI degradation stays contained.
 
 ---
 
@@ -234,20 +234,20 @@ while (true) {
 }
 ```
 
-Notice: `askStream()` returns `{ text: accumulated, actions: parsedActions }` — using the **local closure variable**, not React state.
+Notice: `askStream()` returns `{ text: accumulated, actions: parsedActions }`  -  using the **local closure variable**, not React state.
 
 This is the gotcha. If you read `streamText` (React state) immediately after the stream ends, you might get the previous value. React batches state updates asynchronously. The local `accumulated` variable is always current because it's updated synchronously in the same function scope.
 
-This pattern — local closure variable as the reliable value, React state as the rendering signal — comes up constantly when coordinating async streams with React. The bug it prevents is subtle: your stream finishes, you read `streamText`, you get the second-to-last update, you render that as the "final" result. Users occasionally see responses cut off by one token. Nightmare to debug.
+This pattern  -  local closure variable as the reliable value, React state as the rendering signal  -  comes up constantly when coordinating async streams with React. The bug it prevents is subtle: your stream finishes, you read `streamText`, you get the second-to-last update, you render that as the "final" result. Users occasionally see responses cut off by one token. Nightmare to debug.
 
 ---
 
 ## What I'd Change
 
-**The `replace` event is a hack.** Users briefly see raw `<tool_call>` XML before the replacement event arrives. A proper fix would detect the opening `<tool_call>` tag mid-stream and buffer the tail. I haven't done it yet because it requires a stateful streaming parser — more complexity than I wanted during the initial build. It's on the backlog.
+**The `replace` event is a hack.** Users briefly see raw `<tool_call>` XML before the replacement event arrives. A proper fix would detect the opening `<tool_call>` tag mid-stream and buffer the tail. I haven't done it yet because it requires a stateful streaming parser  -  more complexity than I wanted during the initial build. It's on the backlog.
 
 **Session history truncation.** We append full Q&A pairs to Redis per session. Long conversations hit token limits. Should use a sliding window or incremental summarization. Known debt.
 
 ---
 
-*[OneCamp is open source on the frontend](https://github.com/OneMana-Soft/OneCamp-fe) — `services/aiService.ts` has the full streaming client. The backend runs as a single Go binary at [onemana.dev](https://onemana.dev/onecamp-product). Local AI, no data leaves your server.*
+*[OneCamp is open source on the frontend](https://github.com/OneMana-Soft/OneCamp-fe)  -  `services/aiService.ts` has the full streaming client. The backend runs as a single Go binary at [onemana.dev](https://onemana.dev/onecamp-product). Local AI, no data leaves your server.*

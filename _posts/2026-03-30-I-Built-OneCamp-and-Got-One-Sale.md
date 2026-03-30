@@ -3,7 +3,7 @@ title : "I Spent a Year Building OneCamp. Launched It. Got One Sale. Here's Ever
 image : "/assets/images/post/onecamp-hero.png"
 author : "Akash Hadagali"
 date: 2026-03-30 12:00:00 +0530
-description : "The honest, technical, and slightly humbling story of building OneCamp — a self-hosted all-in-one workspace. Full system architecture, real tech choices, and the brutal reality of launch day."
+description : "The honest, technical, and slightly humbling story of building OneCamp  -  a self-hosted all-in-one workspace. Full system architecture, real tech choices, and the brutal reality of launch day."
 tags : ["OneCamp", "SaaS", "Go", "NextJS", "Self-Hosted", "Startup", "OpenSource", "IndieHacker"]
 ---
 
@@ -15,7 +15,7 @@ As of today, I have **one sale**.
 
 One. Singular. The loneliest number.
 
-This post is about the year that led to that one sale — the actual architecture, the real tech decisions, and the most important lesson I learned the hard way. Grab a coffee. This is going to be a long one.
+This post is about the year that led to that one sale  -  the actual architecture, the real tech decisions, and the most important lesson I learned the hard way. Grab a coffee. This is going to be a long one.
 
 ---
 
@@ -92,7 +92,7 @@ Why Go?
 
 The codebase follows a strict layered architecture:
 - **Controllers** → HTTP handlers, input validation, request parsing
-- **Business** → Domain logic. No HTTP types, no database drivers — pure functions on domain objects
+- **Business** → Domain logic. No HTTP types, no database drivers  -  pure functions on domain objects
 - **Models** → DB queries organized by store (Postgres, Dgraph, Redis, etc.)
 - **Adapter** → Request/response DTOs, the border types
 
@@ -107,7 +107,7 @@ This means I can test business logic without spinning up a database. Wild concep
 | **PostgreSQL** | Users, auth, workspace config, team membership, task data |
 | **Dgraph** | Social graph: messages, posts, reactions, comments, DM relationships |
 | **Redis** | Pub/Sub relay, user profile cache, rate limits, AI session history |
-| **MinIO** | File attachments — self-hosted S3-compatible object storage |
+| **MinIO** | File attachments  -  self-hosted S3-compatible object storage |
 | **OpenSearch** | Full-text search + k-NN vector index for AI semantic retrieval |
 
 The spicy choice here is **Postgres + Dgraph** instead of just Postgres.
@@ -122,11 +122,11 @@ At Zomato I watched deeply joined SQL queries on message tables get progressivel
 
 ## Three Real-Time Systems (Also Yes, Three) 📡
 
-**EMQX (MQTT)** handles all workspace events — new messages, typing indicators, emoji reactions, call status, user presence. Every entity gets an MQTT topic. The broker handles fan-out. You don't write fan-out code. I replaced what would've been hundreds of lines of stateful WebSocket routing with "subscribe to a topic". Feels like cheating.
+**EMQX (MQTT)** handles all workspace events  -  new messages, typing indicators, emoji reactions, call status, user presence. Every entity gets an MQTT topic. The broker handles fan-out. You don't write fan-out code. I replaced what would've been hundreds of lines of stateful WebSocket routing with "subscribe to a topic". Feels like cheating.
 
-**LiveKit (WebRTC)** handles video calls. HD video, screen sharing, recording. It's open-source and self-hostable, which is the only kind of video infra that fits OneCamp's philosophy. We also run a **Python transcription agent** alongside it — it listens to LiveKit sessions and sends transcripts back to the Go backend for storage and AI search.
+**LiveKit (WebRTC)** handles video calls. HD video, screen sharing, recording. It's open-source and self-hostable, which is the only kind of video infra that fits OneCamp's philosophy. We also run a **Python transcription agent** alongside it  -  it listens to LiveKit sessions and sends transcripts back to the Go backend for storage and AI search.
 
-**Hocuspocus (CRDT)** handles real-time collaborative document editing. Two people edit the same doc simultaneously? CRDTs (Conflict-free Replicated Data Types) handle the merge automatically — no last-write-wins, no locking, no "someone is currently editing this section" blocking. It stores session state in Redis between editing sessions.
+**Hocuspocus (CRDT)** handles real-time collaborative document editing. Two people edit the same doc simultaneously? CRDTs (Conflict-free Replicated Data Types) handle the merge automatically  -  no last-write-wins, no locking, no "someone is currently editing this section" blocking. It stores session state in Redis between editing sessions.
 
 ---
 
@@ -179,7 +179,7 @@ graph TB
     HX --> CH
 ```
 
-**Traefik** sits at the edge and handles TLS — SSL certificates are automatic via Let's Encrypt. You don't configure certs. You don't think about cert renewal. It just exists and works.
+**Traefik** sits at the edge and handles TLS  -  SSL certificates are automatic via Let's Encrypt. You don't configure certs. You don't think about cert renewal. It just exists and works.
 
 **HyperDX + ClickHouse** is the observability stack. Every API request gets an OpenTelemetry trace. When something breaks in production, I have distributed traces instead of `grep`-ing through raw log files. This was worth every minute of setup.
 
@@ -191,11 +191,11 @@ Setting all of this up manually would take an experienced engineer a couple of d
 
 OneCamp AI has its own [detailed technical post](/post/Streaming-AI-Go-SSE-Circuit-Breaker.html), but here's the overview:
 
-- **Supports Ollama, OpenAI, and Anthropic** — you pick. Default is Ollama so zero data leaves your server. Switch to GPT-4 if you want. Your call, your infrastructure.
-- **RAG over your workspace** — AI answers are grounded in your actual chat history, tasks, and docs via embedding search over OpenSearch vectors.
-- **Streaming via SSE** — responses stream token-by-token. No 15-second loading spinners.
-- **Circuit breaker + per-user rate limiting** — if Ollama is under load, requests fail fast instead of forming a queue that takes down everything else.
-- **Actions require confirmation** — AI can *propose* creating a task or scheduling an event. It never auto-executes. You see a confirmation card and click it. An AI that silently creates calendar events without your approval is a liability disguised as a feature.
+- **Supports Ollama, OpenAI, and Anthropic**  -  you pick. Default is Ollama so zero data leaves your server. Switch to GPT-4 if you want. Your call, your infrastructure.
+- **RAG over your workspace**  -  AI answers are grounded in your actual chat history, tasks, and docs via embedding search over OpenSearch vectors.
+- **Streaming via SSE**  -  responses stream token-by-token. No 15-second loading spinners.
+- **Circuit breaker + per-user rate limiting**  -  if Ollama is under load, requests fail fast instead of forming a queue that takes down everything else.
+- **Actions require confirmation**  -  AI can *propose* creating a task or scheduling an event. It never auto-executes. You see a confirmation card and click it. An AI that silently creates calendar events without your approval is a liability disguised as a feature.
 
 ---
 
@@ -207,7 +207,7 @@ March 9th, 2026. Shipped to [onemana.dev](https://onemana.dev). Tweeted about it
 
 It was Rs. 1499. That's about $19. I checked the payment notification approximately 45 times that day.
 
-Here's the thing: I wasn't shocked. I was humbled in a specific way — the way you get humbled when you know intellectually that something is true and then experience it being true.
+Here's the thing: I wasn't shocked. I was humbled in a specific way  -  the way you get humbled when you know intellectually that something is true and then experience it being true.
 
 ---
 
@@ -219,14 +219,14 @@ I've read this in a hundred blog posts. I've nodded along. I've said "yeah, tota
 
 Classic. Engineer. Mistake.
 
-The product is — genuinely — not the hard part. The binary works. The features are real. The architecture is solid. But *none of that matters* if the right person never sees it.
+The product is  -  genuinely  -  not the hard part. The binary works. The features are real. The architecture is solid. But *none of that matters* if the right person never sees it.
 
 Distribution channels for a self-hosted developer tool:
-- **Hacker News** — A strong "Show HN" post can drive thousands of targeted visitors in 24 hours
-- **Reddit** — r/selfhosted, r/homelab, r/sysadmin are full of people who are already paying for Slack alternatives and complaining about it
-- **GitHub** — The [open-source frontend](https://github.com/OneMana-Soft/OneCamp-fe) is a long-term discovery channel. Stars compound slowly.
-- **SEO** — "Self-hosted Slack alternative", "open source Notion alternative". These are real searches with real buyer intent.
-- **Building in public** — Which is what this blog post is. Hi 👋, welcome to my distribution strategy.
+- **Hacker News**  -  A strong "Show HN" post can drive thousands of targeted visitors in 24 hours
+- **Reddit**  -  r/selfhosted, r/homelab, r/sysadmin are full of people who are already paying for Slack alternatives and complaining about it
+- **GitHub**  -  The [open-source frontend](https://github.com/OneMana-Soft/OneCamp-fe) is a long-term discovery channel. Stars compound slowly.
+- **SEO**  -  "Self-hosted Slack alternative", "open source Notion alternative". These are real searches with real buyer intent.
+- **Building in public**  -  Which is what this blog post is. Hi 👋, welcome to my distribution strategy.
 
 The tactical mistake: I built all of this first and *then* thought about distribution. The right order is to have distribution channels warm before launch day.
 
@@ -242,7 +242,7 @@ If you're paying SaaS seat tax every month for tools your team barely uses, look
 
 If you want to contribute to the open-source frontend: [github.com/OneMana-Soft/OneCamp-fe](https://github.com/OneMana-Soft/OneCamp-fe)
 
-And if you're the one person who already bought OneCamp — seriously, thank you. You are funding the entire operation. I will name a feature after you if you ask nicely.
+And if you're the one person who already bought OneCamp  -  seriously, thank you. You are funding the entire operation. I will name a feature after you if you ask nicely.
 
 ---
 
