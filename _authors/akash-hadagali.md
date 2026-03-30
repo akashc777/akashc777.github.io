@@ -15,9 +15,9 @@ I'm the founder of **[OneMana](https://onemana.dev)**  -  a tiny one-person comp
 
 Teams today pay for Slack. Then Jira. Then Notion. Then Zoom. Then some calendar thing. None of them talk to each other. You end up doing 40% of your job just *switching tabs*.
 
-So I built **[OneCamp](https://onemana.dev/onecamp-product)**  -  a self-hosted, all-in-one workspace with real-time chat, tasks, docs, video calls, calendar, and a local AI assistant. Runs on your own server. One-time payment. No per-seat pricing. No vendor lock-in.
+I built **[OneCamp](https://onemana.dev/onecamp-product)**  -  a self-hosted, all-in-one workspace with real-time chat, tasks, docs, video calls, calendar, and a local AI assistant. Runs on your own server. One-time payment. No per-seat pricing. No vendor lock-in.
 
-Is it profitable yet? I launched on March 9th, 2026. Got one sale. **I'm manifesting more.** 🙏
+I launched OneCamp on March 9th, 2026. The mission is simple: break the cycle of endless subscriptions. 🚀
 
 The frontend is fully [open source on GitHub](https://github.com/OneMana-Soft/OneCamp-fe). The backend ships as a single binary you can set up with one command. Because life is too short for 47-step installation guides.
 

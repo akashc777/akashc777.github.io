@@ -1,9 +1,9 @@
 ---
-title : "I Spent a Year Building OneCamp. Launched It. Got One Sale. Here's Everything."
+title : "I Spent a Year Building OneCamp. Here's the Complete Architecture."
 image : "/assets/images/post/onecamp-hero.png"
 author : "Akash Hadagali"
 date: 2026-03-30 12:00:00 +0530
-description : "The honest, technical, and slightly humbling story of building OneCamp  -  a self-hosted all-in-one workspace. Full system architecture, real tech choices, and the brutal reality of launch day."
+description : "The honest, technical story of building OneCamp  -  a self-hosted all-in-one workspace. Full system architecture, real tech choices, and the reality of launch day."
 tags : ["OneCamp", "SaaS", "Go", "NextJS", "Self-Hosted", "Startup", "OpenSource", "IndieHacker"]
 ---
 
@@ -11,11 +11,7 @@ On March 9th, 2026, I launched [OneCamp](https://onemana.dev/onecamp-product).
 
 It's a self-hosted, all-in-one workspace. Chat. Tasks. Docs. Video calls. Calendar. A local AI assistant. All on your own server. One-time payment. No per-seat pricing.
 
-As of today, I have **one sale**.
-
-One. Singular. The loneliest number.
-
-This post is about the year that led to that one sale  -  the actual architecture, the real tech decisions, and the most important lesson I learned the hard way. Grab a coffee. This is going to be a long one.
+This post is about the year that led to that launch  -  the actual architecture, the real tech decisions, and the most important lesson I learned the hard way. Grab a coffee. This is going to be a long one.
 
 ---
 
@@ -203,11 +199,7 @@ OneCamp AI has its own [detailed technical post](/post/Streaming-AI-Go-SSE-Circu
 
 March 9th, 2026. Shipped to [onemana.dev](https://onemana.dev). Tweeted about it. Posted in a few places. Added it to some lists.
 
-**One sale.**
-
-It was Rs. 1499. That's about $19. I checked the payment notification approximately 45 times that day.
-
-Here's the thing: I wasn't shocked. I was humbled in a specific way  -  the way you get humbled when you know intellectually that something is true and then experience it being true.
+The response was incredibly validating, but also a stark reminder of an engineering truth that you only truly learn when you launch your own product.
 
 ---
 
@@ -241,8 +233,6 @@ OneCamp isn't going anywhere. I believe in the problem. Teams deserve to own the
 If you're paying SaaS seat tax every month for tools your team barely uses, look at [onemana.dev](https://onemana.dev/onecamp-product). 
 
 If you want to contribute to the open-source frontend: [github.com/OneMana-Soft/OneCamp-fe](https://github.com/OneMana-Soft/OneCamp-fe)
-
-And if you're the one person who already bought OneCamp  -  seriously, thank you. You are funding the entire operation. I will name a feature after you if you ask nicely.
 
 ---
 
