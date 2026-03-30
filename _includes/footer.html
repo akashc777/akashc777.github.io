@@ -34,3 +34,26 @@
 
 <!-- Main Script -->
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+
+<!-- Mermaid JS -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: false, theme: 'default' });
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    const blocks = document.querySelectorAll('code.language-mermaid, [class*="language-mermaid"] code');
+    if (blocks.length === 0) return;
+    
+    blocks.forEach((block) => {
+      let codeText = block.textContent;
+      let targetNode = block.closest('.highlighter-rouge') || block.parentElement;
+
+      const mermaidDiv = document.createElement('div');
+      mermaidDiv.className = 'mermaid';
+      mermaidDiv.textContent = codeText;
+      targetNode.replaceWith(mermaidDiv);
+    });
+    
+    await mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
+  });
+</script>
