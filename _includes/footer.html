@@ -40,42 +40,77 @@
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: false, theme: 'default' });
 
+  // Load panzoom library for dynamic SVG zooming
+  const loadPanZoom = () => {
+    return new Promise((resolve) => {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js';
+      script.onload = resolve;
+      document.head.appendChild(script);
+    });
+  };
+
   document.addEventListener('DOMContentLoaded', async () => {
     const blocks = document.querySelectorAll('code.language-mermaid, [class*="language-mermaid"] code');
     if (blocks.length === 0) return;
     
-    // Inject CSS to make diagrams scrollable and prevent shrinking
     const style = document.createElement('style');
     style.innerHTML = `
       .mermaid-wrapper {
-        overflow-x: auto;
         border: 1px solid #eaeaea;
         border-radius: 8px;
-        padding: 1.5rem;
         margin: 2rem 0;
         background: #fafafa;
-        cursor: ew-resize;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.2s ease;
       }
-      .mermaid-wrapper::-webkit-scrollbar { height: 8px; }
-      .mermaid-wrapper::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
-      .mermaid-wrapper::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
-      .mermaid-wrapper::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
-      .mermaid svg {
-        max-width: none !important;
-        min-width: 800px; /* Ensures extremely dense charts don't compress */
-        display: block;
-        margin: 0 auto;
+      .mermaid-wrapper.fullscreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 99999;
+        margin: 0;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
       }
+      .mermaid-wrapper.fullscreen svg {
+        height: 100vh !important;
+      }
+      .mermaid svg { cursor: grab; }
+      .mermaid svg:active { cursor: grabbing; }
       .mermaid-hint {
         text-align: center;
         font-size: 0.8rem;
-        color: #888;
-        margin-top: -1.5rem;
-        margin-bottom: 2rem;
-        font-style: italic;
+        color: #666;
+        padding: 5px;
+        background: #f1f1f1;
+        border-bottom: 1px solid #eaeaea;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
       }
+      .mermaid-fullscreen-btn {
+        position: absolute;
+        right: 15px;
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 2px 8px;
+        font-size: 0.75rem;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      }
+      .mermaid-fullscreen-btn:hover { background: #eee; }
     `;
     document.head.appendChild(style);
+
+    await loadPanZoom();
 
     blocks.forEach((block) => {
       let codeText = block.textContent;
@@ -84,19 +119,60 @@
       const wrapper = document.createElement('div');
       wrapper.className = 'mermaid-wrapper';
       
+      const hint = document.createElement('div');
+      hint.className = 'mermaid-hint';
+      hint.innerHTML = '🔍 Use mouse wheel to zoom. Click & drag to pan.';
+      
+      const fullscreenBtn = document.createElement('button');
+      fullscreenBtn.className = 'mermaid-fullscreen-btn';
+      fullscreenBtn.innerHTML = '⛶ Fullscreen';
+      
+      fullscreenBtn.onclick = () => {
+         wrapper.classList.toggle('fullscreen');
+         if (wrapper.classList.contains('fullscreen')) {
+             fullscreenBtn.innerHTML = '✖ Exit Fullscreen';
+             document.body.style.overflow = 'hidden'; // prevent background scrolling
+         } else {
+             fullscreenBtn.innerHTML = '⛶ Fullscreen';
+             document.body.style.overflow = '';
+         }
+         // trigger window resize to let svg-pan-zoom fix its boundaries
+         setTimeout(() => window.dispatchEvent(new Event('resize')), 50);
+      };
+      
+      hint.appendChild(fullscreenBtn);
+      
       const mermaidDiv = document.createElement('div');
       mermaidDiv.className = 'mermaid';
       mermaidDiv.textContent = codeText;
       
+      wrapper.appendChild(hint);
       wrapper.appendChild(mermaidDiv);
       targetNode.replaceWith(wrapper);
-      
-      const hint = document.createElement('div');
-      hint.className = 'mermaid-hint';
-      hint.textContent = '👆 Scroll horizontally to view the full diagram';
-      wrapper.parentNode.insertBefore(hint, wrapper.nextSibling);
     });
     
     await mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
+
+    // Enable svg-pan-zoom on the newly generated SVGs
+    setTimeout(() => {
+        document.querySelectorAll('.mermaid svg').forEach(svg => {
+            let boundingHeight = svg.getBoundingClientRect().height;
+            // Floor height at 450px so there's enough room to zoom and pan around
+            if (boundingHeight < 450) boundingHeight = 450; 
+            
+            svg.style.width = '100%';
+            svg.style.height = boundingHeight + 'px';
+            svg.style.maxWidth = 'none';
+            
+            svgPanZoom(svg, {
+              zoomEnabled: true,
+              controlIconsEnabled: true,
+              fit: true,
+              center: true,
+              minZoom: 0.5,
+              maxZoom: 10
+            });
+        });
+    }, 200);
   });
 </script>

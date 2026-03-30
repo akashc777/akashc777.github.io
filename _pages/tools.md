@@ -1,7 +1,7 @@
 ---
 layout: tools
 title: "Tools"
-description : "this is meta description"
+description : "The technology stack and developer tools that power OneMana and OneCamp."
 #### tools ####
 tools:
 # tool category

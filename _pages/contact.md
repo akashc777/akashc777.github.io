@@ -1,7 +1,7 @@
 ---
 layout: contact
 title: "Contact Me 📬"
-description : "this is meta description"
+description : "Get in touch with Akash Hadagali regarding OneMana, technical consultations, or distributed systems architecture."
 image: "/assets/images/blogging-2.svg"
 ---
 
