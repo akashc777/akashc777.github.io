@@ -2,7 +2,7 @@
 fname : "Akash Hadagali"
 title : "Hi 👋, I'm Akash Hadagali"
 image : "https://avatars0.githubusercontent.com/u/32003795?s=460&u=80a93697dc85a7c49078821780a5adcd7aaaac83&v=4"
-description : "Founder @ OneMana · Ex-Zomato SDE · Ex-GitHub Campus Expert · Builder of things people hopefully use"
+description : "Founder @ OneMana · Engineer · Builder of things people hopefully use"
 ---
 
 Let me save you the LinkedIn "Open to work" energy. Here's the actual story.
@@ -21,26 +21,7 @@ Is it profitable yet? I launched on March 9th, 2026. Got one sale. **I'm manifes
 
 The frontend is fully [open source on GitHub](https://github.com/OneMana-Soft/OneCamp-fe). The backend ships as a single binary you can set up with one command. Because life is too short for 47-step installation guides.
 
----
 
-## Where I've been 🏢
-
-**Zomato (SDE-1, 2022–2023)**  -  This is where things got real.
-
-I wasn't just writing CRUD. I was:
-- Building chat systems that handled **75,000+ daily inquiries** across Zomato Intercity, Zomaland, and Zomato Gold
-- Cutting **rider fraud by 10%+** through a streamlined order return flow
-- Saving **₹50 lakhs/month** just by implementing video support for customer refunds (yes, really)
-- Migrating legacy PHP monolith bits to **Go microservices**  -  independently, not as part of a task force
-- Integrating **ChatGPT for chat quality control** before everyone and their dog was doing it
-
-Basically: I learned that good engineering is less about clever code and more about what changes *after* you push.
-
-**Zynga (Engineering Intern, 2021–2022)**  -  Made me deeply paranoid about performance.
-
-When you write code for a mobile game with millions of players, you stop being casual about memory allocation and asset sizes real fast. Players *will* find your exploits. Also got to work on a major feature (SeasonPass in CSR2) as 1 of 3 engineers on the team. C#, Unity, Ruby.
-
-**ToolBox (SWE Intern, 2021)**  -  First real job. i18n, webpack, babel, AWS Lambda, DynamoDB, and writing Puppeteer scrapers. The grind era.
 
 ---
 
@@ -49,7 +30,7 @@ When you write code for a mobile game with millions of players, you stop being c
 <h5>
 GoLang <img src="https://emojis.slackmojis.com/emojis/images/1454546974/291/golang.png?1454546974" alt="Go" style="height: 24px; width: auto; vertical-align: middle;"/>  -  My primary language now. OneCamp's entire backend is Go.
 <br><br>
-Next.js / React <img src="https://emojis.slackmojis.com/emojis/images/1473950148/1161/react.png?1473950148" alt="React" style="height: 24px; width: auto; vertical-align: middle;"/>  -  OneCamp FE is Next.js. Also used at Zomato.
+Next.js / React <img src="https://emojis.slackmojis.com/emojis/images/1473950148/1161/react.png?1473950148" alt="React" style="height: 24px; width: auto; vertical-align: middle;"/>  -  OneCamp FE is Next.js.
 <br><br>
 NodeJS <img src="https://emojis.slackmojis.com/emojis/images/1533426774/4425/nodejs.png?1533426774" alt="NodeJS" style="height: 24px; width: auto; vertical-align: middle;"/>  -  Where it all started.
 <br><br>
@@ -79,6 +60,4 @@ Also: Docker, Redis, PostgreSQL, Minio, LiveKit, Ollama, AWS (Lambda, SQS, Dynam
 
 Find me on [Twitter](https://twitter.com/akashc777) · [GitHub](https://github.com/akashc777) · [LinkedIn](https://www.linkedin.com/in/akashhadagali/) · [hey@akash.page](mailto:hey@akash.page)
 
-<a href="https://drive.google.com/file/d/1UjcxPKhf7cjGENHnk6wL4kdjD9A4TTpb/view" target="blank" class="btn btn-primary">Get Resume</a>
-&nbsp;
-<a href="https://onemana.dev/onecamp-product" target="blank" class="btn btn-transparent">Check out OneCamp →</a>
+<a href="https://onemana.dev/onecamp-product" target="blank" class="btn btn-primary">Check out OneCamp →</a>

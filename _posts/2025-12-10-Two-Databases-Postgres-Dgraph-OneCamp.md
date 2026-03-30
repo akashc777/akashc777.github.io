@@ -111,7 +111,7 @@ In Dgraph (DQL), the equivalent is roughly:
 
 One query. The database traverses graph edges. No multi-table joins. No aggregate subqueries.
 
-I've maintained SQL queries like the first example in production at Zomato  -  handling 75k+ daily inquiries on message tables. I've watched them get progressively more painful as data grows: more denormalization, more index tuning, query planner surprises when table statistics drift. The Dgraph approach is a real difference in how readable and maintainable the data access layer stays over time.
+I've maintained SQL queries like the first example in large-scale production  -  handling 75k+ daily inquiries on message tables. I've watched them get progressively more painful as data grows: more denormalization, more index tuning, query planner surprises when table statistics drift. The Dgraph approach is a real difference in how readable and maintainable the data access layer stays over time.
 
 ---
 

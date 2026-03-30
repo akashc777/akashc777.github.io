@@ -21,7 +21,7 @@ This post is about the year that led to that one sale  -  the actual architectur
 
 ## The Itch That Started It 🤔
 
-I worked at Zomato as an SDE-1. Great company, genuinely fun problems, real scale. But every single day I'd open Slack, then Jira, then Notion, then Google Meet, then Google Calendar.
+Early in my career, I worked on large-scale distributed systems. Great teams, genuinely fun problems, real production scale. But every single day I'd open Slack, then Jira, then Notion, then Google Meet, then Google Calendar.
 
 Five apps. Five subscription bills. Five notification systems that don't talk to each other. Five places where context dies.
 
@@ -88,7 +88,7 @@ Why Go?
 
 1. **Deployment simplicity.** No runtime, no `pip install`, no "wait which Node version did you use". You hand someone a binary and they run it. That's it.
 2. **Concurrency model.** When you're handling WebSocket pub/sub, real-time event workers, background AI processing, and calendar sync jobs all at once, goroutines + channels are genuinely nice to work with. I've written async Node.js. I've written threaded Java. Go's model doesn't keep me up at night.
-3. **I hit the wall with PHP at Zomato.** Migrating parts of a PHP monolith to Go microservices cures you of any remaining nostalgia for dynamically typed web frameworks.
+3. **I've seen monoliths hit their limits.** Migrating parts of legacy PHP monoliths to Go microservices cures you of any remaining nostalgia for dynamically typed web frameworks.
 
 The codebase follows a strict layered architecture:
 - **Controllers** → HTTP handlers, input validation, request parsing
@@ -114,7 +114,7 @@ The spicy choice here is **Postgres + Dgraph** instead of just Postgres.
 
 The data in OneCamp is fundamentally graph-shaped. A DM is a relationship between N users. A message is attached to a group (edge) authored by a user (edge). A reaction is attached to a message (edge) added by a user (edge). In SQL, loading all messages in a conversation with their reactions and comment counts is 4-5 JOINs. In Dgraph, it's one traversal query.
 
-At Zomato I watched deeply joined SQL queries on message tables get progressively more painful as volume grew. I'd rather fight the graph database learning curve upfront than fight query planner confusion at 10x scale.
+I've watched deeply joined SQL queries on message tables get progressively more painful as production volume grew. I'd rather fight the graph database learning curve upfront than fight query planner confusion at 10x scale.
 
 > [I wrote a whole post about this decision](/post/Two-Databases-Postgres-Dgraph-OneCamp.html) if you want the full analysis.
 

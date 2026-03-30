@@ -3,7 +3,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 title: Akash Hadagali | Founder, Engineer, Builder
 description: >- # this means to ignore newlines until "baseurl:"
-  I'm Akash Hadagali — ex-Zomato SDE, GitHub Campus Expert, and founder of OneMana.
+  I'm Akash Hadagali — founder of OneMana, engineer, and builder.
   I build things that help teams collaborate without paying per-seat SaaS tax every month.
   Currently shipping OneCamp: a self-hosted, open-source workspace with chat, tasks, docs, video calls, calendar and AI.
 
