@@ -9,7 +9,7 @@ all_projects:
       button:
         enable : true
         label : "Check it out"
-        link : "https://onemana.dev/onecamp-product"
+        link : "https://onemana.dev"
 
     - title : "Multiuser Whiteboard"
       image : "/assets/images/whiteboard.svg"
