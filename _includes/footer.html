@@ -44,14 +44,57 @@
     const blocks = document.querySelectorAll('code.language-mermaid, [class*="language-mermaid"] code');
     if (blocks.length === 0) return;
     
+    // Inject CSS to make diagrams scrollable and prevent shrinking
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .mermaid-wrapper {
+        overflow-x: auto;
+        border: 1px solid #eaeaea;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        background: #fafafa;
+        cursor: ew-resize;
+      }
+      .mermaid-wrapper::-webkit-scrollbar { height: 8px; }
+      .mermaid-wrapper::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+      .mermaid-wrapper::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
+      .mermaid-wrapper::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+      .mermaid svg {
+        max-width: none !important;
+        min-width: 800px; /* Ensures extremely dense charts don't compress */
+        display: block;
+        margin: 0 auto;
+      }
+      .mermaid-hint {
+        text-align: center;
+        font-size: 0.8rem;
+        color: #888;
+        margin-top: -1.5rem;
+        margin-bottom: 2rem;
+        font-style: italic;
+      }
+    `;
+    document.head.appendChild(style);
+
     blocks.forEach((block) => {
       let codeText = block.textContent;
       let targetNode = block.closest('.highlighter-rouge') || block.parentElement;
 
+      const wrapper = document.createElement('div');
+      wrapper.className = 'mermaid-wrapper';
+      
       const mermaidDiv = document.createElement('div');
       mermaidDiv.className = 'mermaid';
       mermaidDiv.textContent = codeText;
-      targetNode.replaceWith(mermaidDiv);
+      
+      wrapper.appendChild(mermaidDiv);
+      targetNode.replaceWith(wrapper);
+      
+      const hint = document.createElement('div');
+      hint.className = 'mermaid-hint';
+      hint.textContent = '👆 Scroll horizontally to view the full diagram';
+      wrapper.parentNode.insertBefore(hint, wrapper.nextSibling);
     });
     
     await mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
