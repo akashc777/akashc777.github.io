@@ -47,13 +47,13 @@ When you write code for a mobile game with millions of players, you stop being c
 ## What I actually know 🛠️
 
 <h5>
-GoLang <img src="https://emojis.slackmojis.com/emojis/images/1454546974/291/golang.png?1454546974" alt="Go" height="20rem" width="auto"/>  -  My primary language now. OneCamp's entire backend is Go.
+GoLang <img src="https://emojis.slackmojis.com/emojis/images/1454546974/291/golang.png?1454546974" alt="Go" style="height: 24px; width: auto; vertical-align: middle;"/>  -  My primary language now. OneCamp's entire backend is Go.
 <br><br>
-Next.js / React <img src="https://emojis.slackmojis.com/emojis/images/1473950148/1161/react.png?1473950148" alt="React" height="20rem" width="auto"/>  -  OneCamp FE is Next.js. Also used at Zomato.
+Next.js / React <img src="https://emojis.slackmojis.com/emojis/images/1473950148/1161/react.png?1473950148" alt="React" style="height: 24px; width: auto; vertical-align: middle;"/>  -  OneCamp FE is Next.js. Also used at Zomato.
 <br><br>
-NodeJS <img src="https://emojis.slackmojis.com/emojis/images/1533426774/4425/nodejs.png?1533426774" alt="NodeJS" height="20rem" width="auto"/>  -  Where it all started.
+NodeJS <img src="https://emojis.slackmojis.com/emojis/images/1533426774/4425/nodejs.png?1533426774" alt="NodeJS" style="height: 24px; width: auto; vertical-align: middle;"/>  -  Where it all started.
 <br><br>
-Ethereum / Blockchain <img src="https://emojis.slackmojis.com/emojis/images/1570483648/6627/ethereum.png?1570483648" alt="Ethereum" height="20rem" width="auto"/>  -  Built ERC-721 tokens and supply chain apps. Still think blockchains are cool even after the hype died.
+Ethereum / Blockchain <img src="https://emojis.slackmojis.com/emojis/images/1570483648/6627/ethereum.png?1570483648" alt="Ethereum" style="height: 24px; width: auto; vertical-align: middle;"/>  -  Built ERC-721 tokens and supply chain apps. Still think blockchains are cool even after the hype died.
 <br><br>
 </h5>
 
@@ -64,7 +64,7 @@ Also: Docker, Redis, PostgreSQL, Minio, LiveKit, Ollama, AWS (Lambda, SQS, Dynam
 ## The nerd credentials 🎓
 
 - **B.Tech Computer Science**  -  Reva University (2017–2021), CGPA 8.75
-- **Ex-GitHub Campus Expert** <img src="https://emojis.slackmojis.com/emojis/images/1450822151/257/github.png?1450822151" alt="GitHub" height="20rem" width="auto"/>  -  Used to run hackathons, mentor students, and give talks at national and international level events. It was a good era.
+- **Ex-GitHub Campus Expert** <img src="https://emojis.slackmojis.com/emojis/images/1450822151/257/github.png?1450822151" alt="GitHub" style="height: 20px; width: auto; vertical-align: middle;"/>  -  Used to run hackathons, mentor students, and give talks at national and international level events. It was a good era.
 - **Research Paper Copyright**  -  My team holds a copyright on a paper about server health monitoring using the Raft Algorithm. [Check it out](https://drive.google.com/file/d/1hl_NwWrr2gvDAevVB_oLdv8kEcKD2gHd/view?usp=sharing)
 
 ---
