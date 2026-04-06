@@ -485,4 +485,4 @@ That's why I built OneCamp. Not because there isn't good software out there  -  
 
 ---
 
-*OneCamp is available at [onemana.dev](https://onemana.dev/onecamp-product). The frontend is open source at [github.com/OneMana-Soft/OneCamp-fe](https://github.com/OneMana-Soft/OneCamp-fe). Previous technical deep-dives: [the dual-database architecture], [the AI streaming layer], and [why we use MQTT for real-time].*
+*OneCamp is available at [onemana.dev](https://onemana.dev/onecamp-product). The frontend is open source at [github.com/OneMana-Soft/OneCamp-fe](https://github.com/OneMana-Soft/OneCamp-fe). Previous technical deep-dives: [the dual-database architecture](/post/Two-Databases-Postgres-Dgraph-OneCamp.html), [the AI streaming layer](/post/Streaming-AI-Go-SSE-Circuit-Breaker.html), and [why we use MQTT for real-time](/post/Why-We-Use-MQTT-for-Real-Time-OneCamp.html).*
