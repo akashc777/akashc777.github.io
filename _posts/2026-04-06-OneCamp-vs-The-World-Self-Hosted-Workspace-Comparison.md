@@ -7,13 +7,13 @@ description : "A brutally honest, technically deep comparison of OneCamp against
 tags : ["OneCamp", "Slack", "Mattermost", "SaaS", "Self-Hosted", "Open Source", "Comparison", "Architecture", "AI", "Go"]
 ---
 
-Teams are paying a lot of money for their tooling. And not just Slack  -  it's Slack **plus** Notion **plus** Jira **plus** Google Meet **plus** a calendar sync tool. Five apps, five bills, five sets of notifications that live in separate universes.
+Teams are paying a lot of money for their tooling. And not just Slack - it's Slack **plus** Notion **plus** Jira **plus** Google Meet **plus** a calendar sync tool. Five apps, five bills, five sets of notifications that live in separate universes.
 
 The alternative isn't just "pick a cheaper app." It's rethinking what a workspace actually is.
 
-I built OneCamp to answer that question for myself. After shipping it, I spent considerable time studying the competition  -  both the incumbents and the growing list of self-hosted alternatives. This post is that analysis: what each tool does well, what they compromise on, and where OneCamp fits in the landscape.
+I built OneCamp to answer that question for myself. After shipping it, I spent considerable time studying the competition - both the incumbents and the growing list of self-hosted alternatives. This post is that analysis: what each tool does well, what they compromise on, and where OneCamp fits in the landscape.
 
-I'll be direct. I'm the person who built OneCamp. But I'll also be accurate, because the point isn't to hype my own project  -  it's to give you a framework for making an informed decision.
+I'll be direct. I'm the person who built OneCamp. But I'll also be accurate, because the point isn't to hype my own project - it's to give you a framework for making an informed decision.
 
 ---
 
@@ -32,7 +32,7 @@ Modern teams use at minimum five separate products for collaboration:
 | **Calendar** | Google Calendar / Outlook |
 | **AI Assistant** | ChatGPT / Claude (separate tab) |
 
-The cost compounds. A 20-person team paying for Slack Pro, Notion Team, Jira Standard, and Zoom Business easily spends **$300–500/month** in pure SaaS seat tax  -  before you count the time lost context-switching between them.
+The cost compounds. A 20-person team paying for Slack Pro, Notion Team, Jira Standard, and Zoom Business easily spends **$300–500/month** in pure SaaS seat tax - before you count the time lost context-switching between them.
 
 The deeper problem: **you are the integration layer.** You finish a task in Jira, then post about it in Slack, then update the relevant Notion doc, then check if the calendar event is still valid. Your brain is doing the API work that these tools should be doing automatically.
 
@@ -79,7 +79,7 @@ And that's just Slack. You still need Notion, Jira, Zoom, and a calendar integra
 
 Notion solved a different problem: the "too many docs scattered across too many places" problem. Block-based documents, wikis, databases, and project boards in one interface.
 
-It's genuinely clever. The database-as-document abstraction  -  where a row in a database can itself be a full page  -  is one of the more creative UI decisions in recent SaaS history.
+It's genuinely clever. The database-as-document abstraction (where a row in a database can itself be a full page) is one of the more creative UI decisions in recent SaaS history.
 
 **Pricing (2026):**
 
@@ -104,7 +104,7 @@ It's genuinely clever. The database-as-document abstraction  -  where a row in a
 
 ## Tier 2: The Self-Hosted Specialists
 
-These tools do one function well, but they do it on your infrastructure. They're the principled alternative to Tier 1  -  but they still only solve one problem.
+These tools do one function well, but they do it on your infrastructure. They're the principled alternative to Tier 1, but they still only solve one problem.
 
 ### Mattermost
 
@@ -159,7 +159,7 @@ Zulip is the contrarian's choice, and I mean that as a compliment. Instead of tr
 - Topic-based threading eliminates "what is this conversation about?" ambiguity
 - Asynchronous-first design: genuinely good for distributed/remote teams
 - 100% open source with no feature-gated "enterprise only" proprietary version
-- The best catch-up experience of any chat tool  -  topics make it easy to scan what happened while you were offline
+- The best catch-up experience of any chat tool - topics make it easy to scan what happened while you were offline
 
 **What Zulip doesn't solve:**
 - Task management: none
@@ -206,7 +206,7 @@ Huly (previously Santeam) is the closest direct competitor to OneCamp's position
 **What Huly's architecture looks like:**
 - Node.js/TypeScript backend
 - MongoDB for primary storage
-- Collaborative editing via Hocuspocus (CRDT)  -  same as OneCamp
+- Collaborative editing via Hocuspocus (CRDT) - same as OneCamp
 - Their own UI framework (Hare UI)
 
 **Where Huly is still maturing:**
@@ -250,7 +250,7 @@ The full system architecture in one diagram:
 
 ### The Five Architectural Decisions That Differentiate OneCamp
 
-**1. Go backend — single binary deployment**
+**1. Go backend - single binary deployment**
 
 The backend compiles to a single Go binary. No runtime dependency, no `pip install`, no "which Node version?" conversation.
 
@@ -258,7 +258,7 @@ What this means practically: when you deploy OneCamp, the application layer is o
 
 Compare to competitors: Mattermost and Rocket.Chat run Node.js backends. Huly runs TypeScript servers. Node.js is capable, but the Go concurrency model handles the mixed I/O patterns of a real-time workspace more gracefully at the single-server level.
 
-**2. MQTT via EMQX for real-time  -  not raw WebSockets**
+**2. MQTT via EMQX for real-time (not raw WebSockets)**
 
 This decision eliminated an entire category of code.
 
@@ -272,11 +272,11 @@ onecamp/{workspace_id}/channel/{channel_uuid} # Public channels
 onecamp/{workspace_id}/user/{user_uuid}       # Per-user events
 ```
 
-When a message is sent, the Go API publishes to the topic. EMQX delivers it to every subscriber. The backend doesn't maintain connection state  -  the broker does. Fan-out at scale is the broker's problem, not ours.
+When a message is sent, the Go API publishes to the topic. EMQX delivers it to every subscriber. The backend doesn't maintain connection state - the broker does. Fan-out at scale is the broker's problem, not ours.
 
 The entire real-time layer — 20 event types covering messages, reactions, typing indicators, video call status, and user presence — is handled by ~450 lines of TypeScript in the frontend client and a single Docker service in the stack.
 
-**3. Postgres + Dgraph — polyglot persistence for graph-shaped data**
+**3. Postgres + Dgraph - polyglot persistence for graph-shaped data**
 
 Chat data is fundamentally a graph. A DM is an edge between users. A message is an edge from a user to a group, carrying a text payload. A reaction is an edge from a user to a message.
 
@@ -300,9 +300,9 @@ Most collaboration tools compromise on at least one of these three distinct real
 
 LiveKit is self-hostable and produces HD video. A Python transcription agent runs alongside LiveKit sessions, streaming audio to a STT provider and sending transcripts to the Go backend for storage and AI retrieval.
 
-Hocuspocus uses CRDTs (Conflict-free Replicated Data Types)  -  the same technology that powers Google Docs' conflict resolution. Two people editing simultaneously don't overwrite each other. The CRDT algorithm merges changes automatically.
+Hocuspocus uses CRDTs (Conflict-free Replicated Data Types), the same technology that powers Google Docs' conflict resolution. Two people editing simultaneously don't overwrite each other. The CRDT algorithm merges changes automatically.
 
-**5. The AI layer — workspace-aware, local-first, non-destructive**
+**5. The AI layer - workspace-aware, local-first, non-destructive**
 
 OneCamp AI is the most architecturally differentiated feature. Let me describe exactly what it does:
 
@@ -457,9 +457,9 @@ Something important is happening in the developer tooling market right now.
 
 The "SaaS is obviously right" assumption that dominated 2015-2022 is being questioned. The repricing events (Slack's multiple price increases, Twitter/X API lockdown, various SaaS platforms deprecating features without notice) taught a painful lesson: **tools you don't own can be repriced or removed at any time.**
 
-At the same time, self-hosting has genuinely gotten easier. Docker Compose, Traefik for automatic TLS, managed VPS providers starting at $10/month  -  the operational overhead of self-hosting a professional stack has collapsed compared to what it was five years ago.
+At the same time, self-hosting has genuinely gotten easier. Docker Compose, Traefik for automatic TLS, managed VPS providers starting at $10/month. The operational overhead of self-hosting a professional stack has collapsed compared to what it was five years ago.
 
-OneCamp's `onemana` CLI spins up the complete stack  -  10+ services including the LLM  -  in minutes. That wasn't possible to build this cleanly in 2020.
+OneCamp's `onemana` CLI spins up the complete stack (10+ services including the LLM) in minutes. That wasn't possible to build this cleanly in 2020.
 
 The conversation is shifting from "should we self-host?" to "why aren't we self-hosting?"
 
@@ -481,7 +481,7 @@ Do you need local AI + RAG?       → OneCamp (the only option that ships this)
 
 The workspace tooling market is in an interesting moment. The incumbents are mature but expensive and opinionated. The self-hosted alternatives are increasingly capable. And the all-in-one category is young enough that the right product still hasn't been universally crowned.
 
-That's why I built OneCamp. Not because there isn't good software out there  -  there is. But because none of the good software was all of it, on my infrastructure, without a monthly invoice tied to my headcount.
+That's why I built OneCamp. Not because there isn't good software out there - there is. But because none of the good software was all of it, on my infrastructure, without a monthly invoice tied to my headcount.
 
 ---
 
