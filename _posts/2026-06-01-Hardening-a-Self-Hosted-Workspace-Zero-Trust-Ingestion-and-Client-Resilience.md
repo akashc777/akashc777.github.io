@@ -1,10 +1,10 @@
 ---
-title : "Hardening a Self-Hosted Workspace: Zero-Trust Ingestion and Client Resilience"
-image : "/assets/images/post/onecamp-security-resilience-hero.png"
-author : "Akash Hadagali"
+title: "Hardening a Self-Hosted Workspace: Zero-Trust Ingestion and Client Resilience"
+image: "/assets/images/post/onecamp-security-resilience-hero.png"
+author: "Akash Hadagali"
 date: 2026-06-01 16:45:00 +0530
-description : "How I built a zero-trust ingestion layer for OneCamp—implementing magic-byte file signatures, zip-slip and zip-bomb decompression protection, ClamAV socket scanning, and designed a visibility-aware exponential backoff polling engine for client-server resilience."
-tags : ["OneCamp", "Go", "NextJS", "Security", "Zero-Trust", "ClamAV", "Decompression", "API-Resilience", "Web-Performance"]
+description: "How I built a zero-trust ingestion layer for OneCamp—implementing magic-byte file signatures, zip-slip and zip-bomb decompression protection, ClamAV socket scanning, and designed a visibility-aware exponential backoff polling engine for client-server resilience."
+tags: ["OneCamp", "Go", "NextJS", "Security", "Zero-Trust", "ClamAV", "Decompression", "API-Resilience", "Web-Performance"]
 ---
 
 When you host your own workspace, security isn't someone else's problem. 
@@ -63,7 +63,7 @@ To neutralize this risk:
 1.  We maintain a strict allowlist of images safe for inline browser rendering (`inlineSafeTypes`: png, jpeg, gif, webp, bmp, and ico). Note that SVG is explicitly excluded.
 2.  If the file extension belongs to a `dangerousExtensions` list (such as `.html`, `.svg`, `.wasm`, `.exe`, or `.sh`), the Content-Type is immediately coerced to `application/octet-stream`.
 3.  We force the browser to treat the download as a secure file save by formatting a robust RFC 5987-compliant header:
-    ```http
+    ```text
     Content-Disposition: attachment; filename="untrusted.svg"; filename*=UTF-8''untrusted.svg
     ```
 Because it is served as an attachment with a raw stream MIME type, modern browsers will always save it to disk instead of executing or rendering it, completely eliminating stored-XSS threats.
