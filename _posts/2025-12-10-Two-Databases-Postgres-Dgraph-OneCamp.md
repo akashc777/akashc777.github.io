@@ -1,6 +1,6 @@
 ---
 title : "Why OneCamp Uses Both Postgres AND Dgraph (And Whether That Was a Mistake)"
-image : "/assets/images/post/onecamp-hero.png"
+image : "/assets/images/post/onecamp-databases-improved.jpg"
 author : "Akash Hadagali"
 date: 2025-12-10 12:00:00 +0530
 description : "Most apps get away with one database. OneCamp uses two  -  Postgres for users and config, Dgraph for the social graph. Here's the reasoning, the tradeoffs, the distributed write problem, and whether I'd do it again."

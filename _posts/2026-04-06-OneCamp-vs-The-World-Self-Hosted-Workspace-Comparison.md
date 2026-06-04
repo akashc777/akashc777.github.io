@@ -1,6 +1,6 @@
 ---
 title : "OneCamp vs. The World: A Deep Technical Comparison of Self-Hosted Workspace Tools"
-image : "/assets/images/post/onecamp-hero.png"
+image : "/assets/images/post/onecamp-vs-world-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-04-06 12:00:00 +0530
 description : "A brutally honest, technically deep comparison of OneCamp against Slack, Mattermost, Rocket.Chat, Zulip, Notion, and Huly. Architecture, pricing models, AI capabilities, data ownership, and what none of the marketing pages tell you."

@@ -1,6 +1,6 @@
 ---
 title : "Why I Used MQTT for Team Chat (Not WebSockets)  -  And What That Taught Me About Broker-Based Architectures"
-image : "/assets/images/post/onecamp-hero.png"
+image : "/assets/images/post/onecamp-realtime-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-02-14 12:00:00 +0530
 description : "Deep dive into OneCamp's real-time messaging layer  -  why MQTT beat raw WebSockets, how topics map to workspace entities, the Redux pattern that keeps UI and transport completely decoupled, and the scroll position problem that made me sob."

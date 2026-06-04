@@ -1,6 +1,6 @@
 ---
 title: "How I Built a Self-Hosted, AI-Agnostic Workspace with Active Memory Layering"
-image: "/assets/images/post/onecamp-ai-native-hero.png"
+image: "/assets/images/post/onecamp-ai-memory-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-01 16:30:00 +0530
 description: "How I re-engineered OneCamp to support hot-swappable local and cloud LLMs, implemented a self-calibrating EWMA token budget to prevent context truncation, and designed a structured workspace memory layer spanning Postgres, OpenSearch, and DGraph GraphRAG."

@@ -1,6 +1,6 @@
 ---
 title : "How I Built a Universal Import Engine Supporting 8 Different Productivity Platforms"
-image : "/assets/images/post/onecamp-importer-hero.png"
+image : "/assets/images/post/onecamp-importer-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-05-25 12:00:00 +0530
 description : "How I engineered a high-throughput, chunk-based, multi-database migration engine for OneCamp that seamlessly unifies, de-duplicates, and ingests workspace data from Slack, Notion, Asana, Jira, Linear, Trello, ClickUp, and Todoist."

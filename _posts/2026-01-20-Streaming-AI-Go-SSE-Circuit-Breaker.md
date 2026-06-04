@@ -1,6 +1,6 @@
 ---
 title : "Streaming AI in Go: SSE, Circuit Breakers, and the nginx Buffering Bug That Aged Me"
-image : "/assets/images/post/onecamp-hero.png"
+image : "/assets/images/post/onecamp-streaming-ai-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-01-20 12:00:00 +0530
 description : "The real technical details behind OneCamp's streaming AI feature  -  Server-Sent Events in Go's net/http, a fast-path optimization for conversational inputs, post-stream tool call parsing, circuit breakers, and the React batching gotcha that will catch you eventually."

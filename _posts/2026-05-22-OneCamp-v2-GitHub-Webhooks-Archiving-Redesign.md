@@ -1,6 +1,6 @@
 ---
 title : "OneCamp v2.0: GitHub Sync, Custom Webhooks, Data Archiving, and a Complete Frontend Redesign"
-image : "/assets/images/post/onecamp-v2-hero.png"
+image : "/assets/images/post/onecamp-v2-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-05-22 12:00:00 +0530
 description : "The biggest OneCamp update since launch. Bidirectional GitHub integration, production-grade webhook infrastructure, admin data archiving with undo, and a ground-up frontend redesign — 38,000+ lines of new code across 634 files."

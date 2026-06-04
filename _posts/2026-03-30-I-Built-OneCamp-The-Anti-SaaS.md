@@ -1,6 +1,6 @@
 ---
 title : "I Spent a Year Building OneCamp. Here's the Complete Architecture."
-image : "/assets/images/post/onecamp-hero.png"
+image : "/assets/images/post/onecamp-hero-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-03-30 12:00:00 +0530
 description : "The honest, technical story of building OneCamp  -  a self-hosted all-in-one workspace. Full system architecture, real tech choices, and the reality of launch day."

@@ -1,6 +1,6 @@
 ---
 title: "Hardening a Self-Hosted Workspace: Zero-Trust Ingestion and Client Resilience"
-image: "/assets/images/post/onecamp-security-resilience-hero.png"
+image: "/assets/images/post/onecamp-security-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-01 16:45:00 +0530
 description: "How I built a zero-trust ingestion layer for OneCamp—implementing magic-byte file signatures, zip-slip and zip-bomb decompression protection, ClamAV socket scanning, and designed a visibility-aware exponential backoff polling engine for client-server resilience."
