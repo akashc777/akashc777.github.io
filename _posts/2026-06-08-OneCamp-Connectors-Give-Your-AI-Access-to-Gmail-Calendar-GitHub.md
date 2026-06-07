@@ -200,6 +200,8 @@ The obvious next connectors are Slack (for teams migrating to OneCamp who need h
 
 The larger ambition is what I'd call a unified **context layer** — your workspace AI having a complete picture of your working context across every tool you use, all of it on infrastructure you control. Connectors are the first step toward that.
 
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+
 ---
 
 *Previous posts: [Slash Command App Platform](/post/How-I-Built-a-Slash-Command-App-Platform-for-OneCamp.html) · [AI-Agnostic Workspace with Active Memory Layering](/post/How-I-Built-an-AI-Agnostic-Workspace-with-Active-Memory-Layering.html) · [Universal Import Engine](/post/How-I-Built-a-Universal-Import-Engine-For-8-Different-Providers.html) · [Building the Anti-SaaS Workspace](/post/I-Built-OneCamp-The-Anti-SaaS.html)*

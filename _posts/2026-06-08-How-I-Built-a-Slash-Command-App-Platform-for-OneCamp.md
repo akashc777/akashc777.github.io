@@ -280,6 +280,8 @@ And the whole thing — from installing Zoom to configuring a custom internal bo
 
 You can check out the app platform in the Admin panel under **Apps & Integrations**. If you want to connect an external app, the request format and signing scheme are documented in the repo.
 
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+
 ---
 
 *Previous posts: [AI-Agnostic Workspace with Active Memory Layering](/post/How-I-Built-an-AI-Agnostic-Workspace-with-Active-Memory-Layering.html) · [Universal Import Engine](/post/How-I-Built-a-Universal-Import-Engine-For-8-Different-Providers.html) · [OneCamp v2.0: GitHub, Webhooks, Archiving](/post/OneCamp-v2-GitHub-Webhooks-Archiving-Redesign.html) · [Building the Anti-SaaS Workspace](/post/I-Built-OneCamp-The-Anti-SaaS.html)*
