@@ -1,6 +1,6 @@
 ---
 title: "OneCamp Connectors: I Gave the Workspace AI Access to Gmail, Google Calendar, and GitHub"
-image: "/assets/images/post/onecamp-ai-memory-improved.jpg"
+image: "/assets/images/post/onecamp-connectors-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-08 14:00:00 +0530
 description: "How I built per-user OAuth connectors for Gmail, Google Calendar, and GitHub so OneCamp's AI can read emails, check your calendar, and surface pull requests — all on your own infrastructure, without a single byte of your data touching a third-party aggregator."

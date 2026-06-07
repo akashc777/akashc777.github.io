@@ -16,6 +16,7 @@ sass:
   style: compressed
   
 # Build settings
+future: true
 markdown: kramdown
 highlighter: rouge
 kramdown:
