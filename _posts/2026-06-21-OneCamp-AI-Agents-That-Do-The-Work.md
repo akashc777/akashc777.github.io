@@ -1,6 +1,6 @@
 ---
 title: "OneCamp AI Agents: From a Chatbot That Answers to a Coworker That Does the Work"
-image: "/assets/images/post/onecamp-ai-native-hero.png"
+image: "/assets/images/post/onecamp-ai-agents-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-21 14:00:00 +0530
 description: "How I turned OneCamp's workspace AI from a question-answering assistant into an agent that creates and updates tasks, drafts docs, manages projects, and chains reads into actions, all while respecting the exact permission model a human user has, and never acting without confirmation."

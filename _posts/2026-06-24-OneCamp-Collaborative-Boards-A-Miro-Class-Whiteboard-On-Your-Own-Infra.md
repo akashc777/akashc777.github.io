@@ -1,6 +1,6 @@
 ---
 title: "OneCamp Collaborative Boards: A Miro-Class Whiteboard On Your Own Infrastructure"
-image: "/assets/images/post/whiteboard.png"
+image: "/assets/images/post/onecamp-boards-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-24 14:00:00 +0530
 description: "How I built a real-time, multiplayer whiteboard into OneCamp: Excalidraw bound to Yjs over the same collaboration server the docs use, live cursors, an AI that draws diagrams and UI mockups, pinned comments with mentions, snapshot-based mass-delete recovery, and an access model that mirrors the rest of the workspace, all self-hosted."
