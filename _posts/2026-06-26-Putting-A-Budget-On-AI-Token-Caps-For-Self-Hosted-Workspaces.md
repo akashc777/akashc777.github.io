@@ -1,6 +1,6 @@
 ---
 title: "Putting a Budget on AI: Workspace and Per-User Token Caps for a Self-Hosted Workspace"
-image: "/assets/images/post/onecamp-ai-native-hero.png"
+image: "/assets/images/post/onecamp-ai-budget.jpg"
 author: "Akash Hadagali"
 date: 2026-06-26 16:00:00 +0530
 description: "How I added enterprise-grade cost control to OneCamp's AI: metering and gating every model call at one provider chokepoint, daily token budgets for the whole workspace and per individual user, a per-run token cap and wall-clock deadline for agents, exact-or-estimated streaming usage, fail-open Redis metering, admin-editable hot-reloaded limits, and a usage panel, all self-hosted."

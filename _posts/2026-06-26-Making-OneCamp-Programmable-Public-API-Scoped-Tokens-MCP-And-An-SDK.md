@@ -1,6 +1,6 @@
 ---
 title: "Making OneCamp Programmable: A Public API, Scoped Tokens, an MCP Server, and a TypeScript SDK"
-image: "/assets/images/post/onecamp-app-platform-improved.jpg"
+image: "/assets/images/post/onecamp-api-programmable.jpg"
 author: "Akash Hadagali"
 date: 2026-06-26 10:00:00 +0530
 description: "Turning a self-hosted workspace into a platform: scoped, hashed personal access tokens with per-token rate limiting and audit, a /v1 API that reuses the app's own permission-checked business layer, OneCamp as an MCP server so any AI client can call its tools, an MCP client so agents can use external tool servers, a TypeScript SDK, and shareable templates, all without the API ever exceeding what its owner could do by hand."
