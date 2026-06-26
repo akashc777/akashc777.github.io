@@ -138,6 +138,20 @@ It supports flowcharts, roadmaps, user journeys, mind maps, org charts, and, my 
 
 The generated elements are appended to the live scene, which means they flow straight into the Yjs document, which means your collaborators watch the diagram materialize on their screens in real time. And the whole thing rides the same model-agnostic AI service as the rest of OneCamp, with the same rate limiter, circuit breaker, and per-user model selection. The workspace owner picks the model; the board does not care.
 
+### From single-shot to deep, multi-pass diagrams
+
+The first version asked the model for the whole diagram in one shot. That is fine for "five boxes and some arrows", but it falls apart on "the full architecture of our payment system": a single pass produces something shallow and generic, because the model is spreading one budget of attention across structure *and* detail at once.
+
+So generation became a pipeline you can opt into with a "Detailed" toggle. It first asks the model to **plan**: name the major regions and how many nodes each deserves. Then it **expands** each region in its own focused call, where the model has room to add the specific services, states, and decision branches that make a diagram actually useful. The passes are stitched into one graph, re-validated (labels sanitized, dangling edges dropped, counts capped), and laid out by the same dependency-free auto-layout. The result has real depth without ever handing the model a blank cheque on size.
+
+Because the deep path takes several model calls, progress streams back over **Server-Sent Events**: "planning… expanding 'checkout'… laying out…", so a 20-second generation feels like watching something get built rather than staring at a spinner.
+
+### Editing by conversation
+
+A diagram is never right the first time. Instead of regenerating from scratch and losing your manual tweaks, there is a natural-language **refine** endpoint: select the diagram, type "add a retry path from the payment service back to the queue, and color the failure states red", and the model receives the *current* graph as structured input and returns a *diff* applied to it. Your edits survive; the change is surgical.
+
+One small fix that mattered more than it sounds: UI-mockup text used to overflow its component box. The renderer now wraps label text to the box width and reserves matching height up front, so a generated wireframe stays tidy instead of spilling over its own buttons.
+
 ---
 
 ## Comments, Mentions, And The Activity Feed 💬
