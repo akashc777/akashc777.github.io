@@ -21,12 +21,12 @@ The session cookie is the wrong credential for a script. It is broad, it expires
 
 Three things make them safe to hand to a program:
 
-- **Stored hashed, shown once.** The plaintext (`ocp_…`) is returned exactly once at creation and never again; the database holds only a SHA-256 hash. A database leak yields no usable tokens. Auth looks the token up by hash through a unique index, so verification is one indexed read on the hot path.
+- **Stored hashed, shown once.** The plaintext (`oc_…`) is returned exactly once at creation and never again; the database holds only a SHA-256 hash. A database leak yields no usable tokens. Auth looks the token up by hash through a unique index, so verification is one indexed read on the hot path.
 - **Scoped.** A token carries a set of scopes like `tasks:read`, `tasks:write`, `tables:write`, `messages:write`. Each route asserts the scope it needs; a token only reaches the operations it was granted, nothing more.
 - **Bounded and revocable.** Tokens can carry an expiry, there is a per-user cap on how many can be active, and revoking is immediate.
 
 ```
-Authorization: Bearer ocp_a1b2c3...
+Authorization: Bearer oc_a1b2c3...
 ```
 
 Every authenticated call also touches a best-effort "last used" timestamp so a user can see and prune stale tokens.
@@ -105,7 +105,7 @@ A workspace you can click is a product. A workspace you can also program, on inf
 
 ## How To Use It 🚀
 
-**Mint a token.** Go to **Settings → API tokens → New token**. Give it a name, tick only the scopes it needs (e.g. `tasks:write`, `tables:write`), optionally set an expiry, and create it. Copy the `ocp_…` secret **now**, it is shown once. Store it in your secret manager or CI secrets, never in code.
+**Mint a token.** Go to **Settings → API tokens → New token**. Give it a name, tick only the scopes it needs (e.g. `tasks:write`, `tables:write`), optionally set an expiry, and create it. Copy the `oc_…` secret **now**, it is shown once. Store it in your secret manager or CI secrets, never in code.
 
 **Call the API with curl.** Send the token as a bearer header:
 
@@ -149,7 +149,7 @@ await oc.tasks.create({ project_id, title: "Release v2", priority: "high" })
   "mcpServers": {
     "onecamp": {
       "url": "https://work.acme.com/v1/mcp",
-      "headers": { "Authorization": "Bearer ocp_..." }
+      "headers": { "Authorization": "Bearer oc_..." }
     }
   }
 }
