@@ -3,8 +3,8 @@ title: "OneCamp AI Teammates: Agents That Live in Your Channels, With Governance
 image: "/assets/images/post/onecamp-ai-teammates-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-30 10:00:00 +0530
-description: "The next chapter for OneCamp's agents: instead of a separate chatbot, an agent becomes a real, named member of a channel or a DM you can @mention, with its own model and permissions. Plus the governance that makes that safe to give a team, approval modes for writes, a saved-test eval harness, a tamper-evident audit log, reliability dashboards, and a week of cross-surface AI that meets you where you already work."
-tags: ["OneCamp", "Go", "NextJS", "AI", "Agents", "Governance", "Audit", "Self-Hosted", "OpenSource"]
+description: "The next chapter for OneCamp's agents: instead of a separate chatbot, an agent becomes a real, named member of a channel or a DM you can @mention, with its own model and permissions. You can now assign it a task and trust it to finish, on a durable engine that survives restarts, resumes the same work, posts live progress, and pauses to ask when it is stuck. Plus the governance that makes that safe to give a team, approval modes for writes, per-agent and per-channel spend caps, a saved-test eval harness, a tamper-evident audit log, reliability dashboards, and a week of cross-surface AI that meets you where you already work."
+tags: ["OneCamp", "Go", "NextJS", "AI", "Agents", "Governance", "Audit", "Durable", "Self-Hosted", "OpenSource"]
 ---
 
 A few weeks ago I wrote about turning OneCamp's assistant from a chatbot that answers into an agent that does the work: creates tasks, drafts docs, reads then acts, always behind a confirmation gate and the user's own permissions.
@@ -39,6 +39,26 @@ Schedules are real cron-style recurrence (daily / weekly with specific weekdays 
 
 ---
 
+## Hand It Real Work, and Trust It to Finish 🎯
+
+Answering an @mention is the easy half of being a coworker. The real test is whether you can *hand someone a task and walk away*. So an AI teammate can now be **assigned a task** exactly like a person: set it as the assignee on any task, and it picks the work up.
+
+What makes that something you can actually rely on is what happens underneath. An assignment is not a fire-and-forget prompt that lives or dies with one request, it creates a **durable job** on a real queue:
+
+- **It survives a restart.** Redeploy the server mid-run and the job is reclaimed and continued, not lost. A teammate that forgets what it was doing every time you ship is not a teammate.
+- **It resumes the *same* work.** The conversation is checkpointed step by step, so a pause or crash picks up where it left off, and it rebuilds what it has already done so it never repeats a write it already made.
+- **It retries transient trouble** (a rate limit, a brief model outage) with backoff, on its own, without burning through its attempt budget for problems that were never its fault.
+- **It posts one evolving status comment** right on the task: "On it" the moment it starts, a live "Working… (used: search_workspace, create_task)" as stages complete, and the final result in the same comment, so the task thread reads like a teammate narrating progress instead of going dark and surprising you at the end.
+- **It can multitask.** A single AI teammate can work several assigned tasks at once, with a fairness cap so one busy agent never starves the others waiting in line.
+
+And when it genuinely cannot proceed without you, a missing decision, an ambiguous spec, it does not guess and it does not silently fail. It **pauses and asks**: posts "I'm blocked, here's what I need, reply to continue" on the task, parks itself, and **resumes the instant you reply** right there in the thread. The same generic "I need a human" gate works for any agent and any kind of work.
+
+Between runs it keeps short **working notes** to itself, so a long or scheduled task advances slice by slice instead of starting cold each time. You can read those notes in the agent's reliability panel, the agent's own running account of what is done and what is left.
+
+It is deliberately **one engine** for every kind of async work. A research task, a triage task, and a coding task all ride the same durable machine, just with different tools, rather than a separate bespoke pipeline per use case.
+
+---
+
 ## The Hard Part: Governance You Can Actually Trust 🔐
 
 Giving an autonomous teammate write access to your workspace is exactly as scary as it sounds, unless you can answer four questions: *Can I control what it does on its own? Can I measure whether it is any good? Can I see everything it did? Can I prove the record was not tampered with?*
@@ -66,6 +86,10 @@ Every consequential action, agent writes, API calls, AI operations, lands in an 
 
 Agents now report health. The agents list shows a **per-agent health dot** and a **fleet overview strip** (how many agents, recent run success, failures), and each agent's run-history dialog has a **reliability panel** plus the full **run transcript**, so you can read exactly what the agent saw, thought, and did on any given run. Debugging an agent stopped being a mystery.
 
+### Spend you can cap, per agent and per channel
+
+An autonomous teammate that quietly bills to whoever owns it is a surprise waiting to happen. So the AI token budget is now a dial you can set **per agent and per channel**, not just one workspace total. A busy teammate's spend is billed to *its own* daily budget instead of eating its owner's personal quota, each channel can carry its own daily cap (so a chatty channel can't run up the whole bill), and the admin panel shows **today's top-spending users and channels**. When a run hits a cap it does not crash, it pauses and resumes after the budget resets, and tells the team once so a quiet job isn't mistaken for a stuck one. Cost becomes something you watch on a dashboard, not something you discover later.
+
 ---
 
 ## Building an Agent Without Writing a Prompt Wall 🧱
@@ -77,6 +101,7 @@ The builder got more capable and less fiddly:
 - **Per-agent knowledge sources:** ground a specific agent in specific material, so the Support agent answers from the support docs and not the whole workspace.
 - **A `search_workspace` tool:** any agent can recall across the whole workspace and your connected accounts (more on that below), so it is not limited to what fits in its prompt.
 - **Per-agent model:** each agent runs on the model the admin authorizes for it, with its token cap clearly conveyed in replies. A cheap local model for the chatty agent, a stronger one for the analyst.
+- **Coding depth, safely:** an engineering agent can **analyze code, summarize a repo, and read recent changes** to ground its answer, all read-only. Anything that *writes* code stays behind a confirmation and runs through an admin-registered MCP server that honors each tool's read-only hint, so the agent can reason about your code freely while the vendor and the act of writing stay your explicit choice.
 
 ---
 
@@ -111,9 +136,11 @@ And every piece of it, the model, the memory, the audit log, the conversations t
 
 **DM it.** From a new DM, pick the agent (DM-able agents are discoverable there) and talk to it 1:1 with full memory and multi-turn context. Great for a personal "draft this", "what did I miss", "summarize this" specialist.
 
+**Hand it a task.** Open any task and set an AI teammate as the **assignee**, the same field you'd use for a person. It picks the work up on the durable queue, posts an "On it" then live progress as a comment on the task, asks right there if it gets blocked (reply to unblock it), and posts its result when done, surviving any restart in between.
+
 **Make it proactive.** In the builder, add a **schedule trigger**, choose the channel and cadence (daily / weekdays / a set time) and the instruction. Or add an **event trigger** like a new table row to make it react automatically.
 
-**Trust it with evidence.** Add a few **saved tests** to the agent and run them to get a pass-rate badge; check the **health dot** and **run history** on the agents list to see how it is doing; and from **Admin → Audit log**, hit **Verify integrity** and **Export** when you need a clean compliance record.
+**Trust it with evidence.** Add a few **saved tests** to the agent and run them to get a pass-rate badge; check the **health dot** and **run history** on the agents list to see how it is doing; set a **daily token cap** on the agent (and on busy channels) so its spend is bounded and visible; and from **Admin → Audit log**, hit **Verify integrity** and **Export** when you need a clean compliance record.
 
 **Use the cross-surface AI.** Watch the **"Needs you"** card on home and act on approvals inline; press **Cmd+K** to search across your workspace, memory, and connected apps; on a calendar event use **Find a better time** and the **prep brief**; in a chat, **extract tasks** from the discussion; on a board, **Cluster** the notes.
 
