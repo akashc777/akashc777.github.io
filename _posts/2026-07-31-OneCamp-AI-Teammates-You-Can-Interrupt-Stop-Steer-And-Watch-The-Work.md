@@ -1,6 +1,6 @@
 ---
 title: "AI Teammates You Can Interrupt: Stop It, Steer It, and Actually Watch It Work"
-image: "/assets/images/post/onecamp-realtime-improved.jpg"
+image: "/assets/images/post/onecamp-ai-interrupt.jpg"
 author: "Akash Hadagali"
 date: 2026-07-31 10:00:00 +0530
 description: "Handing work to an AI agent has had one uncomfortable property from the start: once it goes, it's gone. You watch a spinner, you can't change your mind, and if it's heading the wrong way you wait for it to finish being wrong. This release fixes that. You can stop an agent from the thread you're standing in, send it a correction while it's still working, and see what it's doing without refreshing. Long conversations no longer die at the model's context limit. And stopping an AI answer actually stops paying for it."

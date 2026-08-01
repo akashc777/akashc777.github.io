@@ -1,6 +1,6 @@
 ---
 title: "What We Fixed So You Never Notice: A Search Outage, a Coding Agent That Couldn't Run, and 31 Screens That Lied to You"
-image: "/assets/images/post/onecamp-security-resilience-hero.png"
+image: "/assets/images/post/onecamp-reliability-fixes.jpg"
 author: "Akash Hadagali"
 date: 2026-08-01 10:00:00 +0530
 description: "No new features in this one. A search node was killed by someone pasting a screenshot into a document. The coding agent turned out to be unable to work in the exact configuration it shipped with. And 31 screens told people they had no data when the truth was a failed request. This is the unglamorous half of building software, written up honestly, because the bugs are more instructive than the features."
