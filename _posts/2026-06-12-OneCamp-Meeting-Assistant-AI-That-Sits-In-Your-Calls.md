@@ -120,7 +120,7 @@ In OneCamp, the agent runs on your infrastructure. The transcript is stored in y
 
 Start a call in any channel, group, or DM. If your admin has transcription and meeting recap enabled, the assistant joins automatically — you'll see live captions during the call, and a recap will land in the conversation shortly after it ends. No "invite the notetaker" dance, no separate bot to set up per meeting.
 
-OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/buy) — one payment, unlimited users, your server.
 
 ---
 

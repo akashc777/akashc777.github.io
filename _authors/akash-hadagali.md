@@ -15,7 +15,7 @@ I'm the founder of **[OneMana](https://onemana.dev)**  -  a tiny one-person comp
 
 Teams today pay for Slack. Then Jira. Then Notion. Then Zoom. Then some calendar thing. None of them talk to each other. You end up doing 40% of your job just *switching tabs*.
 
-I built **[OneCamp](https://onemana.dev/onecamp-product)**  -  a self-hosted, all-in-one workspace with real-time chat, tasks, docs, video calls, calendar, and a local AI assistant. Runs on your own server. One-time payment. No per-seat pricing. No vendor lock-in.
+I built **[OneCamp](https://onemana.dev/buy)**  -  a self-hosted, all-in-one workspace with real-time chat, tasks, docs, video calls, calendar, and a local AI assistant. Runs on your own server. One-time payment. No per-seat pricing. No vendor lock-in.
 
 I launched OneCamp on March 9th, 2026. The mission is simple: break the cycle of endless subscriptions. 🚀
 
@@ -54,4 +54,4 @@ Also: Docker, Redis, PostgreSQL, Minio, LiveKit, Ollama, AWS (Lambda, SQS, Dynam
 
 Find me on [Twitter](https://twitter.com/akashc777) · [GitHub](https://github.com/akashc777) · [LinkedIn](https://www.linkedin.com/in/akashhadagali/) · [hey@akash.page](mailto:hey@akash.page)
 
-<a href="https://onemana.dev/onecamp-product" target="blank" class="btn btn-primary">Check out OneCamp →</a>
+<a href="https://onemana.dev/buy" target="blank" class="btn btn-primary">Check out OneCamp →</a>

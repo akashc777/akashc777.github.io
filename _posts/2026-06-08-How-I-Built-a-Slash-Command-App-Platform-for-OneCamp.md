@@ -11,7 +11,7 @@ There's a moment in every workspace product's life where chat alone stops being 
 
 You want to trigger a Jira issue from a conversation. You want a GIF button. You want to ask your AI a quick question without leaving the channel. You want CI/CD notifications to show up in the right channel automatically.
 
-Slack has `/commands`. Notion has integrations. Every serious collaboration tool eventually builds some version of an app platform. And so, a few weeks ago, I built one for [OneCamp](https://onemana.dev/onecamp-product).
+Slack has `/commands`. Notion has integrations. Every serious collaboration tool eventually builds some version of an app platform. And so, a few weeks ago, I built one for [OneCamp](https://onemana.dev/buy).
 
 This post is about exactly how I built it — the architecture, the tradeoffs, and one specific design decision that I think gets overlooked in most write-ups of systems like this: **how to avoid the trap of requiring a backend deploy every time someone wants to add a new app.**
 
@@ -280,7 +280,7 @@ And the whole thing — from installing Zoom to configuring a custom internal bo
 
 You can check out the app platform in the Admin panel under **Apps & Integrations**. If you want to connect an external app, the request format and signing scheme are documented in the repo.
 
-OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/buy) — one payment, unlimited users, your server.
 
 ---
 

@@ -200,7 +200,7 @@ The obvious next connectors are Slack (for teams migrating to OneCamp who need h
 
 The larger ambition is what I'd call a unified **context layer** — your workspace AI having a complete picture of your working context across every tool you use, all of it on infrastructure you control. Connectors are the first step toward that.
 
-OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/buy) — one payment, unlimited users, your server.
 
 ---
 

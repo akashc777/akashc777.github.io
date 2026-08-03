@@ -500,7 +500,7 @@ The webhook infrastructure opens up a whole category of automation that wasn't p
 
 Next up: mobile push notification improvements, performance optimization for large workspaces, and expanding the integration surface area.
 
-OneCamp is available at [onemana.dev](https://onemana.dev/onecamp-product). The frontend is open source at [github.com/OneMana-Soft/OneCamp-fe](https://github.com/OneMana-Soft/OneCamp-fe).
+OneCamp is available at [onemana.dev](https://onemana.dev/buy). The frontend is open source at [github.com/OneMana-Soft/OneCamp-fe](https://github.com/OneMana-Soft/OneCamp-fe).
 
 ---
 

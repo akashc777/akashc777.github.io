@@ -198,7 +198,7 @@ You get the power of intelligent workspace briefings, instant unread digests ("C
 
 The new AI configuration panel and local model browser are now live in the **Admin Settings > AI Configuration** dashboard. Give it a spin, pull down a local Llama model, and let me know how it performs on your hardware!
 
-OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/buy) — one payment, unlimited users, your server.
 
 ---
 

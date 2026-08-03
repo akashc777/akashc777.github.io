@@ -117,7 +117,7 @@ I'll be straight: the usefulness of nudges is only as good as the commitments th
 
 It's the difference between a tool you operate and a teammate who's paying attention. I'd rather build the second one.
 
-OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/buy) — one payment, unlimited users, your server.
 
 ---
 

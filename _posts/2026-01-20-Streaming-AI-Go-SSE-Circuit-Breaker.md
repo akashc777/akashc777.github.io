@@ -250,4 +250,4 @@ This pattern  -  local closure variable as the reliable value, React state as th
 
 ---
 
-*[OneCamp is open source on the frontend](https://github.com/OneMana-Soft/OneCamp-fe)  -  `services/aiService.ts` has the full streaming client. The backend runs as a single Go binary at [onemana.dev](https://onemana.dev/onecamp-product). Local AI, no data leaves your server.*
+*[OneCamp is open source on the frontend](https://github.com/OneMana-Soft/OneCamp-fe)  -  `services/aiService.ts` has the full streaming client. The backend runs as a single Go binary at [onemana.dev](https://onemana.dev/buy). Local AI, no data leaves your server.*

@@ -218,4 +218,4 @@ The technical debt being: the databases are excellent at their separate jobs, bu
 
 ---
 
-*All five stores run inside a single Docker Compose stack, spun up with one `onemana` command. [Check out OneCamp at onemana.dev](https://onemana.dev/onecamp-product) or explore the [open-source frontend on GitHub](https://github.com/OneMana-Soft/OneCamp-fe).*
+*All five stores run inside a single Docker Compose stack, spun up with one `onemana` command. [Check out OneCamp at onemana.dev](https://onemana.dev/buy) or explore the [open-source frontend on GitHub](https://github.com/OneMana-Soft/OneCamp-fe).*

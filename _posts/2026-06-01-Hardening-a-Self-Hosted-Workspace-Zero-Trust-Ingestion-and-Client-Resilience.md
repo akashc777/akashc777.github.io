@@ -162,7 +162,7 @@ You get the isolation of running on your own physical hardware, with the enterpr
 
 The zero-trust upload security layer and import workers are fully live in the [OneCamp backend repository](file:///home/akash/Documents/oneCamp). Dive into the `helpers/uploadsafe` and `hooks/useResilientPolling.ts` files to explore the full Go and TypeScript implementations!
 
-OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/buy) — one payment, unlimited users, your server.
 
 ---
 

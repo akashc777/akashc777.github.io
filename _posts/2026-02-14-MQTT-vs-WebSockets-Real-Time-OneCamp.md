@@ -206,4 +206,4 @@ If you're building a self-hosted collaboration tool, give MQTT serious considera
 
 ---
 
-*[OneCamp's frontend](https://github.com/OneMana-Soft/OneCamp-fe) is open source  -  `services/mqttService.ts` has the full client implementation. The self-hosted stack at [onemana.dev](https://onemana.dev/onecamp-product) includes a pre-configured EMQX instance.*
+*[OneCamp's frontend](https://github.com/OneMana-Soft/OneCamp-fe) is open source  -  `services/mqttService.ts` has the full client implementation. The self-hosted stack at [onemana.dev](https://onemana.dev/buy) includes a pre-configured EMQX instance.*

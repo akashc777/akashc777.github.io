@@ -7,7 +7,7 @@ description : "The honest, technical story of building OneCamp  -  a self-hosted
 tags : ["OneCamp", "SaaS", "Go", "NextJS", "Self-Hosted", "Startup", "OpenSource", "IndieHacker"]
 ---
 
-On March 9th, 2026, I launched [OneCamp](https://onemana.dev/onecamp-product).
+On March 9th, 2026, I launched [OneCamp](https://onemana.dev/buy).
 
 It's a self-hosted, all-in-one workspace. Chat. Tasks. Docs. Video calls. Calendar. A local AI assistant. All on your own server. One-time payment. No per-seat pricing.
 
@@ -230,7 +230,7 @@ I'm fixing this now. One post at a time.
 
 OneCamp isn't going anywhere. I believe in the problem. Teams deserve to own their tools.
 
-If you're paying SaaS seat tax every month for tools your team barely uses, look at [onemana.dev](https://onemana.dev/onecamp-product). 
+If you're paying SaaS seat tax every month for tools your team barely uses, look at [onemana.dev](https://onemana.dev/buy). 
 
 If you want to contribute to the open-source frontend: [github.com/OneMana-Soft/OneCamp-fe](https://github.com/OneMana-Soft/OneCamp-fe)
 

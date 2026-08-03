@@ -97,7 +97,7 @@ And like everything in OneCamp, it runs entirely on your server. No third-party 
 
 That's the whole philosophy in miniature — give teams the power they actually want, without quietly handing a SaaS vendor a window into everything they say.
 
-OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/onecamp-product) — one payment, unlimited users, your server.
+OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https://onemana.dev/buy) — one payment, unlimited users, your server.
 
 ---
 
