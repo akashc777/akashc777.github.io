@@ -92,6 +92,24 @@ And the dead helper that led me here? It really was superseded — group-chat na
 
 If there's one portable lesson: **parallel arrays that grow under different conditions are a bug waiting for a schedule.** They look fine for as long as every destination type happens to be present, or absent, together.
 
+### The sweep afterwards
+
+Finding one instance of a defect class by accident is not the same as knowing whether there are others, so I went looking for every place a loop bounded by one slice's length indexes a second slice. Nine sites. Six of them write both slices at the same index in a single statement, so they cannot drift. Three were bulk Postgres writers taking parallel lists from a caller — and they didn't agree with each other. One had the length check. One had none, on two independent pairings. And one had this:
+
+```go
+if len(toUUIDs) == 0 || len(toUUIDs) != len(grpIDs) {
+    return nil
+}
+```
+
+That treats "nothing to do" and "you handed me inconsistent data" as the same outcome. If a caller's two lists ever drifted, every DM notification in the batch was skipped — no error returned, nothing logged, notifications simply never arriving and no trace to explain why. The empty case really is a no-op; a mismatch is now an error.
+
+Worth noting the direction nobody guards: a slice that's too *long* doesn't panic, it silently drops rows, because the loop stops at the shorter one. Only the short case fails loudly.
+
+The strongest argument for adding the missing checks wasn't my judgement — it was that one of the three already had one. The invariant was already recognised in this codebase. Two writers just never said it out loud. They now share a single helper, so the rule reads the same everywhere and the error names which inputs disagreed and by how much, which is what you want when the drift happened in code somewhere else.
+
+No live caller violates any of them today. The sweep found no second instance of data actually being mispaired.
+
 ---
 
 ## Making It a Build Failure ✅
