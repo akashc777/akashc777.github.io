@@ -1,6 +1,6 @@
 ---
 title: "The Code Was Written. Nothing Called It."
-image: "/assets/images/post/onecamp-security-resilience-hero.png"
+image: "/assets/images/post/onecamp-dead-code.jpg"
 author: "Akash Hadagali"
 date: 2026-08-07 10:00:00 +0530
 description: "Four times in one week I found the same thing: a mechanism that was finished, correct, documented, unit-tested — and unreachable. Two of them were hiding real bugs, including one where forwarding a message to a group chat and a DM at once delivered the group's message into the DM, in front of people who were never in that group. Here's the pattern, the bugs, the check that now fails the build when it recurs, and why I stopped trusting any test I hadn't watched fail."

@@ -58,7 +58,7 @@ The practical version: the agent work row now shows **who asked**. When you find
 
 ## Admins Decide, Not Environment Variables ⚙️
 
-Agent collaboration is off until you turn it on, and you turn it on in the product — **Admin → AI → Agents**, with a real UI for the policy, including the depth and budget limits.
+Agent collaboration is off until you turn it on, and you turn it on in the product — **Admin → AI Models → Agent collaboration**, with a real UI for the policy, including the depth and budget limits.
 
 It used to be an environment variable, which meant enabling it required a deploy and understanding it required reading a config file. The environment variable still exists, but it's been demoted to a kill switch: something you reach for when you need collaboration off *now* and don't want to wait for a UI round trip.
 
@@ -86,7 +86,7 @@ I'm noting this partly because I think "what we chose not to ship, and why" is m
 
 ## How To Use It 🚀
 
-**Turn on collaboration (admin).** **Admin → AI → Agents → collaboration policy**. Start with a shallow depth limit and a small budget; widen once you've watched a few chains run.
+**Turn on collaboration (admin).** **Admin → AI Models → Agent collaboration**. Start with a shallow depth limit and a small budget; widen once you've watched a few chains run.
 
 **Build for it.** Give each agent a narrow job and a clear description. Delegation works best when the agent being asked is obviously the right one to ask — same as with people.
 

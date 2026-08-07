@@ -1,6 +1,6 @@
 ---
 title: "Regex Is Not a Sanitiser, and Other Things I Got Wrong About Text"
-image: "/assets/images/post/onecamp-v2-hero.png"
+image: "/assets/images/post/onecamp-text-security.jpg"
 author: "Akash Hadagali"
 date: 2026-08-07 09:00:00 +0530
 description: "Four fixes about handling text and media, none of which involve AI. Truncating a string by bytes was splitting characters and producing invalid UTF-8, and the guard around it was appending an ellipsis to text it had never shortened. A markdown renderer was stripping script tags with regexes and handing the result to dangerouslySetInnerHTML — five payloads walked straight through it, on the origin where the admin session lives. An uploaded SVG could run script when navigated to directly. And base64 images were still reaching the search index by a path the guard never covered."

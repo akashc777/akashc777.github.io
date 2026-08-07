@@ -116,9 +116,9 @@ Every capability this week is one people usually only get by shipping their data
 
 ## How To Use It 🚀
 
-**Give an agent data skills.** In **Admin → AI → Agents**, open an agent and add **Analyze a table** (`query_table`) to its tools. Ask it a question about a table in a channel/DM ("bugs per assignee this week") and it answers from the data, with a chart inline when the answer has a shape. For tables directly, add a **Chart view** from the table's view switcher.
+**Give an agent data skills.** In **Settings → Agents**, open an agent and add **Analyze a table** (`query_table`) to its tools. Ask it a question about a table in a channel/DM ("bugs per assignee this week") and it answers from the data, with a chart inline when the answer has a shape. For tables directly, add a **Chart view** from the table's view switcher.
 
-**Turn on code analysis (optional, admin).** Deploy the runner sidecar, then enable it from **Admin → AI → Code analysis sandbox**. Once on, add **`run_analysis`** to an agent's tools. Watch per-agent/channel usage from the reliability panel; read the operator doc first.
+**Turn on code analysis (optional, admin).** Deploy the runner sidecar, then enable it from **Admin → AI Models → Code analysis sandbox**. Once on, add **`run_analysis`** to an agent's tools. Watch per-agent/channel usage from the reliability panel; read the operator doc first.
 
 **Let it see and stay grounded.** Just paste an image into a channel/DM/thread and @mention the agent, it sees it. Temporal grounding is automatic.
 

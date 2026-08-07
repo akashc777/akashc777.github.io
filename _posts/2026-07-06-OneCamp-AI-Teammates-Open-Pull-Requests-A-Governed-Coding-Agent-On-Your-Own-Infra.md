@@ -96,7 +96,7 @@ So: is OneCamp "better than" Honk and Claude Code? Not at raw code quality today
 
 **Deploy the runner (operator).** Bring up the coding profile alongside your stack, then run the containment smoke check, it must pass (git host reachable, everything else blocked, no direct internet) before you go further. The playbook is in `CODING.md`.
 
-**Enable it (admin).** In **Admin → AI → Code pull requests**, enter the runner URL and token and save; the enable toggle unlocks once a runner is configured. Hit **Test runner** to confirm the round-trip works.
+**Enable it (admin).** In **Admin → AI Models → Code pull requests**, enter the runner URL and token and save; the enable toggle unlocks once a runner is configured. Hit **Test runner** to confirm the round-trip works.
 
 **Give an agent the skill.** Add the `code_pr` capability to an engineering agent in the builder, keep it in *Require approval* mode to start.
 

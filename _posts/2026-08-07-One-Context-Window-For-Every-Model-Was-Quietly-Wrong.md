@@ -1,6 +1,6 @@
 ---
 title: "One Context Window for Every Model Was Quietly Wrong"
-image: "/assets/images/post/onecamp-ai-native-hero.png"
+image: "/assets/images/post/onecamp-context-window.jpg"
 author: "Akash Hadagali"
 date: 2026-08-07 11:00:00 +0530
 description: "OneCamp lets an admin allow several models, and a member, a channel or an agent can each pick a different one. But there was exactly one context window setting, and every budget read it no matter which model actually answered. That is wrong in both directions and silently: a channel pinned to a 128k model under an 8192 workspace threw away context that fitted, and on a local model it was worse than wasteful — the model was genuinely run small. Limits now live per model, with a Detect button that asks the provider, and an answer built from a shortened prompt now says so."

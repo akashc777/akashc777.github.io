@@ -92,7 +92,7 @@ That's also why the governance work and this work belong to the same story. Appr
 
 **Watch progress.** No action needed. Queued work appears immediately and updates push themselves. If your connection drops, it reconciles when it returns.
 
-**See compaction (admin).** In the run detail under **Admin → AI → Agents**, compaction points are marked inline so you can see where the conversation was condensed.
+**See compaction (admin).** In the run detail under **Settings → Agents**, compaction points are marked inline so you can see where the conversation was condensed.
 
 ---
 

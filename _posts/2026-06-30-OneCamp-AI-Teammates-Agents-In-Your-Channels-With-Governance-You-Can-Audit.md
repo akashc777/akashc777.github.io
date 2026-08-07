@@ -130,7 +130,7 @@ And every piece of it, the model, the memory, the audit log, the conversations t
 
 ## How To Use It 🚀
 
-**Build an agent.** Go to **Admin → AI → Agents → New agent**. Either describe it in plain language and let OneCamp draft it, or fill it in: name, instructions, the tools it may use, optional **skills** and **knowledge sources**, and the **model** it should run on. Set its **autonomy** to *Require approval* to start, you can loosen it later once you trust it.
+**Build an agent.** Go to **Settings → Agents → New agent**. Either describe it in plain language and let OneCamp draft it, or fill it in: name, instructions, the tools it may use, optional **skills** and **knowledge sources**, and the **model** it should run on. Set its **autonomy** to *Require approval* to start, you can loosen it later once you trust it.
 
 **Put it in a channel.** Open a channel, add the agent from the member picker (or the in-channel AI teammates picker), and set its **allowed channels**. Now anyone in that channel can **@mention** it and it replies in the thread. If it is in approval mode, write actions show up as approval cards in the thread, click to approve.
 
@@ -140,7 +140,7 @@ And every piece of it, the model, the memory, the audit log, the conversations t
 
 **Make it proactive.** In the builder, add a **schedule trigger**, choose the channel and cadence (daily / weekdays / a set time) and the instruction. Or add an **event trigger** like a new table row to make it react automatically.
 
-**Trust it with evidence.** Add a few **saved tests** to the agent and run them to get a pass-rate badge; check the **health dot** and **run history** on the agents list to see how it is doing; set a **daily token cap** on the agent (and on busy channels) so its spend is bounded and visible; and from **Admin → Audit log**, hit **Verify integrity** and **Export** when you need a clean compliance record.
+**Trust it with evidence.** Add a few **saved tests** to the agent and run them to get a pass-rate badge; check the **health dot** and **run history** on the agents list to see how it is doing; set a **daily token cap** on the agent (and on busy channels) so its spend is bounded and visible; and from **Admin → Settings → Audit log**, hit **Verify integrity** and **Export** when you need a clean compliance record.
 
 **Use the cross-surface AI.** Watch the **"Needs you"** card on home and act on approvals inline; press **Cmd+K** to search across your workspace, memory, and connected apps; on a calendar event use **Find a better time** and the **prep brief**; in a chat, **extract tasks** from the discussion; on a board, **Cluster** the notes.
 

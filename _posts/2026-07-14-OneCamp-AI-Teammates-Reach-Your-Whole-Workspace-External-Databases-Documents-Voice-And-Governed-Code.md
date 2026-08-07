@@ -89,7 +89,7 @@ Look at the list, query a production database, read a contract PDF, transcribe a
 
 ## How To Use It 🚀
 
-**Connect a database (admin).** In **Admin → AI → Data sources**, add a PostgreSQL or MySQL connection, pick the engine, and hit **Test connection** before saving. Then ask an agent a question about it, you'll get an answer plus an **editable query-plan card** you can inspect and re-run.
+**Connect a database (admin).** In **Settings → Agents → Data sources**, add a PostgreSQL or MySQL connection, pick the engine, and hit **Test connection** before saving. Then ask an agent a question about it, you'll get an answer plus an **editable query-plan card** you can inspect and re-run.
 
 **Let it read your files.** Drop a PDF or DOCX into any chat and use **Summarize with AI** from the attachment lightbox. For search, ask on the global search page and read the **cited** answer.
 
@@ -99,7 +99,7 @@ Look at the list, query a production database, read a contract PDF, transcribe a
 
 **Reply in-thread.** Quote a message to reply inline, on desktop or mobile; click a reply preview to jump to its parent.
 
-**Give the coding agent room (admin).** In **Admin → AI → Code pull requests**, optionally set a **dedicated code-run model** and enable **work on any accessible repository** if you want the agent to reach beyond linked repos. Keep destructive actions in approval mode, and watch the reliability scorecard before you widen the blast radius.
+**Give the coding agent room (admin).** In **Admin → AI Models → Code pull requests**, optionally set a **dedicated code-run model** and enable **work on any accessible repository** if you want the agent to reach beyond linked repos. Keep destructive actions in approval mode, and watch the reliability scorecard before you widen the blast radius.
 
 ---
 

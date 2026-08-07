@@ -155,7 +155,7 @@ await oc.tasks.create({ project_id, title: "Release v2", priority: "high" })
 }
 ```
 
-**Give your agents external tools (OneCamp as an MCP client).** As an admin, open **Admin → AI → MCP servers → Add server**, paste the external server's URL and any auth header, and hit **Test**. OneCamp introspects it and lists its tools; enable it, and those tools (namespaced like `mcp_github_…`) become selectable when you build an agent.
+**Give your agents external tools (OneCamp as an MCP client).** As an admin, open **Admin → AI Models → MCP servers → Add server**, paste the external server's URL and any auth header, and hit **Test**. OneCamp introspects it and lists its tools; enable it, and those tools (namespaced like `mcp_github_…`) become selectable when you build an agent.
 
 **Share what you built.** On any agent or workflow row in the admin panel, click **Save as template**. Teammates open **Templates**, find it, and click **Install** to get their own copy (it starts inactive so they can review it first).
 
