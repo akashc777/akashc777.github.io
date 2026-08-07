@@ -71,4 +71,4 @@ The ownership of the item keeps changing in the supply chain until it reaches th
 
 
 [Click here to see the GitHub repo]: https://github.com/akashc777/CoffeeSupplyChain
-[my previous blockchain blog]: /post/Real-State-Title-ETH-Blockchain-Project.html
+[my previous blockchain blog]: /post/Real-Estate-Title-ETH-Blockchain-Project.html
