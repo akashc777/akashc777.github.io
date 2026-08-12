@@ -1,6 +1,6 @@
 ---
 title: "The Same One-Line Fault, Five Times, and the Test That Missed It Too"
-image: "/assets/images/post/onecamp-realtime-improved.jpg"
+image: "/assets/images/post/onecamp-one-line-fault.jpg"
 author: "Akash Hadagali"
 date: 2026-08-12 11:00:00 +0530
 description: "Every document and board in the workspace showed 'Reconnecting to collaboration server...' for two weeks, because one unhandled rejection killed a container that had no restart policy. Fixing that one service was the wrong-sized fix: eight more services in the same file would not have survived a reboot, including Postgres, and the same default was in the stack that ships to customers. Then a Makefile target turned out to point at a stub that would have undone the fix, ten compose files turned out to be divergent duplicates of services already defined, `latest` had already moved for all eight upstream images — and the test I wrote to catch the original fault silently skipped a service because its name had a comment after it."

@@ -1,6 +1,6 @@
 ---
 title: "A Failed Signup Burned the Email Address Forever"
-image: "/assets/images/post/onecamp-v2-improved.jpg"
+image: "/assets/images/post/onecamp-failed-signup.jpg"
 author: "Akash Hadagali"
 date: 2026-08-12 10:00:00 +0530
 description: "Creating a user wrote to Postgres, then to Dgraph, and on a Dgraph failure it logged and returned — leaving a row that owns the email address and an account nobody can see. Every retry then failed on the unique constraint, and for SSO every subsequent login failed the same way with no self-service recovery. The same pattern was in channels, teams and projects. Sending a message had a crueller version: the rollback overwrote the error that triggered it, so the API returned 'created post successfully' for a message it had just deleted. Also: 790 response bodies were handing clients Postgres constraint names and internal source lines, and an MCP server whose secret wouldn't decrypt was registered and called with an empty auth header."

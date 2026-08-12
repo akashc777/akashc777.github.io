@@ -1,6 +1,6 @@
 ---
 title: "Two-Factor, SCIM, and the Config File Nothing Was Checking"
-image: "/assets/images/post/onecamp-security-resilience-hero.png"
+image: "/assets/images/post/onecamp-2fa-scim.jpg"
 author: "Akash Hadagali"
 date: 2026-08-12 12:00:00 +0530
 description: "OneCamp now has TOTP two-factor sign-in and SCIM 2.0 provisioning, so Okta or Entra can create and deactivate members and a stolen password is no longer enough. Writing them turned up four decisions where the obvious answer was wrong — reusing the AI key-encryption key would have locked every enrolled user out on the next provider leak, and reusing the API-token middleware for SCIM meant offboarding the admin who connected Okta would silently kill provisioning. Then my own commit corrupted the production config template, and every gate passed, because nothing in the repository had ever read that file."
