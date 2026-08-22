@@ -7,6 +7,11 @@ description: "OneCamp now ships as two tracked editions: v1 without AI, and v2 w
 tags: ["OneCamp", "Release", "Self-Hosted", "OpenSource", "DevOps", "CI", "Enterprise"]
 ---
 
+> **Note, added later:** the day after this was written, those seven commands were replaced by a
+> single `make install`. This post is the story of how the install got fixed, not the current
+> instructions — for those, see [the installation guide](https://onemana.dev/docs/installation),
+> or [OneCamp Cloud](https://onemana.dev/docs/cloud) if you would rather not run a server at all.
+
 If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API, and optional AI teammates. It runs on **your** infrastructure, with **your** choice of model.
 
 This week was release infrastructure, not features. The kind of week that is invisible when it works and very visible when it doesn't. It follows [two-factor and SCIM](/post/Two-Factor-SCIM-And-The-Config-File-Nothing-Was-Checking.html), [a compose fault found five times](/post/The-Same-One-Line-Fault-Five-Times-And-The-Test-That-Missed-It-Too.html), and [a failed signup that burned the email](/post/A-Failed-Signup-Burned-The-Email-Address-Forever.html). The other post from these days is [one server per customer, and the four times the obvious design was wrong](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html).
