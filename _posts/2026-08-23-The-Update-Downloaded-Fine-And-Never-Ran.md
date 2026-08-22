@@ -1,6 +1,6 @@
 ---
 title: "The Update Downloaded Fine, and Never Ran"
-image: "/assets/images/post/onecamp-release-editions.jpg"
+image: "/assets/images/post/onecamp-updater.jpg"
 author: "Akash Hadagali"
 date: 2026-08-23 12:00:00 +0530
 description: "Shipping self-hosted software means the update runs on a machine you cannot see, at a moment you do not choose, on a database you must not break. OneCamp's updater downloaded the new version and stopped there, leaving customers with new code on disk and old code running, and nothing anywhere said so. Fixing it turned up an ordering question with a real answer, a backup that had never once succeeded on a fresh machine, and a release I shipped twice that could not start."
@@ -8,6 +8,8 @@ tags: ["OneCamp", "Self-Hosted", "Deployment", "Migrations", "Backups", "Shell",
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace, chat, docs, tasks, projects, calls, boards, tables, an API, with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
+
+This sits on [two tracked editions, and the customer install that actually works](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html), and on [one server per customer](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html). The first is what a self-hosted update has to land on. The second is the customers who still have no update path at all.
 
 Which means when I ship a fix, I cannot deploy it. You do. On a machine I have never seen, at a time I do not choose, over a database I must not break. Everything I know about deployment assumes I am holding the other end. None of that is true here.
 
@@ -123,3 +125,7 @@ That is the wrong way round, and it is next.
 Three of the four problems here were code that had never run: an unreachable fallback on the only path that needed it, a check that ran after the thing it checked for was created, a fatal startup gate on a file I had just removed. None of them threw an error. Two of them printed success.
 
 The through line is that I verified by reading what the software said about itself. What it says is written by the same person who wrote the bug. The exit code, the checksum, the state of the database afterwards: those are written by the machine, and the machine has no opinion about whether the update worked.
+
+The install surface this has to land on: [shipping two editions](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html). The customers who still have no update path: [one server per customer](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html).
+
+*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

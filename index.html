@@ -114,11 +114,10 @@ layout: default
         
         <div class="bg-white shadow block bradius">
           <h2>Posts 📝</h2><br>
-          {% for post in paginator.posts %}
+          {% for post in site.posts limit: 6 %}
           {% include post.html %}
           {% endfor %}
-          <!-- pagination -->
-          {% include pagination.html %}
+          <a href="{{ '/blog.html' | relative_url }}" class="btn btn-sm btn-transparent pl-0 mt-2">View all posts</a>
         </div>
       </div>
     </div>

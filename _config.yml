@@ -31,9 +31,6 @@ plugins:
   - jekyll/tagging
   - jemoji
 
-paginate: 3
-paginate_path: "/page/:num"
-
 
 # include
 include:
