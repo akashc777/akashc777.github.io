@@ -115,3 +115,7 @@ Four things, none of them clever:
 **Point every new guard at the bug it was written for.** A test that has never seen the failure it guards against is a comment.
 
 The recovery paths, the token hashing, the slimmer images and the CI boot check are all live. The Firebase key rotation is the one item still outstanding, and it's the one that matters most.
+
+The other posts from these days: [one server per customer](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html), and [shipping two editions](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html). Before that: [two-factor and SCIM](/post/Two-Factor-SCIM-And-The-Config-File-Nothing-Was-Checking.html).
+
+*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

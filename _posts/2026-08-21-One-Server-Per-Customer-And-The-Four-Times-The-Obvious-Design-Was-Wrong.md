@@ -104,3 +104,7 @@ The whole flow is built, instrumented, tested and deployed. Every step has been 
 **It has never provisioned a real machine.** The SSH transport and the provider's reinstall call have not run against actual hardware, because doing that means buying a server to throw away, and I've been building the thing that spends money before spending it. That dry run is the last thing between this and a paying customer, and until it happens I'd describe managed hosting as *finished* rather than *proven*.
 
 If you want the version that is proven: [the self-hosted edition](https://onemana.dev/buy) has been running in production for months, and it's the same product. You just have to bring the machine.
+
+The install surface this sits on: [shipping two editions, and the customer install that actually works](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html). The week before: [two-factor and SCIM](/post/Two-Factor-SCIM-And-The-Config-File-Nothing-Was-Checking.html), [a compose fault found five times](/post/The-Same-One-Line-Fault-Five-Times-And-The-Test-That-Missed-It-Too.html), and [a failed signup that burned the email](/post/A-Failed-Signup-Burned-The-Email-Address-Forever.html).
+
+*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Managed hosting is the other option, one machine per customer, once it has provisioned a real one. Find it at [onemana.dev](https://onemana.dev/buy).*
