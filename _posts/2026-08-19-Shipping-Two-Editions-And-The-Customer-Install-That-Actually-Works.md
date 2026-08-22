@@ -7,10 +7,17 @@ description: "OneCamp now ships as two tracked editions: v1 without AI, and v2 w
 tags: ["OneCamp", "Release", "Self-Hosted", "OpenSource", "DevOps", "CI", "Enterprise"]
 ---
 
-> **Note, added later:** the day after this was written, those seven commands were replaced by a
-> single `make install`. This post is the story of how the install got fixed, not the current
-> instructions — for those, see [the installation guide](https://onemana.dev/docs/installation),
-> or [OneCamp Cloud](https://onemana.dev/docs/cloud) if you would rather not run a server at all.
+> **Note, added later.** Two things in this post have since changed, and one of them matters.
+>
+> **Do not install `v1.0.0` or `v2.0.0`.** They were the current tags the day this was written; the
+> current ones are **`v1.4.4` and `v2.4.4`**. Everything before `v1.4.4` / `v2.4.4` shipped a
+> service-account credential inside the archive and baked your `.env` into the container image. Both
+> are fixed, and the credential has been rotated — but the old tags still contain them.
+>
+> The seven commands below were also replaced the next day by a single `make install`. This post is
+> the story of how the install got fixed, not the instructions — for those see
+> [the installation guide](https://onemana.dev/docs/installation), or
+> [OneCamp Cloud](https://onemana.dev/docs/cloud) if you would rather not run a server at all.
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API, and optional AI teammates. It runs on **your** infrastructure, with **your** choice of model.
 
@@ -20,10 +27,13 @@ This week was release infrastructure, not features. The kind of week that is inv
 
 ## Two Editions, Two Tags
 
-OneCamp has always had an AI branch and a non-AI branch, but the tags were drifting. `v1.0.0` and `v2.0.0` now point to the heads of the two edition branches:
+OneCamp has always had an AI branch and a non-AI branch, but the tags were drifting. As of today, `v1.0.0` and `v2.0.0` point to the heads of the two edition branches:
 
 - **v2.0.0** is the AI edition (`main`).
 - **v1.0.0** is the AI-free edition (`without-ai`).
+
+*Both lines have moved on since — see the note above. The scheme is what lasted: an even major for
+the AI edition, an odd one for the AI-free edition, each tracking its own branch.*
 
 The AI-free tree is not the same code with features hidden. It is a separate build that has the AI packages, routes, marketplace entry, and AI-only environment keys removed. That means a v1 install never downloads an Ollama image, never exposes an AI endpoint, and never asks an operator to configure keys for a feature that is not there.
 
