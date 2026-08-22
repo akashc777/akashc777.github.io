@@ -7,12 +7,12 @@ description: "OneCamp now ships as two tracked editions: v1 without AI, and v2 w
 tags: ["OneCamp", "Release", "Self-Hosted", "OpenSource", "DevOps", "CI", "Enterprise"]
 ---
 
-> **Note, added later.** Two things in this post have since changed, and one of them matters.
+> **Note, added later.** Two things have changed since this was written.
 >
-> **Do not install `v1.0.0` or `v2.0.0`.** They were the current tags the day this was written; the
-> current ones are **`v1.4.4` and `v2.4.4`**. Everything before `v1.4.4` / `v2.4.4` shipped a
-> service-account credential inside the archive and baked your `.env` into the container image. Both
-> are fixed, and the credential has been rotated — but the old tags still contain them.
+> **If you downloaded before 22 August 2026, re-run the installer.** Releases before that date
+> shipped a service-account credential inside the archive and baked your `.env` into the container
+> image. Both are fixed. You do not need to look up a version — the installer always fetches the
+> current release on the edition you choose. Delete the old archive once you have re-downloaded.
 >
 > The seven commands below were also replaced the next day by a single `make install`. This post is
 > the story of how the install got fixed, not the instructions — for those see
@@ -25,15 +25,16 @@ This week was release infrastructure, not features. The kind of week that is inv
 
 ---
 
-## Two Editions, Two Tags
+## Two Editions, Two Branches
 
-OneCamp has always had an AI branch and a non-AI branch, but the tags were drifting. As of today, `v1.0.0` and `v2.0.0` point to the heads of the two edition branches:
+OneCamp has always had an AI branch and a non-AI branch, but the releases were drifting. They are now two permanent editions, each tracking its own branch:
 
-- **v2.0.0** is the AI edition (`main`).
-- **v1.0.0** is the AI-free edition (`without-ai`).
+- **v1** is the AI-free edition (`without-ai`).
+- **v2** is the AI edition (`main`).
 
-*Both lines have moved on since — see the note above. The scheme is what lasted: an even major for
-the AI edition, an odd one for the AI-free edition, each tracking its own branch.*
+That is the whole vocabulary a customer needs. Nobody picks a version number: you choose an edition,
+and the installer fetches the current release on that line. Every licence includes **both**, so
+moving from v1 to v2 later is a re-run of the installer, not another purchase.
 
 The AI-free tree is not the same code with features hidden. It is a separate build that has the AI packages, routes, marketplace entry, and AI-only environment keys removed. That means a v1 install never downloads an Ollama image, never exposes an AI endpoint, and never asks an operator to configure keys for a feature that is not there.
 
