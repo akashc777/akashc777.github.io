@@ -126,6 +126,6 @@ Three of the four problems here were code that had never run: an unreachable fal
 
 The through line is that I verified by reading what the software said about itself. What it says is written by the same person who wrote the bug. The exit code, the checksum, the state of the database afterwards: those are written by the machine, and the machine has no opinion about whether the update worked.
 
-The install surface this has to land on: [shipping two editions](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html). The customers who still have no update path: [one server per customer](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html).
+The install surface this has to land on: [shipping two editions](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html). The customers who still have no update path: [one server per customer](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html). The same class of green light a week later: [one dead hostname took video calls down for 26 days](/post/One-Dead-Hostname-Took-Video-Calls-Down-For-26-Days.html).
 
 *[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

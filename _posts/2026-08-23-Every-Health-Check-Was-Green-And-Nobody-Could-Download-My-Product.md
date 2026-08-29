@@ -1,6 +1,6 @@
 ---
 title: "Every Health Check Was Green and Nobody Could Download My Product"
-image: "/assets/images/post/onecamp-release-editions.jpg"
+image: "/assets/images/post/onecamp-health-check.jpg"
 author: "Akash Hadagali"
 date: 2026-08-23 18:00:00 +0530
 description: "I made the build server's Docker image smaller, which is a good idea, and it removed two binaries that appear in no import statement. The service compiled, started, stayed healthy, answered its install script from memory, and returned 404 for the actual product. It stayed that way for hours. Four failures stacked on top of each other, each one hidden by the one above it, and the only reason I found any of them was asking a question that had nothing to do with them."
@@ -8,6 +8,8 @@ tags: ["OneCamp", "Docker", "Go", "Operations", "Silent Failure", "Self-Hosted",
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace, chat, docs, tasks, projects, calls, boards, tables, an API, with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
+
+This follows [the update that downloaded and never ran](/post/The-Update-Downloaded-Fine-And-Never-Ran.html). That one left new files on disk and the old binary running. This one left a healthy process that could not produce a download.
 
 The service that sells it does something slightly unusual: it compiles OneCamp on request. A customer's licence decides which release line they get, so the server clones the repository at that tag, patches two constants with the customer's own domains, builds a binary, and zips it. One archive per customer, built when they ask for it.
 
@@ -119,3 +121,7 @@ What I would do differently is notice that "this service needs a build toolchain
 The Dockerfile now says so, at some length, including the part where the right answer is to build archives in CI and stop running a compiler on the API box. Until that exists, the dependency is real, and being honest about it beats a small image that cannot do its job.
 
 Health checks tell you a process is running. They are very bad at telling you it is useful.
+
+What that looks like when the green thing is a certificate instead of a health check: [one dead hostname took video calls down for 26 days](/post/One-Dead-Hostname-Took-Video-Calls-Down-For-26-Days.html).
+
+*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
