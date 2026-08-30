@@ -146,6 +146,6 @@ If you run OneCamp: the object-store and collaboration fixes matter to you, and 
 
 And if you have a Traefik rule that accumulates hostnames, go read it. Mine had been wrong for a month and the only symptom was that a feature people rarely test on a demo had stopped existing.
 
-The same class of green light, twice already this month: [every health check was green](/post/Every-Health-Check-Was-Green-And-Nobody-Could-Download-My-Product.html), and [the update that downloaded and never ran](/post/The-Update-Downloaded-Fine-And-Never-Ran.html).
+The same class of green light, twice already this month: [every health check was green](/post/Every-Health-Check-Was-Green-And-Nobody-Could-Download-My-Product.html), and [the update that downloaded and never ran](/post/The-Update-Downloaded-Fine-And-Never-Ran.html). This week it was the test suite: [every test passed and the feature was lying](/post/Every-Test-Passed-And-The-Feature-Was-Lying.html).
 
 *[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
