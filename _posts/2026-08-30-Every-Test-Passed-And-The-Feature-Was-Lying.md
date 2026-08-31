@@ -98,6 +98,8 @@ So the fixes are all the same shape. Take a sentence and give it a way to be wro
 
 The recap is honest now, and still coupled to video recording. A team that wants written notes without keeping video of their colleagues still cannot have them. Labelling that was the small fix and it was the right one to do first, because shipping a trigger whose companion data silently is not there was the thing to stop. Decoupling the transcript from the recording is the real work, and it is next.
 
+Update: that decoupling shipped, and turned out not to be the larger remaining problem. The sequel is [every feature worked and nobody could reach it](/post/Every-Feature-Worked-And-Nobody-Could-Reach-It.html).
+
 If you want to read the fixes rather than take my word for them, they are all in the open repository.
 
 *[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

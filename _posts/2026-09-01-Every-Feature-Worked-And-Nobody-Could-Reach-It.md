@@ -79,4 +79,6 @@ The recap links the document. The activity feed got a card. Skills got an editor
 
 The default is fixed and browser transcription still only works in Chrome and Edge, because that is the only place the Web Speech API exists. A participant on Firefox or Safari contributes nothing. The recap now says so when it happens rather than presenting a partial transcript as a whole one, but the gap is real and the honest fix is the bundled speech server, which now ships and runs on your own machine.
 
-All of this is in v2.7.0 and v1.5.0, out today. OneCamp is [$19 once to self-host](https://onemana.dev/buy), source included, on your own server.
+All of this is in v2.7.0 and v1.5.0, out today. The other half of this release is the unglamorous bit: [AI governance is mostly boring plumbing](/post/AI-Governance-Is-Mostly-Boring-Plumbing.html).
+
+*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

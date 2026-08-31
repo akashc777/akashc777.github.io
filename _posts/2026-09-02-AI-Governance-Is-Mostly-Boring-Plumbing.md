@@ -92,4 +92,6 @@ Governance sounds like ethics and is mostly plumbing. Permissions read at call t
 
 What it does require is being willing to write down where your own answer is still "not yet", and to correct the sentence on your website when it turns out to be broader than your code. I did both this week. The second one was more useful.
 
-OneCamp is [$19 once to self-host](https://onemana.dev/buy), source included. v2.7.0 and v1.5.0 are out, and everything described here is in them.
+v2.7.0 and v1.5.0 are out, and everything described here is in them. The other post from this release: [every feature worked and nobody could reach it](/post/Every-Feature-Worked-And-Nobody-Could-Reach-It.html).
+
+*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
