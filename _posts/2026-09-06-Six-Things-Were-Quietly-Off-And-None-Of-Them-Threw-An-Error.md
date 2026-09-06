@@ -1,6 +1,6 @@
 ---
 title: "Six Things Were Quietly Off And None Of Them Threw An Error"
-image: "/assets/images/post/onecamp-release-editions.jpg"
+image: "/assets/images/post/onecamp-quietly-off.jpg"
 author: "Akash Hadagali"
 date: 2026-09-06 12:00:00 +0530
 description: "Push notifications were off on every install that followed my own guide. Video calls had no certificate because the documentation told you not to create the record. Telemetry was going nowhere because I read a URL as a hostname. None of these threw an error, which is the only reason they lasted. Here is the fortnight, the two releases it produced, and the three things I promised last time that are now done."

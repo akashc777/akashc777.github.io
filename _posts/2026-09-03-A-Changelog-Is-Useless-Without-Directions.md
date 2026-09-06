@@ -121,6 +121,8 @@ A run does not record which version of its skills produced it. Edit a skill and 
 
 And the agent improvement loop applies changes rather than proposing them. Proposing, with the evidence attached, and waiting for a person, is what makes it sellable to the large majority who will not put an unsupervised agent in production. That one is waiting on real data rather than on me.
 
+Update: all three shipped. Retention is an admin setting, every run stores its skill fingerprints, and the improvement loop proposes rather than applies. The write-up is [six things were quietly off and none of them threw an error](/post/Six-Things-Were-Quietly-Off-And-None-Of-Them-Threw-An-Error.html).
+
 If any of the directions above turn out to be wrong, tell me. That is the whole point of the post.
 
 *[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
