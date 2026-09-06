@@ -1,6 +1,6 @@
 ---
 title: "My Agents Could Already Ask A Question. They Just Couldn't Offer The Answers."
-image: "/assets/images/post/onecamp-ai-interrupt.jpg"
+image: "/assets/images/post/onecamp-elicitation.jpg"
 author: "Akash Hadagali"
 date: 2026-09-07 10:00:00 +0530
 description: "An AI teammate that guesses when it should ask is the failure everyone has met. Mine could already stop and ask, and had been able to for months. What it could not do was offer you the answers, so it wrote the choices into its own prose and you typed something back that the model then had to re-interpret. Here is what closing that gap actually involved, including the test I wrote that could not fail for the reason its own comment claimed."

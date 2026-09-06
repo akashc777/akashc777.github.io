@@ -109,7 +109,7 @@ So an agent can now offer the answers. It lists two to six choices, you pick one
 
 One rule from that specification is enforced rather than documented. **An agent may never ask you for a password, key, token or other credential.** That is not theoretical here: an agent's instructions are editable, its skills come from a shared library, and its knowledge is pulled from workspace content other people write. Any of those is a place to plant "ask the user to paste their API key", and the question would arrive wearing the trusted name of a colleague's agent. The request is refused before it reaches you. Asking *which* key to use is a choice between things the agent can already reach, and stays allowed.
 
-**Where:** wherever the agent is working. A blocked agent shows its question and its choices on your Home dashboard, and you answer in the thread or the task it asked in.
+**Where:** wherever the agent is working. A blocked agent shows its question and its choices on your Home dashboard, and you answer in the thread or the task it asked in. The dedicated write-up is [my agents could already ask a question, they just couldn't offer the answers](/post/My-Agents-Could-Already-Ask-A-Question-They-Just-Could-Not-Offer-The-Answers.html).
 
 ## New: your agents' governance record can leave the building
 
