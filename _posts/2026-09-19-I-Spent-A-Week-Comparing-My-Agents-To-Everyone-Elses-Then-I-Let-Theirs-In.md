@@ -193,6 +193,24 @@ Expand the run in the agent's history. You get the steps, every tool call, and a
 
 Then **Admin, Settings, Audit log**. The `agent.run` row carries which agent, which human it acted for, what it was refused, and `remote_brain` naming the endpoint's host.
 
+### A rule you will meet if you point it at the internet
+
+While writing this walkthrough I noticed the field would accept `http://` and an empty secret, and that is worth stating plainly, because **a run does not send a question.** It sends the agent's instructions, the workspace knowledge it is grounded in, the conversation, and the result of every tool this workspace ran for it. Workspace content, leaving the building, on every step.
+
+So the rule is now: an endpoint that resolves **outside your own network must use https and must have a secret**. One on your own network, which is where the example above lives, needs neither.
+
+```
+-> refusing to send workspace content to a remote agent outside your own
+   network over plain http; use https (example.com resolves to 172.6...)
+
+-> refusing to send workspace content to a remote agent outside your own
+   network with no secret; set one so the endpoint is not open to anybody
+```
+
+It is decided by the **address actually dialled**, not the hostname typed, for the same reason the SSRF guard resolves before it connects: a name is not a promise about where it goes.
+
+The second half of that rule is the one I went back and forth on. A token does not protect your data in transit, TLS does. What it protects against is an endpoint that asks nothing of its callers, which is an endpoint anybody can also talk to, holding a conversation out of your workspace. The ecosystem agrees: OpenBot's own bot [refuses to start without a token](https://github.com/CopilotKit/OpenBot), Bedrock's [AG-UI contract](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-agui-protocol-contract.html) specifies https with a bearer token, and there is already a filed bug in the wild about [an AG-UI endpoint that skipped its framework's auth](https://github.com/agno-agi/agno/issues/8633). Unauthenticated AG-UI endpoints are not hypothetical, they are a thing that happens by accident.
+
 ### What to change for a real one
 
 Give the remote agent an autonomy level of **Approval** if you want every write proposed to a person first, set its **Scope** to the channels and projects it may touch, and leave the destructive-action backstop alone: it queues irreversible actions for a human regardless of autonomy, including for remote agents.
@@ -210,6 +228,8 @@ Before this, I was asking the first buyer to throw their work away. Now the pitc
 ## Still open
 
 The list where I am honest, because a changelog with only wins is an advert.
+
+**A test I wrote to prove a fix, an hour after writing a post about exactly this.** The refusal above arrives wrapped three deep: my package's wrapper, Go's HTTP client naming the request, then the dialer's. I wrote a trim so the reason reads first instead of the url, wrote a test with a one-layer string I made up, watched it pass, and shipped a trim that never fired. I only found it because I read the live message after deploying. The test now uses the real shape, copied from that message. I wrote three paragraphs about this failure mode in my last post and then did it again the same week.
 
 **I cannot meter what the remote spends.** Its model calls happen on its account. The per-agent daily token cap does not apply, and saying so in the interface is honesty, not a solution. If I want a real ceiling on a remote agent it has to be counted in runs or calls rather than tokens, and I have not built that.
 
