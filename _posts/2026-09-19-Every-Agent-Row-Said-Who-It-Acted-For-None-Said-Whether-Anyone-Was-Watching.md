@@ -141,4 +141,6 @@ And if you want to know whether you have this problem right now without reading 
 
 And, as ever: I never claim OneCamp makes you compliant with anything. It produces records. What those records are worth is between you and your auditor.
 
+The other post from this fortnight: [I spent a week comparing my agents to everyone else's, then I let theirs in](/post/I-Spent-A-Week-Comparing-My-Agents-To-Everyone-Elses-Then-I-Let-Theirs-In.html).
+
 *[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

@@ -94,4 +94,6 @@ What it does require is being willing to write down where your own answer is sti
 
 v2.7.0 and v1.5.0 are out, and everything described here is in them. The other post from this release: [every feature worked and nobody could reach it](/post/Every-Feature-Worked-And-Nobody-Could-Reach-It.html).
 
+Update: the next piece of this plumbing is [every agent row said who it acted for, none said whether anyone was watching](/post/Every-Agent-Row-Said-Who-It-Acted-For-None-Said-Whether-Anyone-Was-Watching.html).
+
 *[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

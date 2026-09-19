@@ -151,7 +151,7 @@ class Agent(BaseHTTPRequestHandler):
 HTTPServer(("0.0.0.0", 4200), Agent).serve_forever()
 ```
 
-It has to be reachable from your OneCamp container. If you run it on the same host, that is your Docker bridge address rather than `localhost`, which you can find with `docker inspect <your-onecamp-api-container> -f '{{range .NetworkSettings.Networks}}{{.Gateway}} {{end}}'`. On mine that is `172.21.0.1`, so the endpoint is `http://172.21.0.1:4200/ag-ui`.
+It has to be reachable from your OneCamp container. If you run it on the same host, that is your Docker bridge address rather than `localhost`, which you can find with `{% raw %}docker inspect <your-onecamp-api-container> -f '{{range .NetworkSettings.Networks}}{{.Gateway}} {{end}}'{% endraw %}`. On mine that is `172.21.0.1`, so the endpoint is `http://172.21.0.1:4200/ag-ui`.
 
 If you already have a LangGraph, CrewAI, Mastra or Pydantic AI agent with an AG-UI endpoint, skip this step and use that instead. That is the entire point.
 
@@ -220,5 +220,7 @@ The list where I am honest, because a changelog with only wins is an advert.
 **One reference implementation is not the ecosystem.** I have tested against a handful of endpoints and the protocol's own event list. The first bug report from somebody running a framework I have not tried will teach me something.
 
 If you try it against your own agent and it breaks, tell me what it sent. That is the fastest way this gets better.
+
+The other post from this fortnight: [every agent row said who it acted for, none said whether anyone was watching](/post/Every-Agent-Row-Said-Who-It-Acted-For-None-Said-Whether-Anyone-Was-Watching.html).
 
 *[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
