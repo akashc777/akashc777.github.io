@@ -99,6 +99,38 @@ The server list now marks that server and says why. The field asks for the secre
 
 My backend knew all of this. The API returned it, in a field called `auth_secret_unreadable` that the frontend never read. **That gap, where the server knows and the screen does not, is the most boring bug class I ship and the hardest one to notice, because every test on both sides passes.**
 
+## Seeing all three of these on your own install
+
+### The initiator, in about two minutes
+
+Go to **Admin, AI and Agents** and find the **Governance drill**. Press it. It makes an agent attempt something the person it acts for is not allowed to do, watches it get refused, and shows you the rows.
+
+Now go to **Admin, Settings, Audit log**. The drill's two rows are there, each reading `person, ...` because you pressed the button.
+
+Press **Nobody watching**. They vanish, which is the correct answer: somebody was watching. What remains is everything that ran on its own.
+
+To put something in that list deliberately, open **Settings, Agents**, edit any agent, set its trigger to **On a schedule** with a short interval, and come back after it fires. Its row reads `schedule, nobody watching`. If you have external tooling calling in over MCP, its decisions are there too, as `handoff`.
+
+Members do not need the admin screen for the part that concerns them: **Activity, then the AI tab** shows the same word on their own agents' runs, read from the same row.
+
+One thing to expect: rows written before this release have no initiator and show none. Nothing was backfilled.
+
+### The charts
+
+Any agent that has at least one tool or one knowledge source is now told it may draw. Ask one something whose answer is a handful of numbers, in a channel, a direct message or **Run test** in the builder:
+
+> How many tasks were completed each day this week? Show it as a chart.
+
+The chart renders inline in the message. If the agent has no tools and no knowledge it is not told about charts at all, because the first rule in that prompt is that it must never invent data to fill one, and an agent with nothing to read can only invent.
+
+### The connector warning
+
+If you have MCP connectors, go to **Admin, AI and Agents, AI Models** and look at the server list. A connector whose secret can no longer be decrypted now carries a **Secret unreadable** badge and a line saying why. Open it and the secret field asks for the value again rather than offering to keep the broken one.
+
+To see the relevance behaviour, ask the assistant two questions with a connector broken: one about what it does, one about anything else. Only the first mentions it.
+
+And if you want to know whether you have this problem right now without reading logs: that server list is the answer, and it takes one look.
+
 ## Still open
 
 **The non-streaming ask endpoint has no notice at all.** The streaming one, which is what the app uses, reports everything described above. Its older sibling attaches no sink, so an answer there can be built from a shortened prompt and never say so. Nothing in my frontend calls it any more: there is an import of its hook sitting in one component that never destructures it, which is exactly the shape of how an endpoint rots. It is still a public endpoint, and API-token callers still reach it.

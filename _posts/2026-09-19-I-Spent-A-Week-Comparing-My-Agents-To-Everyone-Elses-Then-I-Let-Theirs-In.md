@@ -97,6 +97,106 @@ There is now a **Test connection** button next to the field. It runs the real cl
 
 While I was in there I fixed a quieter dishonesty. Every agent has a daily token limit. For a remote agent that limit did nothing, because the model spend happens on somebody else's account and this workspace cannot see it. The field now says so.
 
+## Try it in ten minutes
+
+Everything below I ran against my own demo while writing this, and the outputs are copied from those runs.
+
+### 1. Stand up something to point at
+
+This is the whole agent. It publishes no tools, asks OneCamp to run one of its, and reports what OneCamp said back. Python standard library, no dependencies.
+
+```python
+# agent.py   ->   python3 agent.py
+import json
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+TOKEN = "change-me"
+
+class Agent(BaseHTTPRequestHandler):
+    def do_POST(self):
+        if self.headers.get("x-agent-token") != TOKEN:
+            self.send_response(401); self.end_headers(); return
+        run = json.loads(self.rfile.read(int(self.headers["content-length"])))
+        self.send_response(200)
+        self.send_header("content-type", "text/event-stream")
+        self.end_headers()
+
+        def send(event):
+            self.wfile.write(f"data: {json.dumps(event)}\n\n".encode())
+            self.wfile.flush()
+
+        send({"type": "RUN_STARTED", "threadId": run["threadId"], "runId": run["runId"]})
+
+        # Anything OneCamp already ran for me comes back as a tool message.
+        answered = [m for m in run["messages"] if m.get("role") == "tool"]
+
+        if not answered:
+            # Ask OneCamp to run one of ITS tools. I have none of my own, and I
+            # ask whether or not it was offered, so you can watch both outcomes.
+            send({"type": "TOOL_CALL_START", "toolCallId": "c1", "toolCallName": "web_search"})
+            send({"type": "TOOL_CALL_ARGS", "toolCallId": "c1",
+                  "delta": json.dumps({"query": "onecamp self hosted"})})
+            send({"type": "TOOL_CALL_END", "toolCallId": "c1"})
+        else:
+            said = answered[-1]["content"]
+            send({"type": "TEXT_MESSAGE_START", "messageId": "m1", "role": "assistant"})
+            send({"type": "TEXT_MESSAGE_CONTENT", "messageId": "m1",
+                  "delta": f"OneCamp answered my tool call with: {said}"})
+            send({"type": "TEXT_MESSAGE_END", "messageId": "m1"})
+
+        send({"type": "RUN_FINISHED", "threadId": run["threadId"], "runId": run["runId"]})
+
+    def log_message(self, *a): pass
+
+HTTPServer(("0.0.0.0", 4200), Agent).serve_forever()
+```
+
+It has to be reachable from your OneCamp container. If you run it on the same host, that is your Docker bridge address rather than `localhost`, which you can find with `docker inspect <your-onecamp-api-container> -f '{{range .NetworkSettings.Networks}}{{.Gateway}} {{end}}'`. On mine that is `172.21.0.1`, so the endpoint is `http://172.21.0.1:4200/ag-ui`.
+
+If you already have a LangGraph, CrewAI, Mastra or Pydantic AI agent with an AG-UI endpoint, skip this step and use that instead. That is the entire point.
+
+### 2. Point an agent at it
+
+**Settings, then Agents, then New agent.** Give it a name and one line of instructions. Under **Tools**, tick **web_search** for now. Open **Advanced** and fill in:
+
+- **Remote agent (AG-UI endpoint)**: `http://172.21.0.1:4200/ag-ui`
+- **Auth header**: `x-agent-token`
+- **Secret**: `change-me`
+
+Press **Test connection**. You should get the remote's own reply back. If you get `remote answered 401` the token is wrong, and if you get a message about a blocked address you have pointed it at link-local or cloud metadata, which is refused before the request is made.
+
+Save it. The agent now shows a **Remote** badge in the list.
+
+### 3. Run it, and watch a tool actually run
+
+Hit **Run test** with any prompt. On my demo, where web search has no API key configured:
+
+```
+OneCamp answered my tool call with: error: web search is not configured for this workspace
+```
+
+That is the tool being **permitted**, executed, and failing on its own terms. Governance said yes; the tool said no.
+
+### 4. Now take the tool away, which is the part worth seeing
+
+Edit the agent, untick **web_search**, tick anything else, save, and run it again.
+
+```
+OneCamp answered my tool call with: skipped: tool not permitted for this agent
+```
+
+The remote asked for the same thing. This time it never happened, the refusal went back to the remote as a tool result so it could correct itself, and the reason is a row in your audit log. Nothing about the remote changed. Everything about the permission did.
+
+### 5. Read the record
+
+Expand the run in the agent's history. You get the steps, every tool call, and a **remote** badge on anything the remote ran on its own machine.
+
+Then **Admin, Settings, Audit log**. The `agent.run` row carries which agent, which human it acted for, what it was refused, and `remote_brain` naming the endpoint's host.
+
+### What to change for a real one
+
+Give the remote agent an autonomy level of **Approval** if you want every write proposed to a person first, set its **Scope** to the channels and projects it may touch, and leave the destructive-action backstop alone: it queues irreversible actions for a human regardless of autonomy, including for remote agents.
+
 ## What this is actually for
 
 Two kinds of buyer, and they want opposite things.
