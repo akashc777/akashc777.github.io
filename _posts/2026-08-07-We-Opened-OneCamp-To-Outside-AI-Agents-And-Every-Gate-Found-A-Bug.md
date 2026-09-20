@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-07 12:00:00 +0530
 description: "Claude Desktop, Cursor and anything else speaking MCP can now reach a OneCamp workspace — through an authority rule that is an intersection with a real person's live permissions, never a union, re-evaluated per call. Gating all thirty tools turned into an audit I hadn't planned, because writing an authority rule beside one that already shipped is how you find out the shipped one was wrong. Four times it was: a doc author locked out of their own doc, an agent able to DM a ghost identity people are refused, an event loop that walked past the delegation gate, and a write that could never be retried."
 tags: ["OneCamp", "MCP", "Go", "Security", "Governance", "AI", "Agents", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/we-opened-onecamp-to-outside-ai-agents-and-every-gate-found-a-bug"
 ---
 This is the first of four posts about a week with no new features in it. The [previous one](/post/What-We-Fixed-So-You-Never-Notice-A-Search-Outage-A-Coding-Agent-And-31-Screens-That-Lied.html) was about unglamorous fixes; this week was about sixty commits across five repositories and nothing anybody can click.
 

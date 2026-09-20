@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-10 11:00:00 +0530
 description: "Most software waits for you to remember. OneCamp's AI Nudges flip that — a quiet engine that notices the commitment you made in a Tuesday call, sees it's overdue, and taps you on the shoulder. Here's how I built it, why it stays out of your way, and the privacy line I refused to cross."
 tags: ["OneCamp", "Go", "AI", "Productivity", "Nudges", "Architecture", "Self-Hosted", "PostgreSQL", "MQTT", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-ai-nudges-a-workspace-that-remembers-what-you-promised"
 ---
 
 Here's a thing that happens to all of us.

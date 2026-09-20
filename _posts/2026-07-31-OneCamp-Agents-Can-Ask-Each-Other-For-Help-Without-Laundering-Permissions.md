@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-07-31 16:00:00 +0530
 description: "Your specialist agents couldn't talk to each other. Not by oversight — by a deliberate mute that stopped one agent replying to itself forever. This release replaces that blanket mute with a budget, so an agent can pull in the right specialist for part of a job. The interesting part is the constraint: every hop carries the person who started the chain, so a chain with no human at its root is refused. Also in here: why I decided not to implement A2A, and deleted the half I'd already built."
 tags: ["OneCamp", "Go", "NextJS", "AI", "Agents", "Delegation", "Governance", "A2A", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-agents-can-ask-each-other-for-help-without-laundering-permissions"
 ---
 If you've built more than one agent in OneCamp, you've probably hit this and assumed it was a bug.
 

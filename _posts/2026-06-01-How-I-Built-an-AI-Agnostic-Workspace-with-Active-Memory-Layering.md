@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-01 16:30:00 +0530
 description: "How I re-engineered OneCamp to support hot-swappable local and cloud LLMs, implemented a self-calibrating EWMA token budget to prevent context truncation, and designed a structured workspace memory layer spanning Postgres, OpenSearch, and DGraph GraphRAG."
 tags: ["OneCamp", "Go", "NextJS", "Architecture", "AI", "Ollama", "PostgreSQL", "Dgraph", "OpenSearch", "GraphRAG"]
+canonical_url: "https://onemana.dev/blog/how-i-built-an-ai-agnostic-workspace-with-active-memory-layering"
 ---
 
 When I first built [OneCamp as the self-hosted, anti-SaaS workspace](/post/I-Built-OneCamp-The-Anti-SaaS.html), my goal was simple: give teams absolute control over their communication, data, and workflows without paying massive recurring subscription bills. 

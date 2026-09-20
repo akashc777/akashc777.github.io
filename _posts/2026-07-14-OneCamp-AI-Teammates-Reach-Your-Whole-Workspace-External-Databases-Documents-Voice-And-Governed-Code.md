@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-07-14 10:00:00 +0530
 description: "Last week OneCamp's agents learned to open pull requests. This stretch was about reach: an agent can now query your real production databases (Postgres, MySQL) read-only through a plan you can inspect and re-run, read the PDF and Word doc you dropped in chat, answer from your workspace search with clickable citations, take dictation and translate a message in one click, and build a little interactive tool you can actually click. And the coding agent grew up — it now works on any repo you can reach, on a model of its own so it isn't starved by chat, with destructive actions held for approval and protected branches it will not touch. All self-hosted, all on the model you choose, all bounded by the same permissions and budgets."
 tags: ["OneCamp", "Go", "NextJS", "AI", "Agents", "DataSources", "SQL", "Documents", "Voice", "CodePR", "Governance", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-ai-teammates-reach-your-whole-workspace-external-databases-documents-voi"
 ---
 
 The last few posts have walked one line: OneCamp's AI went from a chatbot that answers, to a teammate with a place in your channels, to one with governance you can audit, to one with senses and skills, and last week to one that writes code and opens a pull request.

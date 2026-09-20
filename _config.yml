@@ -1,7 +1,18 @@
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog. EMPTY, not "/": with a
+# slash here absolute_url produces https://akash.page//post/x.html, and a
+# canonical or og:url with a doubled slash is a different URL to a crawler.
+url: "https://akash.page" # the base hostname & protocol for your site
+# Set 2026-09-20. It was empty, and jekyll-sitemap writes <loc> from it, so
+# every entry in sitemap.xml was a relative path. The sitemap spec requires
+# absolute URLs and Google discards the ones that are not, which means all
+# 52 posts had been submitted and silently dropped since the site went up.
 
 title: Akash Hadagali | Founder, Engineer, Builder
+# The short name for the end of a page title. site.title is the whole tagline and
+# is right on its own as the home page's title; appended to a post headline it
+# pushes the combined title past what a search result shows, which spends the
+# characters that were supposed to carry the post's own words.
+brand: Akash Hadagali
 description: >- # this means to ignore newlines until "baseurl:"
   I'm Akash Hadagali — founder of OneMana, engineer, and builder.
   I build things that help teams collaborate without paying per-seat SaaS tax every month.

@@ -5,6 +5,7 @@ author : "Akash Hadagali"
 date: 2026-05-25 12:00:00 +0530
 description : "How I engineered a high-throughput, chunk-based, multi-database migration engine for OneCamp that seamlessly unifies, de-duplicates, and ingests workspace data from Slack, Notion, Asana, Jira, Linear, Trello, ClickUp, and Todoist."
 tags : ["OneCamp", "Go", "NextJS", "Architecture", "Data-Migration", "PostgreSQL", "Dgraph", "OpenSource"]
+canonical_url : "https://onemana.dev/blog/how-i-built-a-universal-import-engine-for-8-different-providers"
 ---
 
 When building [OneCamp as the self-hosted, all-in-one anti-SaaS workspace](/post/I-Built-OneCamp-The-Anti-SaaS.html), the biggest friction point for teams migrating to it was always the same: **\"Our data is locked inside five different SaaS apps.\"** 

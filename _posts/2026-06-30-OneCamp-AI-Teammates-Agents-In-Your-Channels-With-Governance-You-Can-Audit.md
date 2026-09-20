@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-30 10:00:00 +0530
 description: "The next chapter for OneCamp's agents: instead of a separate chatbot, an agent becomes a real, named member of a channel or a DM you can @mention, with its own model and permissions. You can now assign it a task and trust it to finish, on a durable engine that survives restarts, resumes the same work, posts live progress, and pauses to ask when it is stuck. Plus the governance that makes that safe to give a team, approval modes for writes, per-agent and per-channel spend caps, a saved-test eval harness, a tamper-evident audit log, reliability dashboards, and a week of cross-surface AI that meets you where you already work."
 tags: ["OneCamp", "Go", "NextJS", "AI", "Agents", "Governance", "Audit", "Durable", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-ai-teammates-agents-in-your-channels-with-governance-you-can-audit"
 ---
 
 A few weeks ago I wrote about turning OneCamp's assistant from a chatbot that answers into an agent that does the work: creates tasks, drafts docs, reads then acts, always behind a confirmation gate and the user's own permissions.

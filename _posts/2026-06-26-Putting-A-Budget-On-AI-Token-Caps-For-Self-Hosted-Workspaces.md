@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-26 16:00:00 +0530
 description: "How I added enterprise-grade cost control to OneCamp's AI: metering and gating every model call at one provider chokepoint, daily token budgets for the whole workspace and per individual user, a per-run token cap and wall-clock deadline for agents, exact-or-estimated streaming usage, fail-open Redis metering, admin-editable hot-reloaded limits, and a usage panel, all self-hosted."
 tags: ["OneCamp", "Go", "AI", "Cost", "Redis", "Self-Hosted", "Architecture", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/putting-a-budget-on-ai-token-caps-for-self-hosted-workspaces"
 ---
 
 The moment a workspace has AI agents, an AI assistant, AI that draws diagrams, and AI that builds tables, it also has a new way to spend money (or, on a self-hosted model server, to saturate a GPU): tokens. One enthusiastic agent in a retry loop, or one curious user pasting a novel into the assistant fifty times, and your "free" AI has a bill or a melted box.

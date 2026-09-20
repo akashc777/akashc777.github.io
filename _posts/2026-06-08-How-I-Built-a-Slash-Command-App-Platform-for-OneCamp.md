@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-08 10:00:00 +0530
 description: "How I designed and built a slash-command and app platform for OneCamp — a data-driven external-app webhook system, built-in first-party apps, a curated marketplace, and a per-app encrypted secret store — without requiring a backend deploy every time a new app is added."
 tags: ["OneCamp", "Go", "NextJS", "Architecture", "Slash-Commands", "Apps", "Marketplace", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/how-i-built-a-slash-command-app-platform-for-onecamp"
 ---
 
 There's a moment in every workspace product's life where chat alone stops being enough.

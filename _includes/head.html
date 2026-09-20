@@ -1,13 +1,58 @@
 <head>
   <meta charset="utf-8">
-  <title>{{ site.title }}</title>
+
+  {%- comment -%}
+    WHAT THIS BLOCK IS FOR.
+
+    Every page on this site used to render <title>{{ site.title }}</title>, so
+    all 52 posts told a search engine they were the same document, called
+    "Akash Hadagali | Founder, Engineer, Builder". The title is the strongest
+    thing a page says about itself and not one post was saying anything. There
+    was no canonical either, so the 22 posts that also live on onemana.dev were
+    two unlabelled copies competing with each other, and no og: or twitter:
+    tags, so every share on the channel that actually sends traffic rendered as
+    a bare link.
+
+    page.canonical_url is set on a post that was republished elsewhere and names
+    the copy that should win. Everything else points at itself.
+  {%- endcomment -%}
+
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- assign page_desc = page.description | default: site.description -%}
+  {%- assign page_image = page.image | default: page.cover -%}
+  {%- assign canonical = page.canonical_url | default: page.url | absolute_url -%}
+
+  <title>{% if page.title %}{{ page.title | strip_html }} | {{ site.brand }}{% else %}{{ site.title }}{% endif %}</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="{%if page.description%}{{page.description}}{%else%}{{site.description}}{%endif%}">
-    
+  <meta name="description" content="{{ page_desc | strip_html | strip_newlines }}">
+  <link rel="canonical" href="{{ canonical }}">
+
   {% if site.author %}
-  <meta name="author" content="{{ . }}">
+  <meta name="author" content="{{ site.author }}">
   {% endif %}
+
+  {%- comment -%}
+    og:url carries the canonical, not the page's own address: a share of a
+    republished post should credit the copy that is meant to rank, the same way
+    the canonical does, rather than quietly disagreeing with it.
+
+    The card is summary_large_image only when there is an image to fill it. A
+    large card declared over a missing image renders as a broken box, which is
+    worse than the small card it would otherwise have been.
+  {%- endcomment -%}
+  <meta property="og:site_name" content="{{ site.brand }}">
+  <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ page_title | strip_html }}">
+  <meta property="og:description" content="{{ page_desc | strip_html | strip_newlines | truncate: 200 }}">
+  <meta property="og:url" content="{{ canonical }}">
+  {% if page_image %}<meta property="og:image" content="{{ page_image | absolute_url }}">{% endif %}
+  {% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+
+  <meta name="twitter:card" content="{% if page_image %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{{ page_title | strip_html }}">
+  <meta name="twitter:description" content="{{ page_desc | strip_html | strip_newlines | truncate: 200 }}">
+  {% if page_image %}<meta name="twitter:image" content="{{ page_image | absolute_url }}">{% endif %}
 
 
   {% for css in site.data.plugins.css %}

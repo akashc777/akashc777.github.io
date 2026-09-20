@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-15 11:00:00 +0530
 description: "Welcome messages, keyword auto-replies, turning a message into a task, lightweight moderation — the automation every team eventually wants. I built a Workflow Builder for OneCamp that does it without a single extra runtime, and that can never do something its creator couldn't do by hand. Here's the design."
 tags: ["OneCamp", "Go", "Automation", "Workflows", "Moderation", "Architecture", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-workflows-slack-class-automation-without-the-bots"
 ---
 
 Every team, once it grows past a certain size, wants the same handful of small automations.

@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-07-06 10:00:00 +0530
 description: "This week OneCamp's agents learned to write code and open a pull request, the same way you'd hand the job to a teammate: @mention one, describe the change, and it clones the repo, edits, builds, tests, and opens a PR for a human to review. The interesting part isn't that it can, everyone's agent can now. It's where it runs: on infrastructure you own, through the model you choose, inside a network-locked sandbox, with the same approvals, budgets, audit trail, and a reliability scorecard that learns from whether your PRs actually merged. Here's how it works, and an honest read on where it stands next to Spotify's Honk and Anthropic's Claude Code."
 tags: ["OneCamp", "Go", "NextJS", "AI", "Agents", "CodePR", "GitHub", "Sandbox", "Governance", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-ai-teammates-open-pull-requests-a-governed-coding-agent-on-your-own-infr"
 ---
 
 For the last few weeks these posts have followed one thread: turning OneCamp's AI from a chatbot that answers into a teammate that does the work. It got a place in the room (agents live in your channels and DMs), then governance you can audit (approvals, budgets, a tamper-evident log, an eval harness), then senses and skills (it can see an image, reason over your tables, run code in a sandbox, follow a PR through CI).

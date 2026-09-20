@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-09-19 10:00:00 +0530
 description: "The new crop of AI coworkers can do things mine cannot, and I went looking for what. The answer was not a feature. It was that they accept an agent built anywhere, and I only accepted my own. So a OneCamp agent can now reason at somebody else's endpoint and still work under my workspace's rules, which cost me one adapter instead of a second agent loop. Then I read the protocol properly and found three bugs I had shipped."
 tags: ["OneCamp", "AI Agents", "AG-UI", "Interop", "Governance", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/i-spent-a-week-comparing-my-agents-to-everyone-elses-then-i-let-theirs-in"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.

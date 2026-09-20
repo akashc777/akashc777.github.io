@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-12 11:00:00 +0530
 description: "Every call you have is full of decisions and action items that evaporate the second it ends. OneCamp puts an ambient AI assistant in the room — it transcribes live, then writes the recap, posts it where the call happened, and remembers the commitments. Here's how I built it on a self-hosted LiveKit stack."
 tags: ["OneCamp", "Go", "Python", "AI", "LiveKit", "WebRTC", "Transcription", "Meetings", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-meeting-assistant-ai-that-sits-in-your-calls"
 ---
 
 Think about the last good meeting you had.

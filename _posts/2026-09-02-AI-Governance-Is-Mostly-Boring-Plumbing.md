@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-09-02 12:00:00 +0530
 description: "The AI Act's transparency rules took effect on 2 August 2026. ServiceNow bought a company to watch what agents do at runtime. Only 23% of organisations report significant ROI from agents. All three are the same story: nobody can show what their AI did. Here is what governing an AI workspace actually consists of, mechanism by mechanism, including the four places where my own answer is still 'not yet'."
 tags: ["OneCamp", "AI Governance", "EU AI Act", "Audit", "Agents", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/ai-governance-is-mostly-boring-plumbing"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace with AI agents that runs on **your** infrastructure. I build it and sell it, which means I have spent this year finding out what governing agents actually requires, as opposed to what it sounds like it requires.

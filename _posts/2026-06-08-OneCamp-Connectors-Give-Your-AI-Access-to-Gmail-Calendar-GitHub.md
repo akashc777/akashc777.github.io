@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-08 14:00:00 +0530
 description: "How I built per-user OAuth connectors for Gmail, Google Calendar, and GitHub so OneCamp's AI can read emails, check your calendar, and surface pull requests — all on your own infrastructure, without a single byte of your data touching a third-party aggregator."
 tags: ["OneCamp", "Go", "NextJS", "Architecture", "AI", "Connectors", "Gmail", "GitHub", "OAuth", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-connectors-give-your-ai-access-to-gmail-calendar-github"
 ---
 
 Every AI assistant has a context problem.

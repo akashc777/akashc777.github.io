@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-07-31 10:00:00 +0530
 description: "Handing work to an AI agent has had one uncomfortable property from the start: once it goes, it's gone. You watch a spinner, you can't change your mind, and if it's heading the wrong way you wait for it to finish being wrong. This release fixes that. You can stop an agent from the thread you're standing in, send it a correction while it's still working, and see what it's doing without refreshing. Long conversations no longer die at the model's context limit. And stopping an AI answer actually stops paying for it."
 tags: ["OneCamp", "Go", "NextJS", "AI", "Agents", "Realtime", "UX", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-ai-teammates-you-can-interrupt-stop-steer-and-watch-the-work"
 ---
 Every post in this series has pushed on the same idea: an AI that does the work, not one that answers questions about it. Agents got a place in your channels, then governance you could audit, then senses and skills, then the ability to open a pull request.
 

@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-21 14:00:00 +0530
 description: "How I turned OneCamp's workspace AI from a question-answering assistant into an agent that creates and updates tasks, drafts docs, manages projects, and chains reads into actions, all while respecting the exact permission model a human user has, and never acting without confirmation."
 tags: ["OneCamp", "Go", "NextJS", "Architecture", "AI", "Agents", "Permissions", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-ai-agents-that-do-the-work"
 ---
 
 There is a quiet line every AI assistant eventually has to cross.

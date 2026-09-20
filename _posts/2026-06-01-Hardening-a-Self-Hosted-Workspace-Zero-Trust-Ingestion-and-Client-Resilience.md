@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-01 16:45:00 +0530
 description: "How I built a zero-trust ingestion layer for OneCamp—implementing magic-byte file signatures, zip-slip and zip-bomb decompression protection, ClamAV socket scanning, and designed a visibility-aware exponential backoff polling engine for client-server resilience."
 tags: ["OneCamp", "Go", "NextJS", "Security", "Zero-Trust", "ClamAV", "Decompression", "API-Resilience", "Web-Performance"]
+canonical_url: "https://onemana.dev/blog/hardening-a-self-hosted-workspace-zero-trust-ingestion-and-client-resilience"
 ---
 
 When you host your own workspace, security isn't someone else's problem. 

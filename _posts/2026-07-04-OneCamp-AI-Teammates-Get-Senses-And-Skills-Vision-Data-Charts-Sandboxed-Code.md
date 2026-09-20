@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-07-04 10:00:00 +0530
 description: "Last week I gave OneCamp's agents a place in the room and the governance to make handing one to a team responsible. This week was about senses and skills: native tool-calling that works on modest local models, an agent that can see the image you paste and knows what day it is, answers straight from your tables with charts it draws inline, runs real Python in an isolated sandbox, follows a pull request through CI, keeps standing instructions you just tell it, and watches your work on a routine, all self-hosted, all bounded by the same permissions and budgets."
 tags: ["OneCamp", "Go", "NextJS", "AI", "Agents", "Tool-Calling", "Vision", "Charts", "Sandbox", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-ai-teammates-get-senses-and-skills-vision-data-charts-sandboxed-code"
 ---
 
 Last week's post was about giving OneCamp's agents a *place in the room*, an agent becomes a real, @mentionable member of a channel or DM, you can hand it a task on a durable engine, and there's governance (approvals, spend caps, an audit chain, an eval harness) that makes trusting it a responsible choice instead of a leap.

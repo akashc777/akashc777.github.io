@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-06-25 11:00:00 +0530
 description: "Why a table in OneCamp is its own first-class entity rather than a blob inside a doc: a jsonb row model that survives schema changes, fractional ordering, grid/board/calendar views, a relation field that links rows to real tasks and projects, AI that builds a whole table from one sentence, and a permission model that mirrors the rest of the workspace, all self-hosted."
 tags: ["OneCamp", "Go", "NextJS", "Postgres", "AI", "Self-Hosted", "Architecture", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/onecamp-tables-notion-style-databases-your-ai-and-api-can-use"
 ---
 
 Every workspace ends up needing a small database.
