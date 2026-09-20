@@ -7,7 +7,7 @@ description: "124 commits in two weeks across the backend and the frontend. A ch
 tags: ["OneCamp", "Changelog", "Product", "AI", "Self-Hosted", "Mobile", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
 
 Two weeks. 124 commits across the backend and the two frontends. Normally this is where I write a changelog.
 
@@ -125,4 +125,4 @@ Update: all three shipped. Retention is an admin setting, every run stores its s
 
 If any of the directions above turn out to be wrong, tell me. That is the whole point of the post.
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

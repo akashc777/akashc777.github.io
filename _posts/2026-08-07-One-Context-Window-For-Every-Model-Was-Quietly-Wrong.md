@@ -8,7 +8,7 @@ tags: ["OneCamp", "AI", "LLM", "Go", "NextJS", "Ollama", "Self-Hosted", "OpenSou
 ---
 One of four posts about a week with no new features in it. The first was about [opening OneCamp to outside AI agents](/post/We-Opened-OneCamp-To-Outside-AI-Agents-And-Every-Gate-Found-A-Bug.html); this one is smaller and, if you run local models, probably more likely to have affected you.
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace with AI teammates that live in it — on your own infrastructure, through your own choice of model.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace with AI teammates that live in it — on your own infrastructure, through your own choice of model.
 
 That last part is the whole design. OneCamp is model-agnostic on purpose: an admin allows a set of models, and a member, a channel, or an agent can each pick a different one from that allowlist.
 

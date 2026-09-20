@@ -7,7 +7,7 @@ description: "An AI teammate that guesses when it should ask is the failure ever
 tags: ["OneCamp", "AI Agents", "MCP", "Elicitation", "Self-Hosted", "Governance", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
 
 Six weeks ago I wrote about [agents you can interrupt, stop and steer](/post/OneCamp-AI-Teammates-You-Can-Interrupt-Stop-Steer-And-Watch-The-Work.html). That post was about a person interrupting an agent. This one is about the agent interrupting itself.
 
@@ -112,4 +112,4 @@ Being honest about the list, because a changelog that only contains wins is mark
 
 If any of this turns out to be wrong, tell me. That is the whole point of the post.
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

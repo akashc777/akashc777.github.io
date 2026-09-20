@@ -7,7 +7,7 @@ description: "OneCamp has always been self-hosted: you buy a licence, you run it
 tags: ["OneCamp", "Managed Hosting", "Go", "Postgres", "OVH", "Provisioning", "Distributed Systems", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
 
 Until this week there was exactly one way to get it: buy a lifetime licence, download the archive, run it on a machine you own. That is still the option I'd pick. But "run it on a machine you own" is a sentence that ends a lot of conversations, and the people it ends them with are not the ones who don't care about their data — they're the ones who care and don't have an ops team.
 
@@ -107,4 +107,4 @@ If you want the version that is proven: [the self-hosted edition](https://oneman
 
 The install surface this sits on: [shipping two editions, and the customer install that actually works](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html). The week before: [two-factor and SCIM](/post/Two-Factor-SCIM-And-The-Config-File-Nothing-Was-Checking.html), [a compose fault found five times](/post/The-Same-One-Line-Fault-Five-Times-And-The-Test-That-Missed-It-Too.html), and [a failed signup that burned the email](/post/A-Failed-Signup-Burned-The-Email-Address-Forever.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Managed hosting is the other option, one machine per customer, once it has provisioned a real one. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Managed hosting is the other option, one machine per customer, once it has provisioned a real one. Find it at [onemana.dev](https://onemana.dev/buy).*

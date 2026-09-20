@@ -7,7 +7,7 @@ description: "Last week I wrote about features that were lying. This week is the
 tags: ["OneCamp", "Product", "AI", "Defaults", "Go", "TypeScript", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.
 
 [Last week's post](/post/Every-Test-Passed-And-The-Feature-Was-Lying.html) was about features that made false claims. This week is the sequel and the shape is different. Nothing lied. Everything worked. **Almost none of it could be reached.**
 
@@ -81,4 +81,4 @@ The default is fixed and browser transcription still only works in Chrome and Ed
 
 All of this is in v2.7.0 and v1.5.0, out today. The other half of this release is the unglamorous bit: [AI governance is mostly boring plumbing](/post/AI-Governance-Is-Mostly-Boring-Plumbing.html). What that looks like as a changelog, with the click path for each change: [a changelog is useless without directions](/post/A-Changelog-Is-Useless-Without-Directions.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

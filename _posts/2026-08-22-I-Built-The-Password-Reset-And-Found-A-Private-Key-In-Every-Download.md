@@ -8,7 +8,7 @@ description: "A customer asked what happens if they forget their workspace admin
 tags: ["OneCamp", "Security", "Docker", "Go", "Release Engineering", "Postmortem", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
 
 This week I added [managed hosting](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html). Then someone asked a question that sounded like support and turned out to be architecture:
 
@@ -118,4 +118,4 @@ The recovery paths, the token hashing, the slimmer images and the CI boot check 
 
 The other posts from these days: [one server per customer](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html), and [shipping two editions](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html). Before that: [two-factor and SCIM](/post/Two-Factor-SCIM-And-The-Config-File-Nothing-Was-Checking.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

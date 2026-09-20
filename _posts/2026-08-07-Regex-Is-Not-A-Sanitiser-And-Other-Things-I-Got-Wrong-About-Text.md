@@ -10,7 +10,7 @@ One of four posts about a week with no new features in it. The others were about
 
 This one has no AI in it at all. It's about text, media, and the browser — and it's the one with the most general lessons in it, because none of these mistakes are specific to what I'm building.
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace with AI teammates, running on your own infrastructure through your own choice of model.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace with AI teammates, running on your own infrastructure through your own choice of model.
 
 ---
 

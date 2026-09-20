@@ -11,7 +11,7 @@ One of three posts about the days after [the week with no new features in it](/p
 
 This is the one I'd read. Not because the fixes are clever — every single one is a one-line change — but because the shape of it is something I've now watched happen five times in a row, and the last instance was a test I had written specifically to prevent the previous four.
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace with AI teammates, running on your own infrastructure.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace with AI teammates, running on your own infrastructure.
 
 ---
 

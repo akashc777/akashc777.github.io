@@ -8,7 +8,7 @@ tags: ["OneCamp", "MCP", "Go", "Security", "Governance", "AI", "Agents", "Self-H
 ---
 This is the first of four posts about a week with no new features in it. The [previous one](/post/What-We-Fixed-So-You-Never-Notice-A-Search-Outage-A-Coding-Agent-And-31-Screens-That-Lied.html) was about unglamorous fixes; this week was about sixty commits across five repositories and nothing anybody can click.
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. The point is that it runs on **your** infrastructure, through **your** choice of model, so nothing leaves your network unless you send it there.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. The point is that it runs on **your** infrastructure, through **your** choice of model, so nothing leaves your network unless you send it there.
 
 The main job was letting **agents outside** it reach in — Claude Desktop, Cursor, anything speaking MCP — without that becoming a hole in the product.
 

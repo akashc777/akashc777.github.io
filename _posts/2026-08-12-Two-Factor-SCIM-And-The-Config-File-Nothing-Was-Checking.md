@@ -9,7 +9,7 @@ tags: ["OneCamp", "Security", "2FA", "TOTP", "SCIM", "Go", "NextJS", "Enterprise
 
 One of three posts about the days after [the week with no new features in it](/post/We-Opened-OneCamp-To-Outside-AI-Agents-And-Every-Gate-Found-A-Bug.html). This one has new capability in it. The other two are about [the same one-line fault found five times](/post/The-Same-One-Line-Fault-Five-Times-And-The-Test-That-Missed-It-Too.html) and [a failed signup burning an email address forever](/post/A-Failed-Signup-Burned-The-Email-Address-Forever.html).
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
 
 Two things came up in every conversation with anyone who has a compliance team: **make a stolen password insufficient**, and **stop making us create and delete accounts by hand**. So: TOTP two-factor, and SCIM 2.0 provisioning.
 

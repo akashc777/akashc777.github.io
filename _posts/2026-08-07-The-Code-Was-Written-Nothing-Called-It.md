@@ -8,7 +8,7 @@ tags: ["OneCamp", "Go", "Testing", "CodeQuality", "StaticAnalysis", "DeadCode", 
 ---
 One of four posts about a week with no new features in it. The others were about [opening OneCamp to outside AI agents](/post/We-Opened-OneCamp-To-Outside-AI-Agents-And-Every-Gate-Found-A-Bug.html), [token limits that follow the model](/post/One-Context-Window-For-Every-Model-Was-Quietly-Wrong.html), and [text, media and browser-facing security](/post/Regex-Is-Not-A-Sanitiser-And-Other-Things-I-Got-Wrong-About-Text.html). This one is the most portable, because the pattern isn't specific to anything I'm building.
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace with AI teammates, running on your own infrastructure through your own choice of model.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace with AI teammates, running on your own infrastructure through your own choice of model.
 
 ---
 

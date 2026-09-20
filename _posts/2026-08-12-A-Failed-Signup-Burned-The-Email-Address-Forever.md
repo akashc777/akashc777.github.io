@@ -11,7 +11,7 @@ One of three posts about the days after [the week with no new features in it](/p
 
 No features in this one. It's the half of the job where you find out what your code does when the second write fails.
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace with AI teammates, on your own infrastructure. It stores relational data in Postgres and the identity/permission graph in Dgraph, which means a lot of operations are **two writes**, and this post is about all the ways I had not thought hard enough about the gap between them.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace with AI teammates, on your own infrastructure. It stores relational data in Postgres and the identity/permission graph in Dgraph, which means a lot of operations are **two writes**, and this post is about all the ways I had not thought hard enough about the gap between them.
 
 ---
 

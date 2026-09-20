@@ -7,7 +7,7 @@ description: "Shipping self-hosted software means the update runs on a machine y
 tags: ["OneCamp", "Self-Hosted", "Deployment", "Migrations", "Backups", "Shell", "Docker", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace, chat, docs, tasks, projects, calls, boards, tables, an API, with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace, chat, docs, tasks, projects, calls, boards, tables, an API, with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
 
 This sits on [two tracked editions, and the customer install that actually works](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html), and on [one server per customer](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html). The first is what a self-hosted update has to land on. The second is the customers who still have no update path at all.
 
@@ -128,4 +128,4 @@ The through line is that I verified by reading what the software said about itse
 
 The install surface this has to land on: [shipping two editions](/post/Shipping-Two-Editions-And-The-Customer-Install-That-Actually-Works.html). The customers who still have no update path: [one server per customer](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html). The same class of green light a week later: [one dead hostname took video calls down for 26 days](/post/One-Dead-Hostname-Took-Video-Calls-Down-For-26-Days.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

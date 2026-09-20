@@ -7,7 +7,7 @@ description: "My audit log could always tell you whose authority an agent acted 
 tags: ["OneCamp", "AI Governance", "Audit", "EU AI Act", "AI Agents", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
 
 Two weeks ago I wrote that [AI governance is mostly boring plumbing](/post/AI-Governance-Is-Mostly-Boring-Plumbing.html). This fortnight was three more pieces of it, and one of them I only found because somebody pasted my own product's warning at me.
 
@@ -143,4 +143,4 @@ And, as ever: I never claim OneCamp makes you compliant with anything. It produc
 
 The other post from this fortnight: [I spent a week comparing my agents to everyone else's, then I let theirs in](/post/I-Spent-A-Week-Comparing-My-Agents-To-Everyone-Elses-Then-I-Let-Theirs-In.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

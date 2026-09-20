@@ -7,7 +7,7 @@ description: "The AI Act's transparency rules took effect on 2 August 2026. Serv
 tags: ["OneCamp", "AI Governance", "EU AI Act", "Audit", "Agents", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace with AI agents that runs on **your** infrastructure. I build it and sell it, which means I have spent this year finding out what governing agents actually requires, as opposed to what it sounds like it requires.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace with AI agents that runs on **your** infrastructure. I build it and sell it, which means I have spent this year finding out what governing agents actually requires, as opposed to what it sounds like it requires.
 
 Three things happened this year that are the same thing.
 
@@ -96,4 +96,4 @@ v2.7.0 and v1.5.0 are out, and everything described here is in them. The other p
 
 Update: the next piece of this plumbing is [every agent row said who it acted for, none said whether anyone was watching](/post/Every-Agent-Row-Said-Who-It-Acted-For-None-Said-Whether-Anyone-Was-Watching.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

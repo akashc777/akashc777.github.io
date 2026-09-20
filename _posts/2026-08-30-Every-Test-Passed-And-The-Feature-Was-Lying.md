@@ -7,7 +7,7 @@ description: "Last week I wrote about things that broke silently. This week noth
 tags: ["OneCamp", "Testing", "Product", "AI", "Go", "TypeScript", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.
 
 [Last week's post](/post/One-Dead-Hostname-Took-Video-Calls-Down-For-26-Days.html) was about things that broke silently. A certificate expired, video calls died for 26 days, and no alarm went off.
 
@@ -102,4 +102,4 @@ Update: that decoupling shipped, and turned out not to be the larger remaining p
 
 If you want to read the fixes rather than take my word for them, they are all in the open repository.
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

@@ -7,7 +7,7 @@ description: "I made the build server's Docker image smaller, which is a good id
 tags: ["OneCamp", "Docker", "Go", "Operations", "Silent Failure", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace, chat, docs, tasks, projects, calls, boards, tables, an API, with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace, chat, docs, tasks, projects, calls, boards, tables, an API, with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.
 
 This follows [the update that downloaded and never ran](/post/The-Update-Downloaded-Fine-And-Never-Ran.html). That one left new files on disk and the old binary running. This one left a healthy process that could not produce a download.
 
@@ -124,4 +124,4 @@ Health checks tell you a process is running. They are very bad at telling you it
 
 What that looks like when the green thing is a certificate instead of a health check: [one dead hostname took video calls down for 26 days](/post/One-Dead-Hostname-Took-Video-Calls-Down-For-26-Days.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

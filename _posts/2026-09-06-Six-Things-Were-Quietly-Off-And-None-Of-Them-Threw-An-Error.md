@@ -7,7 +7,7 @@ description: "Push notifications were off on every install that followed my own 
 tags: ["OneCamp", "Release", "Self-Hosted", "AI Agents", "Observability", "Audit", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
 
 This fortnight shipped as **v2.8.0** and **v1.6.0**, the AI edition and the edition without AI. Most of it was not new features. Most of it was finding things that were already broken and not saying so.
 
@@ -161,4 +161,4 @@ And the agent improvement loop is real but hungry. It reads your last thirty day
 
 If any of the directions above turn out to be wrong, tell me. That is the whole point of the post.
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

@@ -7,7 +7,7 @@ description: "A customer churned in July. Their DNS record was deleted and their
 tags: ["OneCamp", "Traefik", "TLS", "Postgres", "Operations", "Silent Failure", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.
 
 This sits next to [every health check was green, and nobody could download the product](/post/Every-Health-Check-Was-Green-And-Nobody-Could-Download-My-Product.html) and [the update that downloaded and never ran](/post/The-Update-Downloaded-Fine-And-Never-Ran.html). Same shape: the thing that was green was not the thing that mattered.
 
@@ -148,4 +148,4 @@ And if you have a Traefik rule that accumulates hostnames, go read it. Mine had 
 
 The same class of green light, twice already this month: [every health check was green](/post/Every-Health-Check-Was-Green-And-Nobody-Could-Download-My-Product.html), and [the update that downloaded and never ran](/post/The-Update-Downloaded-Fine-And-Never-Ran.html). This week it was the test suite: [every test passed and the feature was lying](/post/Every-Test-Passed-And-The-Feature-Was-Lying.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

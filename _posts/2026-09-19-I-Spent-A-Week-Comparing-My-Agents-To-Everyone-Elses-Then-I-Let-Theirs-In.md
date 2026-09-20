@@ -7,7 +7,7 @@ description: "The new crop of AI coworkers can do things mine cannot, and I went
 tags: ["OneCamp", "AI Agents", "AG-UI", "Interop", "Governance", "Self-Hosted", "OpenSource"]
 ---
 
-If you're new here: [OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
+If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
 
 This summer a new shape of product arrived: the AI coworker that gets a computer of its own. A browser it drives, a shell it runs, logins it holds. I spent a week with them, including reading one of them line by line, because I wanted an honest answer to a question I had been avoiding.
 
@@ -243,4 +243,4 @@ If you try it against your own agent and it breaks, tell me what it sent. That i
 
 The other post from this fortnight: [every agent row said who it acted for, none said whether anyone was watching](/post/Every-Agent-Row-Said-Who-It-Acted-For-None-Said-Whether-Anyone-Was-Watching.html).
 
-*[OneCamp](https://onemana.dev/buy) is an open-source, self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
