@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-09-19 12:00:00 +0530
 description: "My audit log could always tell you whose authority an agent acted on. It could not tell you whether that person was in the room. That is the question an auditor actually asks, and it had no field, so I added one and immediately found two places writing rows that still said nothing. Also in this fortnight: agents that answer with a chart because of a comment I wrote that was wrong, and a warning my own demo was showing on every single answer."
 tags: ["OneCamp", "AI Governance", "Audit", "EU AI Act", "AI Agents", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/every-agent-row-said-who-it-acted-for-none-said-whether-anyone-was-watching"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
