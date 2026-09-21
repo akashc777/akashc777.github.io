@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-30 12:00:00 +0530
 description: "Last week I wrote about things that broke silently. This week nothing broke. The build was green, the frontend's 618 tests passed, and three features were telling customers things that were not true: a meeting recap that only works for recorded calls and never says so, every bot in the product claiming to be the AI assistant including on the edition that has no AI, and a feature I shipped to the one frontend repository nobody deploys."
 tags: ["OneCamp", "Testing", "Product", "AI", "Go", "TypeScript", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/every-test-passed-and-the-feature-was-lying"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.

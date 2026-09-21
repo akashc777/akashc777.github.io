@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-07 11:00:00 +0530
 description: "OneCamp lets an admin allow several models, and a member, a channel or an agent can each pick a different one. But there was exactly one context window setting, and every budget read it no matter which model actually answered. That is wrong in both directions and silently: a channel pinned to a 128k model under an 8192 workspace threw away context that fitted, and on a local model it was worse than wasteful — the model was genuinely run small. Limits now live per model, with a Detect button that asks the provider, and an answer built from a shortened prompt now says so."
 tags: ["OneCamp", "AI", "LLM", "Go", "NextJS", "Ollama", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/one-context-window-for-every-model-was-quietly-wrong"
 ---
 One of four posts about a week with no new features in it. The first was about [opening OneCamp to outside AI agents](/post/We-Opened-OneCamp-To-Outside-AI-Agents-And-Every-Gate-Found-A-Bug.html); this one is smaller and, if you run local models, probably more likely to have affected you.
 

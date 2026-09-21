@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-12 10:00:00 +0530
 description: "Creating a user wrote to Postgres, then to Dgraph, and on a Dgraph failure it logged and returned — leaving a row that owns the email address and an account nobody can see. Every retry then failed on the unique constraint, and for SSO every subsequent login failed the same way with no self-service recovery. The same pattern was in channels, teams and projects. Sending a message had a crueller version: the rollback overwrote the error that triggered it, so the API returned 'created post successfully' for a message it had just deleted. Also: 790 response bodies were handing clients Postgres constraint names and internal source lines, and an MCP server whose secret wouldn't decrypt was registered and called with an empty auth header."
 tags: ["OneCamp", "Go", "Postgres", "Dgraph", "Reliability", "Security", "NextJS", "Debugging", "SelfHosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/a-failed-signup-burned-the-email-address-forever"
 ---
 
 One of three posts about the days after [the week with no new features in it](/post/We-Opened-OneCamp-To-Outside-AI-Agents-And-Every-Gate-Found-A-Bug.html). The others are about [two-factor and SCIM](/post/Two-Factor-SCIM-And-The-Config-File-Nothing-Was-Checking.html) and [the same one-line fault found five times](/post/The-Same-One-Line-Fault-Five-Times-And-The-Test-That-Missed-It-Too.html).

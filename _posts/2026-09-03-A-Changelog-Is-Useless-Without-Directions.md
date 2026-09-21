@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-09-03 12:00:00 +0530
 description: "124 commits in two weeks across the backend and the frontend. A changelog tells you what changed and almost never tells you where the change lives, which is how software ends up full of features nobody can find. So this is the changelog with the directions in it, grouped by what you were trying to do. Plus two more dead ends I found while writing it, including one where a page on a phone had no title, no back button and no bottom navigation."
 tags: ["OneCamp", "Changelog", "Product", "AI", "Self-Hosted", "Mobile", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/a-changelog-is-useless-without-directions"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.

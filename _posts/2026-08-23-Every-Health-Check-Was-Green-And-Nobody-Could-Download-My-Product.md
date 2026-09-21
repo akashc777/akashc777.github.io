@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-23 18:00:00 +0530
 description: "I made the build server's Docker image smaller, which is a good idea, and it removed two binaries that appear in no import statement. The service compiled, started, stayed healthy, answered its install script from memory, and returned 404 for the actual product. It stayed that way for hours. Four failures stacked on top of each other, each one hidden by the one above it, and the only reason I found any of them was asking a question that had nothing to do with them."
 tags: ["OneCamp", "Docker", "Go", "Operations", "Silent Failure", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/every-health-check-was-green-and-nobody-could-download-my-product"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace, chat, docs, tasks, projects, calls, boards, tables, an API, with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.

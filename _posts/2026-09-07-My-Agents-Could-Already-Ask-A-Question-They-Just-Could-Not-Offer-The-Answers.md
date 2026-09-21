@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-09-07 10:00:00 +0530
 description: "An AI teammate that guesses when it should ask is the failure everyone has met. Mine could already stop and ask, and had been able to for months. What it could not do was offer you the answers, so it wrote the choices into its own prose and you typed something back that the model then had to re-interpret. Here is what closing that gap actually involved, including the test I wrote that could not fail for the reason its own comment claimed."
 tags: ["OneCamp", "AI Agents", "MCP", "Elicitation", "Self-Hosted", "Governance", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/my-agents-could-already-ask-a-question-they-just-could-not-offer-the-answers"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.

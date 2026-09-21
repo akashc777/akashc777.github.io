@@ -5,6 +5,7 @@ author : "Akash Hadagali"
 date: 2025-12-10 12:00:00 +0530
 description : "Most apps get away with one database. OneCamp uses two  -  Postgres for users and config, Dgraph for the social graph. Here's the reasoning, the tradeoffs, the distributed write problem, and whether I'd do it again."
 tags : ["Go", "PostgreSQL", "Dgraph", "Database", "Architecture", "OneCamp", "GraphDB"]
+canonical_url : "https://onemana.dev/blog/two-databases-postgres-dgraph-onecamp"
 ---
 
 When I mention that OneCamp uses both PostgreSQL and Dgraph, I get one of two reactions:

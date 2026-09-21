@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-12 12:00:00 +0530
 description: "OneCamp now has TOTP two-factor sign-in and SCIM 2.0 provisioning, so Okta or Entra can create and deactivate members and a stolen password is no longer enough. Writing them turned up four decisions where the obvious answer was wrong — reusing the AI key-encryption key would have locked every enrolled user out on the next provider leak, and reusing the API-token middleware for SCIM meant offboarding the admin who connected Okta would silently kill provisioning. Then my own commit corrupted the production config template, and every gate passed, because nothing in the repository had ever read that file."
 tags: ["OneCamp", "Security", "2FA", "TOTP", "SCIM", "Go", "NextJS", "Enterprise", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/two-factor-scim-and-the-config-file-nothing-was-checking"
 ---
 
 One of three posts about the days after [the week with no new features in it](/post/We-Opened-OneCamp-To-Outside-AI-Agents-And-Every-Gate-Found-A-Bug.html). This one has new capability in it. The other two are about [the same one-line fault found five times](/post/The-Same-One-Line-Fault-Five-Times-And-The-Test-That-Missed-It-Too.html) and [a failed signup burning an email address forever](/post/A-Failed-Signup-Burned-The-Email-Address-Forever.html).

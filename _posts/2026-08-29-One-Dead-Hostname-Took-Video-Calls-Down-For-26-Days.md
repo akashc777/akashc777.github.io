@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-29 12:00:00 +0530
 description: "A customer churned in July. Their DNS record was deleted and their hostname stayed in a Traefik rule, which meant the certificate covering every customer's video service could no longer renew. It expired on 29 July and nobody could join a call until 24 August. In the same week I found an email queue that had never once enqueued anything, an agent that could not report its own failure, a dry run that was not a dry run, and my own public repository configured to point every buyer at my servers."
 tags: ["OneCamp", "Traefik", "TLS", "Postgres", "Operations", "Silent Failure", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/one-dead-hostname-took-video-calls-down-for-26-days"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.

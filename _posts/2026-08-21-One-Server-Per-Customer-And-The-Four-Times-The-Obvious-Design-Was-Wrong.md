@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-21 12:00:00 +0530
 description: "OneCamp has always been self-hosted: you buy a licence, you run it. Managed hosting adds the other option — you pay monthly and a whole server gets provisioned for you, one machine per customer, no shared database anywhere. Building it turned up four places where the obvious implementation was quietly wrong: a claim that excluded nobody, a nil provisioner that reported success, a DNS record pointing the workspace at the wrong host, and a server pool defined by exclusion that would have wiped the production box. None of them would have failed loudly."
 tags: ["OneCamp", "Managed Hosting", "Go", "Postgres", "OVH", "Provisioning", "Distributed Systems", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/one-server-per-customer-and-the-four-times-the-obvious-design-was-wrong"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace — chat, docs, tasks, projects, calls, boards, tables, an API — with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.

@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-23 12:00:00 +0530
 description: "Shipping self-hosted software means the update runs on a machine you cannot see, at a moment you do not choose, on a database you must not break. OneCamp's updater downloaded the new version and stopped there, leaving customers with new code on disk and old code running, and nothing anywhere said so. Fixing it turned up an ordering question with a real answer, a backup that had never once succeeded on a fresh machine, and a release I shipped twice that could not start."
 tags: ["OneCamp", "Self-Hosted", "Deployment", "Migrations", "Backups", "Shell", "Docker", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/the-update-downloaded-fine-and-never-ran"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace, chat, docs, tasks, projects, calls, boards, tables, an API, with AI teammates that live in it. It runs on **your** infrastructure, through **your** choice of model.

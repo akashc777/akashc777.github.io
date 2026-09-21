@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-07 09:00:00 +0530
 description: "Four fixes about handling text and media, none of which involve AI. Truncating a string by bytes was splitting characters and producing invalid UTF-8, and the guard around it was appending an ellipsis to text it had never shortened. A markdown renderer was stripping script tags with regexes and handing the result to dangerouslySetInnerHTML — five payloads walked straight through it, on the origin where the admin session lives. An uploaded SVG could run script when navigated to directly. And base64 images were still reaching the search index by a path the guard never covered."
 tags: ["OneCamp", "Go", "NextJS", "Security", "XSS", "UTF-8", "OpenSearch", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/regex-is-not-a-sanitiser-and-other-things-i-got-wrong-about-text"
 ---
 One of four posts about a week with no new features in it. The others were about [opening OneCamp to outside AI agents](/post/We-Opened-OneCamp-To-Outside-AI-Agents-And-Every-Gate-Found-A-Bug.html), [token limits that follow the model](/post/One-Context-Window-For-Every-Model-Was-Quietly-Wrong.html), and [four mechanisms that were written and never called](/post/The-Code-Was-Written-Nothing-Called-It.html).
 

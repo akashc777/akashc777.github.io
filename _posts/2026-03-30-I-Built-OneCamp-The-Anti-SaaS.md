@@ -5,6 +5,7 @@ author : "Akash Hadagali"
 date: 2026-03-30 12:00:00 +0530
 description : "The honest, technical story of building OneCamp  -  a self-hosted all-in-one workspace. Full system architecture, real tech choices, and the reality of launch day."
 tags : ["OneCamp", "SaaS", "Go", "NextJS", "Self-Hosted", "Startup", "OpenSource", "IndieHacker"]
+canonical_url : "https://onemana.dev/blog/i-built-onecamp-the-anti-saas"
 ---
 
 On March 9th, 2026, I launched [OneCamp](https://onemana.dev/buy).

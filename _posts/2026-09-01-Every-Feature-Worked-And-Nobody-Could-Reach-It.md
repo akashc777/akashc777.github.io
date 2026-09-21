@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-09-01 12:00:00 +0530
 description: "Last week I wrote about features that were lying. This week is the sequel with a different shape: features that were telling the truth and were unreachable. The meeting recap needed a recording nobody made. Browser transcription, the default, kept nothing at all. A meeting notes document existed with no link to it. An agent activity feed had a finished API and no interface. Skills had a full lifecycle in the database and no way to edit one."
 tags: ["OneCamp", "Product", "AI", "Defaults", "Go", "TypeScript", "Self-Hosted", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/every-feature-worked-and-nobody-could-reach-it"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo, which means I get to find out what breaks.

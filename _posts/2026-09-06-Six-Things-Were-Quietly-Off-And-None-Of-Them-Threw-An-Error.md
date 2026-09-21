@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-09-06 12:00:00 +0530
 description: "Push notifications were off on every install that followed my own guide. Video calls had no certificate because the documentation told you not to create the record. Telemetry was going nowhere because I read a URL as a hostname. None of these threw an error, which is the only reason they lasted. Here is the fortnight, the two releases it produced, and the three things I promised last time that are now done."
 tags: ["OneCamp", "Release", "Self-Hosted", "AI Agents", "Observability", "Audit", "OpenSource"]
+canonical_url: "https://onemana.dev/blog/six-things-were-quietly-off-and-none-of-them-threw-an-error"
 ---
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.

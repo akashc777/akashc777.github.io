@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-19 12:00:00 +0530
 description: "OneCamp now ships as two tracked editions: v1 without AI, and v2 with AI. That sounds like a packaging change until you try to install it. The published guide told customers to run make targets that did not exist, the shipped Makefile pointed at a compose file with a different name, and make doctor reported a clean config while secret-store placeholders were still in it. Fixing the install surface turned up the same pattern as the code: the spec was the documentation, and the documentation had drifted."
 tags: ["OneCamp", "Release", "Self-Hosted", "OpenSource", "DevOps", "CI", "Enterprise"]
+canonical_url: "https://onemana.dev/blog/shipping-two-editions-and-the-customer-install-that-actually-works"
 ---
 
 > **Note, added later.** Two things have changed since this was written.

@@ -5,6 +5,7 @@ author : "Akash Hadagali"
 date: 2026-02-14 12:00:00 +0530
 description : "Deep dive into OneCamp's real-time messaging layer  -  why MQTT beat raw WebSockets, how topics map to workspace entities, the Redux pattern that keeps UI and transport completely decoupled, and the scroll position problem that made me sob."
 tags : ["OneCamp", "MQTT", "WebSockets", "Go", "Real-Time", "Architecture", "Redux"]
+canonical_url : "https://onemana.dev/blog/mqtt-vs-websockets-real-time-onecamp"
 ---
 
 When I tell people I used MQTT for a team chat app, they look at me the way people look at someone who shows up to a dinner party with a thermos full of protein shake.

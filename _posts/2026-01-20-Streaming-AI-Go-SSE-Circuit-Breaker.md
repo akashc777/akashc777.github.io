@@ -5,6 +5,7 @@ author : "Akash Hadagali"
 date: 2026-01-20 12:00:00 +0530
 description : "The real technical details behind OneCamp's streaming AI feature  -  Server-Sent Events in Go's net/http, a fast-path optimization for conversational inputs, post-stream tool call parsing, circuit breakers, and the React batching gotcha that will catch you eventually."
 tags : ["Go", "AI", "SSE", "Ollama", "OneCamp", "LLM", "CircuitBreaker", "Architecture"]
+canonical_url : "https://onemana.dev/blog/streaming-ai-go-sse-circuit-breaker"
 ---
 
 The most common mistake in AI-integrated backends: treating the LLM like a normal API call.

@@ -5,6 +5,7 @@ author: "Akash Hadagali"
 date: 2026-08-07 10:00:00 +0530
 description: "Four times in one week I found the same thing: a mechanism that was finished, correct, documented, unit-tested — and unreachable. Two of them were hiding real bugs, including one where forwarding a message to a group chat and a DM at once delivered the group's message into the DM, in front of people who were never in that group. Here's the pattern, the bugs, the check that now fails the build when it recurs, and why I stopped trusting any test I hadn't watched fail."
 tags: ["OneCamp", "Go", "Testing", "CodeQuality", "StaticAnalysis", "DeadCode", "Debugging", "Security", "Self-Hosted"]
+canonical_url: "https://onemana.dev/blog/the-code-was-written-nothing-called-it"
 ---
 One of four posts about a week with no new features in it. The others were about [opening OneCamp to outside AI agents](/post/We-Opened-OneCamp-To-Outside-AI-Agents-And-Every-Gate-Found-A-Bug.html), [token limits that follow the model](/post/One-Context-Window-For-Every-Model-Was-Quietly-Wrong.html), and [text, media and browser-facing security](/post/Regex-Is-Not-A-Sanitiser-And-Other-Things-I-Got-Wrong-About-Text.html). This one is the most portable, because the pattern isn't specific to anything I'm building.
 

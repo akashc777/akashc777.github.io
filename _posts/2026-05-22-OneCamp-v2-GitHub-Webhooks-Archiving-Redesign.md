@@ -5,6 +5,7 @@ author : "Akash Hadagali"
 date: 2026-05-22 12:00:00 +0530
 description : "The biggest OneCamp update since launch. Bidirectional GitHub integration, production-grade webhook infrastructure, admin data archiving with undo, and a ground-up frontend redesign — 38,000+ lines of new code across 634 files."
 tags : ["OneCamp", "GitHub", "Webhooks", "Self-Hosted", "Go", "NextJS", "Architecture", "OpenSource"]
+canonical_url : "https://onemana.dev/blog/onecamp-v2-github-webhooks-archiving-redesign"
 ---
 
 Two months after [launching OneCamp](/post/I-Built-OneCamp-The-Anti-SaaS.html), I just shipped the largest update since day one.
