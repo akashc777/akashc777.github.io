@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-agents-finish.jpg"
 author: "Akash Hadagali"
 date: 2026-10-01 19:20:00 +0530
 description: "I assigned real work to OneCamp's AI teammates for a week and kept a list of every time one said it had finished when it had not: it had started a coding job, or offered me three options, or written 'ready for the next step'. This is what changed so an agent now checks the thing itself before calling it done, keeps going when a long job runs out of steps, tells you privately instead of interrupting a channel, signs every action it takes, and runs your background work on the model you choose."
+canonical_url: "https://onemana.dev/blog/my-agents-kept-saying-done-when-they-had-only-started"
 tags: ["OneCamp", "AI Agents", "Governance", "Reliability", "Self-Hosted", "OpenSource"]
 ---
 

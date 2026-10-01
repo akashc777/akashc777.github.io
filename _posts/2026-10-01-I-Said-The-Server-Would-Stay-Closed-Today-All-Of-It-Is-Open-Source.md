@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-open-source-plans.jpg"
 author: "Akash Hadagali"
 date: 2026-10-01 19:00:00 +0530
 description: "OneCamp's server is now open source under AGPL-3.0, both editions, including the AI one I had said would stay commercial. There is also a free plan for teams of up to 25, an installer that serves the whole workspace from one server, a Check for updates button, and a desktop app. This is what changed in the last few days, which of the four ways to run OneCamp fits you, and the one thing I found the day I opened the code."
+canonical_url: "https://onemana.dev/blog/i-said-the-server-would-stay-closed-today-all-of-it-is-open-source"
 tags: ["OneCamp", "Open Source", "AGPL", "Self-Hosted", "Desktop App", "Free Plan"]
 ---
 
@@ -87,7 +88,7 @@ Then I made it impossible to repeat. In **v2.38.1** (and v1.24.1), the fallback 
 
 The next two posts cover the rest:
 
-- [Half the team was still in Slack, and everyone's email was in another tab](https://akashc777.github.io/post/Half-The-Team-Was-Still-In-Slack-And-Everyones-Email-Was-In-Another-Tab.html): a live bridge so a team can move off Slack gradually, and your Gmail inside OneCamp.
-- [My agents kept saying done when they had only started](https://akashc777.github.io/post/My-Agents-Kept-Saying-Done-When-They-Had-Only-Started.html): agents that finish what they start, tell you things privately, and sign their work.
+- [Half the team was still in Slack, and everyone's email was in another tab](https://onemana.dev/blog/half-the-team-was-still-in-slack-and-everyones-email-was-in-another-tab): a live bridge so a team can move off Slack gradually, and your Gmail inside OneCamp.
+- [My agents kept saying done when they had only started](https://onemana.dev/blog/my-agents-kept-saying-done-when-they-had-only-started): agents that finish what they start, tell you things privately, and sign their work.
 
 If you try OneCamp, from source or from the free plan, I would like to hear what got in your way. Issues and discussions are open at [github.com/OneMana-Soft/OneCamp](https://github.com/OneMana-Soft/OneCamp).
