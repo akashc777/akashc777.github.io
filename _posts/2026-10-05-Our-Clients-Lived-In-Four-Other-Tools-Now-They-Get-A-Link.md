@@ -36,7 +36,7 @@ A **booking page** shows only your free time, in the visitor's time zone, and pu
 
 Agency work comes in sprints and in repeats, and the last few releases cover both:
 
-- **Cycles**: sprints of one to eight weeks for a project; when one ends, its unfinished tasks carry into the next. [Cycles](https://onemana.dev/docs/cycles).
+- **Cycles**: sprints of one to four weeks for a project; when one ends, its unfinished tasks carry into the next. [Cycles](https://onemana.dev/docs/cycles).
 - **Repeating tasks**: the monthly report and the weekly status update create themselves when the last one is done. [Recurring tasks](https://onemana.dev/docs/recurring-tasks).
 - **Workshops on the whiteboard**: a timer, dot voting, and everyone's view following whoever presents. [Board facilitation](https://onemana.dev/docs/board-facilitation).
 - **Pause notifications** when you're with a client, and a teammate can still reach you once a day if it really can't wait. [Pause notifications](https://onemana.dev/docs/pause-notifications).
