@@ -54,7 +54,7 @@ Current prices are on [the buy page](https://onemana.dev/buy).
 
 Until this week, "install OneCamp" meant two deployments: the server on your machine, and the web app somewhere else (Vercel, usually), with its own domain and DNS records. People who expected one command met a second job right at the moment they thought they were done.
 
-**The installer now builds and serves the web app from the same server.** One `make install`, one set of DNS records, done. Everything needs a Linux server with Docker, 8 GB of RAM and 40 GB of disk, and the [installation guide](https://onemana.dev/docs/installation) says that before you start, not after.
+**The installer now builds and serves the web app from the same server.** One `make install`, one set of DNS records, done. Everything needs a Linux server with Docker, 4 GB of RAM and 40 GB of disk (with 8 GB or more, uploads are also scanned for viruses), and the [installation guide](https://onemana.dev/docs/installation) says that before you start, not after. *(Updated 5 Oct: this said 8 GB when published. Since then the installer leaves the virus scanner off on smaller servers, so 4 GB is the minimum.)*
 
 ## Knowing there is an update
 
