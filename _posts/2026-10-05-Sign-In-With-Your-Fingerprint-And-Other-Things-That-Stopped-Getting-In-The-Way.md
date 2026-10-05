@@ -20,6 +20,8 @@ A passkey signs you in with what your device already uses to unlock: a fingerpri
 
 **Use it.** On the sign-in page, press **Sign in with a passkey** and confirm with your device. That's all. OneCamp doesn't then ask for a two-step code: a passkey is already two factors, the device you hold and you.
 
+> **Update, 5 October:** on v2.46.0 to v2.48.0 the button did nothing, because the web app's own security header told the browser not to allow passkeys. It's fixed in v2.48.1 (and v1.33.1 without AI): update and it works. If you press it without a passkey on that device, the page now tells you how to add one.
+
 **Rename or remove one** with the pencil and bin beside it. Removing it stops it signing you in to OneCamp; delete it from the device or password manager too.
 
 Two rules worth knowing, both deliberate:
