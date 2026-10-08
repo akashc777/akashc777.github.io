@@ -4,7 +4,7 @@ image: "/assets/images/post/onecamp-read-receipts.jpg"
 author: "Akash Hadagali"
 date: 2026-10-09 12:00:00 +0530
 description: "OneCamp now shows Seen under your latest message in a DM, and who has read it in a group chat, live. Each person can turn theirs off, and admins can turn them off for everyone."
-canonical_url: "https://onemana.dev/blog/seen-read-receipts"
+canonical_url: "https://onemana.dev/blog/seen-read-receipts-in-dms-and-group-chats"
 tags: ["OneCamp", "Chat", "Read Receipts", "Slack Alternative", "Teams Alternative", "Self-Hosted", "OpenSource"]
 ---
 
