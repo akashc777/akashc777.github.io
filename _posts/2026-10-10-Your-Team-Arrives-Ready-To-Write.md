@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-teammates-ready.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 02:30:00 +0530
 description: "A new teammate in OneCamp now lands in #general with the message box ready, however they get in: an invitation, Google, GitHub, single sign-on or the directory. Invitations say where they stand, a whole company can join through its Google Workspace domain, and a refused sign-in says why. Free, self-hosted, on every plan."
+canonical_url: "https://onemana.dev/blog/your-team-arrives-ready-to-write"
 tags: ["OneCamp", "Onboarding", "Single Sign-On", "SCIM", "Slack Alternative", "Self-Hosted", "OpenSource"]
 ---
 

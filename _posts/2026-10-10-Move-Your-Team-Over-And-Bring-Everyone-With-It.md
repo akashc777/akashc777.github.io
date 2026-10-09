@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-imports-invite.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 01:30:00 +0530
 description: "OneCamp's imports from Slack, Jira, Asana, Trello, monday.com, Notion, Linear, ClickUp and Todoist now finish with the people who came across, ready to invite in one step. A Slack import keeps your channels as they were, a failed import always has a way forward, and clients on a shared link reach your team. Free, self-hosted, on every plan."
+canonical_url: "https://onemana.dev/blog/move-your-team-over-and-bring-everyone-with-it"
 tags: ["OneCamp", "Import", "Slack Alternative", "Jira Alternative", "Guests", "Self-Hosted", "OpenSource"]
 ---
 

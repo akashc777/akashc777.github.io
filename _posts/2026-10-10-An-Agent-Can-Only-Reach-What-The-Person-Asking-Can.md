@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-agent-reach.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 02:00:00 +0530
 description: "An AI agent in OneCamp used to run every tool with its owner's access, for anyone who could message it. Now each run knows who asked, and reaches only what both that person and the owner can. Text from outside your workspace, a GitHub comment, a webhook or a public form, can no longer steer what an agent does. Here is how it works and why it matters."
+canonical_url: "https://onemana.dev/blog/an-agent-can-only-reach-what-the-person-asking-can"
 tags: ["OneCamp", "AI Agents", "Security", "Governance", "Self-Hosted", "OpenSource"]
 ---
 

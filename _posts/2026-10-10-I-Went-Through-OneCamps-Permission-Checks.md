@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-permissions-audit.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 00:30:00 +0530
 description: "A member could join any private channel by its id, edit anyone's message, or follow every conversation live through the message broker. GitHub sign-in took addresses GitHub hadn't verified. Here is what going through OneCamp's permission checks found, what v2.70.0 and v1.55.0 change, and why you should update today."
+canonical_url: "https://onemana.dev/blog/i-went-through-onecamps-permission-checks"
 tags: ["OneCamp", "Security", "Release", "Self-Hosted", "Post-Mortem", "OpenSource"]
 ---
 
@@ -54,7 +55,7 @@ Over thirty of those decisions were wrong. Here they are, grouped by what they l
 
 ## AI and automation
 
-- **An agent ran every tool as its owner, for anyone who could message it.** Asking someone's agent to "find the plan" searched their private channels and DMs. A run now carries who asked, and reaches only what both that person and the agent's owner can. There's [a post of its own](/post/An-Agent-Can-Only-Reach-What-The-Person-Asking-Can.html) on this.
+- **An agent ran every tool as its owner, for anyone who could message it.** Asking someone's agent to "find the plan" searched their private channels and DMs. A run now carries who asked, and reaches only what both that person and the agent's owner can. There's [a post of its own](https://onemana.dev/blog/an-agent-can-only-reach-what-the-person-asking-can) on this.
 - **An agent bound to an event heard about events everywhere**, private channels its owner wasn't in included. It now hears only events in places its owner can see.
 - **Anyone who could manage a channel's members could put someone else's agent in it.** Only its owner or an admin can now.
 - **The UI Designer's generated screens were cleaned with patterns** that missed handlers written after a slash or a quote. They're now cleaned by parsing the HTML.

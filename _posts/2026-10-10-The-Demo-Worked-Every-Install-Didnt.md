@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-install-fixes.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 01:00:00 +0530
 description: "Messages never arrived live on a single self-hosted install, calls never started on a fresh one, and make install could stop before printing the one password it never shows again. The demo showed none of it, because the demo doesn't run the files customers install. Here is what was broken, why nothing said so, and what v2.70.0 and v1.55.0 change."
+canonical_url: "https://onemana.dev/blog/the-demo-worked-every-install-didnt"
 tags: ["OneCamp", "Release", "Self-Hosted", "Post-Mortem", "Docker", "OpenSource"]
 ---
 
