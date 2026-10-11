@@ -62,4 +62,4 @@ And a shared link keeps working when things go wrong:
 - In **Admin → Import**, pick where you're coming from. The [docs](https://onemana.dev/docs) say what each provider needs.
 - Try the [live demo](https://onemana.dev/demo): **#acme** is a channel shared with a client.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.70.0 (with AI) or v1.55.0 (without AI) with `make update`.
+- Already running OneCamp? Update to the latest release with `make update`, in either edition.

@@ -54,4 +54,4 @@ Notion and Airtable have linked databases and rollups, hosted on their servers a
 
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1) and open the **Vendors** table: each vendor's Launch budget lines, and the Spend they add up to.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.69.0 (with AI) or v1.54.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

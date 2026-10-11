@@ -288,6 +288,6 @@ The importer frontend is available in your admin panel under the **Import** tab.
 
 ---
 
-*Previous posts: [OneCamp v2.0: GitHub Sync, Webhooks, Archiving](/post/OneCamp-v2-GitHub-Webhooks-Archiving-Redesign.html) · [Why we use two databases](/post/Two-Databases-Postgres-Dgraph-OneCamp.html) · [Why MQTT for real-time](/post/MQTT-vs-WebSockets-Real-Time-OneCamp.html) · [Building the Anti-SaaS Workspace](/post/I-Built-OneCamp-The-Anti-SaaS.html)*
+*Previous posts: [OneCamp: GitHub Sync, Webhooks, Archiving](/post/OneCamp-v2-GitHub-Webhooks-Archiving-Redesign.html) · [Why we use two databases](/post/Two-Databases-Postgres-Dgraph-OneCamp.html) · [Why MQTT for real-time](/post/MQTT-vs-WebSockets-Real-Time-OneCamp.html) · [Building the Anti-SaaS Workspace](/post/I-Built-OneCamp-The-Anti-SaaS.html)*
 
 *[Follow on Twitter](https://twitter.com/akashc777) for more updates.*

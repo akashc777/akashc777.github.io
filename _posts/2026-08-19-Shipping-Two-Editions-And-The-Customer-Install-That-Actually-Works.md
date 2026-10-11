@@ -3,7 +3,7 @@ title: "Shipping Two Editions, And The Customer Install That Actually Works"
 image: "/assets/images/post/onecamp-release-editions.jpg"
 author: "Akash Hadagali"
 date: 2026-08-19 12:00:00 +0530
-description: "OneCamp now ships as two tracked editions: v1 without AI, and v2 with AI. That sounds like a packaging change until you try to install it. The published guide told customers to run make targets that did not exist, the shipped Makefile pointed at a compose file with a different name, and make doctor reported a clean config while secret-store placeholders were still in it. Fixing the install surface turned up the same pattern as the code: the spec was the documentation, and the documentation had drifted."
+description: "OneCamp now ships as two tracked editions: one without AI, and one with AI. That sounds like a packaging change until you try to install it. The published guide told customers to run make targets that did not exist, the shipped Makefile pointed at a compose file with a different name, and make doctor reported a clean config while secret-store placeholders were still in it. Fixing the install surface turned up the same pattern as the code: the spec was the documentation, and the documentation had drifted."
 tags: ["OneCamp", "Release", "Self-Hosted", "OpenSource", "DevOps", "CI", "Enterprise"]
 canonical_url: "https://onemana.dev/blog/shipping-two-editions-and-the-customer-install-that-actually-works"
 ---
@@ -30,14 +30,14 @@ This week was release infrastructure, not features. The kind of week that is inv
 
 OneCamp has always had an AI branch and a non-AI branch, but the releases were drifting. They are now two permanent editions, each tracking its own branch:
 
-- **v1** is the AI-free edition (`without-ai`).
-- **v2** is the AI edition (`main`).
+- The edition **without AI** tracks the `without-ai` branch.
+- The edition **with AI** tracks `main`.
 
 That is the whole vocabulary a customer needs. Nobody picks a version number: you choose an edition,
 and the installer fetches the current release on that line. Every licence includes **both**, so
-moving from v1 to v2 later is a re-run of the installer, not another purchase.
+moving to the edition with AI later is a re-run of the installer, not another purchase.
 
-The AI-free tree is not the same code with features hidden. It is a separate build that has the AI packages, routes, marketplace entry, and AI-only environment keys removed. That means a v1 install never downloads an Ollama image, never exposes an AI endpoint, and never asks an operator to configure keys for a feature that is not there.
+The AI-free tree is not the same code with features hidden. It is a separate build that has the AI packages, routes, marketplace entry, and AI-only environment keys removed. That means an install without AI never downloads an Ollama image, never exposes an AI endpoint, and never asks an operator to configure keys for a feature that is not there.
 
 Keeping two editions buildable from the same repo means every CI gate has to pass on both. The `without-ai` workflow was failing on guard tests that assume the full tree — tests that walk every exported function, every environment template, every OpenSearch seam, and every authorization consumer. Those tests are correct for the full edition. In the AI-free edition the right answer is not "make the code look like the full edition"; it is "make the guards understand that this edition intentionally does less." So the guards now skip or baseline the parts that do not exist in `without-ai`.
 
@@ -75,7 +75,7 @@ The fix was not to rewrite the guide. The guide was the spec. The Makefile had t
 
 ## Why The Frontend Snapshot Needed A Hard Reset
 
-The public frontend repo has two branches with unrelated histories: `ai` (v2) and `main` (v1). `main` had fallen behind because every sync meant cherry-picking non-AI commits out of an AI-first tree. After a while the only honest thing to do was regenerate it: take the current `ai` tree, delete the AI-only pages, components, hooks, and utilities, and fix what broke.
+The public frontend repo has two branches with unrelated histories: `ai` (with AI) and `main` (without AI). `main` had fallen behind because every sync meant cherry-picking non-AI commits out of an AI-first tree. After a while the only honest thing to do was regenerate it: take the current `ai` tree, delete the AI-only pages, components, hooks, and utilities, and fix what broke.
 
 That removed ~60 files and ~20k lines. Build and tests pass. The non-AI edition now has the same recent boards, tables, templates, SCIM, two-factor, and call-gating work as the AI edition, without the AI surfaces.
 
@@ -100,4 +100,4 @@ In each case the fix was to make the artifact match the stated contract, rather 
 
 Next: [one server per customer, and the four times the obvious design was wrong](/post/One-Server-Per-Customer-And-The-Four-Times-The-Obvious-Design-Was-Wrong.html).
 
-*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace. It now ships as two editions, v1 without AI and v2 with it: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*
+*[OneCamp](https://onemana.dev/buy) is a self-hosted workspace. It now ships as two editions, one without AI and one with it: one payment, unlimited users, your server. Find it at [onemana.dev](https://onemana.dev/buy).*

@@ -70,4 +70,4 @@ Each person sees the card as themselves. If someone in the channel can't open th
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guides: [Pausing notifications and focus time](https://onemana.dev/docs/pause-notifications) and [Link cards](https://onemana.dev/docs/link-cards).
 
-These arrived in OneCamp v2.49.0 (with AI) and v1.34.0 (without AI).
+These arrived in both editions of OneCamp on 6 October.

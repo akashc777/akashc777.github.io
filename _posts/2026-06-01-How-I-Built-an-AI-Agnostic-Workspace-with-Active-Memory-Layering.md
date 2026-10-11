@@ -203,6 +203,6 @@ OneCamp is available as a self-hosted lifetime purchase at [onemana.dev](https:/
 
 ---
 
-*Previous posts: [Universal Import Engine: Migrating from 8 SaaS Platforms](/post/How-I-Built-a-Universal-Import-Engine-For-8-Different-Providers.html) · [OneCamp v2.0: GitHub Sync, Webhooks, Archiving](/post/OneCamp-v2-GitHub-Webhooks-Archiving-Redesign.html) · [Why we use two databases](/post/Two-Databases-Postgres-Dgraph-OneCamp.html) · [Building the Anti-SaaS Workspace](/post/I-Built-OneCamp-The-Anti-SaaS.html)*
+*Previous posts: [Universal Import Engine: Migrating from 8 SaaS Platforms](/post/How-I-Built-a-Universal-Import-Engine-For-8-Different-Providers.html) · [OneCamp: GitHub Sync, Webhooks, Archiving](/post/OneCamp-v2-GitHub-Webhooks-Archiving-Redesign.html) · [Why we use two databases](/post/Two-Databases-Postgres-Dgraph-OneCamp.html) · [Building the Anti-SaaS Workspace](/post/I-Built-OneCamp-The-Anti-SaaS.html)*
 
 *For real-time updates on self-hosting and self-correcting systems, [follow me on Twitter](https://twitter.com/akashc777).*

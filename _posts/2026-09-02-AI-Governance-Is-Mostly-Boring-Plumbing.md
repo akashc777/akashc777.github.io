@@ -93,7 +93,7 @@ Governance sounds like ethics and is mostly plumbing. Permissions read at call t
 
 What it does require is being willing to write down where your own answer is still "not yet", and to correct the sentence on your website when it turns out to be broader than your code. I did both this week. The second one was more useful.
 
-v2.7.0 and v1.5.0 are out, and everything described here is in them. The other post from this release: [every feature worked and nobody could reach it](/post/Every-Feature-Worked-And-Nobody-Could-Reach-It.html).
+The new release of both editions is out, and everything described here is in it. The other post from this release: [every feature worked and nobody could reach it](/post/Every-Feature-Worked-And-Nobody-Could-Reach-It.html).
 
 Update: the next piece of this plumbing is [every agent row said who it acted for, none said whether anyone was watching](/post/Every-Agent-Row-Said-Who-It-Acted-For-None-Said-Whether-Anyone-Was-Watching.html).
 

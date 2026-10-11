@@ -28,7 +28,7 @@ Three things about how it works:
 - **A small model is fine.** A local model on a server's CPU can take a minute or two to write a plan. The draft runs on the server and the app checks back until it's ready, so a slow model never times out halfway. You can keep filling in the name and the team meanwhile, or press **Cancel**.
 - **The AI's plan is checked like any template file**, so a plan it got wrong comes back as a message to try again, never as a broken project. Small models tend to ignore the timeframe ("six weeks", then a plan that ends on day 16), so OneCamp reads the timeframe from what you wrote and stretches the plan to fit.
 
-Describe it is part of OneCamp with AI (v2.55.0). The templates, and everything below, are in both editions.
+Describe it is part of OneCamp with AI. The templates, and everything below, are in both editions.
 
 ## Every template has a page
 
@@ -63,4 +63,4 @@ The pages come from the same code that makes the projects. If a template changes
 - Browse [all the templates](https://onemana.dev/templates).
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guide: [Project templates](https://onemana.dev/docs/project-templates).
-- Already running OneCamp? Update to v2.55.0 (with AI) or v1.40.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

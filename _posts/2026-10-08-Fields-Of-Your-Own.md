@@ -62,4 +62,4 @@ Editing a task in a list filtered by cycle, by assignee, by overdue or by one of
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1): the Q4 launch project has its fields set, and three completed cycles behind the current one.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guides: [Custom fields](https://onemana.dev/docs/custom-fields) and [Cycles](https://onemana.dev/docs/cycles).
-- Already running OneCamp? Update to v2.63.0 (with AI) or v1.48.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

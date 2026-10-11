@@ -10,7 +10,7 @@ tags: ["OneCamp", "Invoices", "Time Tracking", "Agencies", "Freelancers", "Self-
 
 If you're new here: [OneCamp](https://onemana.dev) is a self-hosted workspace (chat, tasks, docs, calls, calendar and AI agents) that you install on your own server. It is [open source](https://github.com/OneMana-Soft/OneCamp) and free for up to 25 people.
 
-OneCamp has made invoices from tracked time [since v2.48](https://onemana.dev/docs/time-tracking), at [each person's rate](https://onemana.dev/blog/bill-your-time-at-the-right-rate). But an invoice lived only as long as the browser tab: you printed it to a PDF, and from then on, whether it was paid was something you kept in your head, or in a spreadsheet. Now OneCamp keeps track.
+OneCamp has made invoices from tracked time [since 5 October](https://onemana.dev/docs/time-tracking), at [each person's rate](https://onemana.dev/blog/bill-your-time-at-the-right-rate). But an invoice lived only as long as the browser tab: you printed it to a PDF, and from then on, whether it was paid was something you kept in your head, or in a spreadsheet. Now OneCamp keeps track.
 
 ![A project's invoices in OneCamp: one paid, one overdue and a draft](/assets/images/post/onecamp-invoices.jpg)
 
@@ -42,4 +42,4 @@ Asana, Linear, Notion and Basecamp don't make invoices at all. Toggl makes one f
 
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1): the Q4 launch project's time report (the clock button) has a paid invoice, an overdue one and a draft.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.65.0 (with AI) or v1.50.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

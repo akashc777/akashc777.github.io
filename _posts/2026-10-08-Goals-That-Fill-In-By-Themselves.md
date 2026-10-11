@@ -67,4 +67,4 @@ In Asana, goals are on the Advanced plan, priced per seat. In OneCamp they're in
 - [Open the goals in the live demo](https://onecamp.onemana.dev/?start_demo=goals). The demo has a quarter's goal with two goals under it. Open **Launch the Business tier**, which is yours in the demo, and check in.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guide: [Goals](https://onemana.dev/docs/goals).
-- Already running OneCamp? Update to v2.59.0 (with AI) or v1.44.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

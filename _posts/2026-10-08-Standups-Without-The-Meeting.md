@@ -62,4 +62,4 @@ Now only the workspace assistant and the agents you set up are tagged **Agent**.
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1) and go to **#engineering**. Today's "What did you work on today?" is there, with Maya's and Jonas's answers in the thread. Choose **⋯**, then **Check-ins**, to see its schedule.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guide: [Check-ins](https://onemana.dev/docs/check-ins).
-- Already running OneCamp? Update to v2.61.0 (with AI) or v1.46.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

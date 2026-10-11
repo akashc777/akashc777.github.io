@@ -3,7 +3,7 @@ title: "Three bugs the redesign turned up"
 image: "/assets/images/post/onecamp-three-bugs.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 11:40:00 +0530
-description: "Going through every OneCamp screen for the redesign meant opening a lot of tasks and running a lot of imports. Three things happened that shouldn't have: opening a task could record an edit nobody made, an import could run twice at once, and undoing a Slack import failed halfway. All three are fixed in v2.71.0, with tests that fail if they ever come back."
+description: "Going through every OneCamp screen for the redesign meant opening a lot of tasks and running a lot of imports. Three things happened that shouldn't have: opening a task could record an edit nobody made, an import could run twice at once, and undoing a Slack import failed halfway. All three are fixed in this release, with tests that fail if they ever come back."
 tags: ["OneCamp", "Reliability", "Imports", "Tasks", "Self-Hosted", "OpenSource"]
 ---
 
@@ -49,5 +49,5 @@ The import test also runs on a deliberately overloaded machine, because the orig
 
 ## Get it
 
-- On your own server: `make update` brings v2.71.0 (with AI) or v1.56.0 (without AI). All three fixes are in both.
+- On your own server: `make update` brings this release to either edition. All three fixes are in both.
 - New to OneCamp? [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed, or try the [live demo](https://onemana.dev/demo) first.

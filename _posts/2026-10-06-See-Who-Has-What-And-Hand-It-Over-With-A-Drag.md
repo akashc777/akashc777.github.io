@@ -53,4 +53,4 @@ OneCamp comes in two editions, with AI and without. Some fixes had only reached 
 
 - In the [live demo](https://onecamp.onemana.dev/?start_demo=1), open **Q4 launch**, press **Board**, then **View → Group by → Assignee**, and drag a task from one person to another.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.51.0 (with AI) or v1.36.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

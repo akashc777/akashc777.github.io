@@ -74,4 +74,4 @@ OneCamp Cloud servers get the same clean-up with this update, and their owners a
 - In the [live demo](https://onecamp.onemana.dev/?start_demo=templates), New project opens on the templates. Pick **Client project**, give it a name and press Create.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guides: [Project templates](https://onemana.dev/docs/project-templates) and [Disk space](https://onemana.dev/docs/disk-space).
-- Already running OneCamp? Update to v2.54.0 (with AI) or v1.39.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

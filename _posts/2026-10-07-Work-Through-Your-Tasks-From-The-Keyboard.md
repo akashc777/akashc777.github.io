@@ -70,4 +70,4 @@ New people now get a small card at the bottom left, once: **Ctrl/⌘ K** to find
 - In the [live demo](https://onecamp.onemana.dev/?start_demo=1), open **Q4 launch**, press **List**, then **J**, **X** and **S**.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guides: [Lists and boards from the keyboard](https://onemana.dev/docs/keyboard-lists) and [Side by side](https://onemana.dev/docs/side-by-side).
-- Already running OneCamp? Update to v2.53.0 (with AI) or v1.38.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

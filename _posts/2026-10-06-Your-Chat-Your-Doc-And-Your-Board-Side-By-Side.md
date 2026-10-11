@@ -73,4 +73,4 @@ The app kept every response it had ever fetched, and every conversation you open
 - In the [live demo](https://onecamp.onemana.dev/?start_demo=1), open #engineering, then Alt-click **Q4 launch plan** and **Q4 launch** in the sidebar. Press **?** for the shortcuts.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guides: [Side by side](https://onemana.dev/docs/side-by-side) and [Tags, board rows and time in status](https://onemana.dev/docs/tags-rows-and-time-in-status).
-- Already running OneCamp? Update to v2.52.0 (with AI) or v1.37.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

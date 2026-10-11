@@ -65,4 +65,4 @@ The point of running your workspace on your own server is knowing where your con
 - Open the [live demo](https://onemana.dev/demo) and mention **@Release Captain** in **#engineering**: it checks before it calls an item done, and asks before it changes anything.
 - Set up your own from your profile menu, **Agents & skills**, from a template or from scratch.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.70.0 with `make update`. Agents are in the edition with AI.
+- Already running OneCamp? Update to the latest release with `make update`. Agents are in the edition with AI.

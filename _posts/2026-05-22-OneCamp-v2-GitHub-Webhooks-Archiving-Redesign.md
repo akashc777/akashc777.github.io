@@ -1,5 +1,5 @@
 ---
-title : "OneCamp v2.0: GitHub Sync, Custom Webhooks, Data Archiving, and a Complete Frontend Redesign"
+title : "OneCamp: GitHub Sync, Custom Webhooks, Data Archiving, and a Complete Frontend Redesign"
 image : "/assets/images/post/onecamp-v2-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-05-22 12:00:00 +0530
@@ -12,7 +12,7 @@ Two months after [launching OneCamp](/post/I-Built-OneCamp-The-Anti-SaaS.html), 
 
 **172 backend files changed. 462 frontend files changed. 16,845 new lines of Go. 21,565 new lines of TypeScript. One combined commit message that reads like a feature roadmap.**
 
-This post breaks down the four major pillars of the v2.0 release — the actual architecture decisions, the engineering tradeoffs, and what I learned building each one. If you've read my [previous architecture post](/post/I-Built-OneCamp-The-Anti-SaaS.html), think of this as the sequel.
+This post breaks down the four major pillars of this release — the actual architecture decisions, the engineering tradeoffs, and what I learned building each one. If you've read my [previous architecture post](/post/I-Built-OneCamp-The-Anti-SaaS.html), think of this as the sequel.
 
 ---
 

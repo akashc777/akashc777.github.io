@@ -10,7 +10,7 @@ canonical_url: "https://onemana.dev/blog/six-things-were-quietly-off-and-none-of
 
 If you're new here: [OneCamp](https://onemana.dev/buy) is a self-hosted workspace (chat, docs, tasks, projects, calls, boards, tables, an API) that runs on **your** infrastructure. I build it, sell it, and operate the demo.
 
-This fortnight shipped as **v2.8.0** and **v1.6.0**, the AI edition and the edition without AI. Most of it was not new features. Most of it was finding things that were already broken and not saying so.
+This fortnight shipped in both editions, with AI and without. Most of it was not new features. Most of it was finding things that were already broken and not saying so.
 
 That turned out to be the theme, so that is how this post is organised. A feature that fails loudly gets fixed on the same day. A feature that fails silently survives for months, and every one of the six below survived because nothing anywhere printed a word about it.
 

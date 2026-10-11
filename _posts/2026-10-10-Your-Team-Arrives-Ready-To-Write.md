@@ -63,4 +63,4 @@ The [single sign-on guide](https://onemana.dev/docs/single-sign-on) has every se
 
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed. Then invite someone, and watch where they land.
 - Or try the [live demo](https://onemana.dev/demo) first.
-- Already running OneCamp? Update to v2.70.0 (with AI) or v1.55.0 (without AI) with `make update`. If your `.env` sets `AUTH_EMAIL_DISABLED`, read the release notes first: it now does what it says.
+- Already running OneCamp? Update to the latest release with `make update`, in either edition. If your `.env` sets `AUTH_EMAIL_DISABLED`, read the release notes first: it now does what it says.

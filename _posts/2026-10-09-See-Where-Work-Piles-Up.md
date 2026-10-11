@@ -38,4 +38,4 @@ Jira draws a cumulative flow diagram among its agile reports. [ClickUp](https://
 
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1) and choose **All projects → Reports**: the launch's weeks of history are already there.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.66.0 (with AI) or v1.51.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

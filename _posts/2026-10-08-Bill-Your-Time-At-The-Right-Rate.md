@@ -50,4 +50,4 @@ Rates have no dates, so changing one re-prices time already logged. Make the inv
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=projects), choose **Q4 launch**, then **Time** in the project's tools. The demo bills the team at $85 an hour and you at $95.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guide: [Time tracking](https://onemana.dev/docs/time-tracking).
-- Already running OneCamp? Update to v2.60.0 (with AI) or v1.45.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

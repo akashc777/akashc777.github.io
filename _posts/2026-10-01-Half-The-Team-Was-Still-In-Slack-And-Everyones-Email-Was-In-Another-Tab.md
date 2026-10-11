@@ -74,6 +74,6 @@ While building the reply, I found that the older "send an email" feature that ag
 
 ## Try both
 
-Both are in the latest release: OneCamp **v2.38** (with AI), and **v1.24** for the edition with no AI, where the Inbox has everything but the summary. On a self-hosted install, **Admin, Health and updates** tells you if you are behind and the one command to update.
+Both are in the latest release, with AI and without; in the edition with no AI, the Inbox has everything but the summary. On a self-hosted install, **Admin, Health and updates** tells you if you are behind and the one command to update.
 
 The [live demo](https://onemana.dev) has the Inbox in its sidebar. Next post: [agents that finish what they start](https://onemana.dev/blog/my-agents-kept-saying-done-when-they-had-only-started).

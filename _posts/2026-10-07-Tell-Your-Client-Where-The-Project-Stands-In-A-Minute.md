@@ -64,4 +64,4 @@ This one matters if you run OneCamp yourself. Mail sent to a domain that doesn't
 - In the [live demo](https://onecamp.onemana.dev/?start_demo=1), open **Q4 launch**, then **Updates**, and press **Write the first update**.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guide: [Project updates](https://onemana.dev/docs/project-updates).
-- Already running OneCamp? Update to v2.53.0 (with AI) or v1.38.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

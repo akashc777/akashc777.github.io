@@ -55,4 +55,4 @@ OneCamp's reports are one opinionated page rather than a dashboard builder, and 
 - [Open the live demo on the reports](https://onecamp.onemana.dev/?start_demo=reports). It has two projects, Q4 launch and Customer onboarding, with weeks of finished work behind them.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guide: [Reports](https://onemana.dev/docs/reports).
-- Already running OneCamp? Update to v2.62.0 (with AI) or v1.47.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

@@ -3,14 +3,14 @@ title: "I Went Through OneCamp's Permission Checks. Over Thirty Were Wrong."
 image: "/assets/images/post/onecamp-permissions-audit.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 00:30:00 +0530
-description: "A member could join any private channel by its id, edit anyone's message, or follow every conversation live through the message broker. GitHub sign-in took addresses GitHub hadn't verified. Here is what going through OneCamp's permission checks found, what v2.70.0 and v1.55.0 change, and why you should update today."
+description: "A member could join any private channel by its id, edit anyone's message, or follow every conversation live through the message broker. GitHub sign-in took addresses GitHub hadn't verified. Here is what going through OneCamp's permission checks found, what this release changes, and why you should update today."
 canonical_url: "https://onemana.dev/blog/i-went-through-onecamps-permission-checks"
 tags: ["OneCamp", "Security", "Release", "Self-Hosted", "Post-Mortem", "OpenSource"]
 ---
 
 If you're new here: [OneCamp](https://onemana.dev) is a self-hosted workspace (chat, tasks, docs, calls, calendar and AI agents) that you install on your own server. It is [open source](https://github.com/OneMana-Soft/OneCamp) and free for up to 25 people.
 
-**If you run OneCamp, update to v2.70.0 (with AI) or v1.55.0 (without AI) today, with `make update`.** Everything below is fixed in those versions. Most of it needed a member account to abuse. The exceptions are the GitHub sign-in, the rate limits, the email provider's webhook and the import downloads, which someone outside your workspace could reach.
+**If you run OneCamp, update today with `make update`, with AI or without.** Everything below is fixed in this release. Most of it needed a member account to abuse. The exceptions are the GitHub sign-in, the rate limits, the email provider's webhook and the import downloads, which someone outside your workspace could reach.
 
 People put their most private conversations in a workspace. A buyer who self-hosts is usually doing it because they care where those conversations go. So I stopped adding features for a while and went through the places OneCamp decides who may do something: the request handlers, the background jobs, the message broker, sign-in, and what the AI and automations can reach.
 

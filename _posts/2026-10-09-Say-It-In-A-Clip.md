@@ -38,4 +38,4 @@ Record for up to five minutes. **Pause** when you need to, then **Stop**, play i
 
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1), go to **#design**, and press the microphone in the message box.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.67.0 (with AI) or v1.52.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

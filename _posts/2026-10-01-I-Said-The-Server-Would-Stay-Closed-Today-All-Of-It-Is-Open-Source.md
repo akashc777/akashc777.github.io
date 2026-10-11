@@ -82,7 +82,7 @@ process.env.INTERNAL_SECRET || 'super-secret-key'
 
 `INTERNAL_SECRET` is what OneCamp's own services use to talk to each other, for things like loading a document for live editing. If it was never set, the service quietly fell back to a value that is now printed in public. The installer has always generated a random value for it, so installs made with `make install` were fine, but our own demo was not: it had been running on the fallback. I rotated it.
 
-Then I made it impossible to repeat. In **v2.38.1** (and v1.24.1), the fallback is gone, and the server refuses its internal routes outright if the secret is a known default or shorter than 16 characters, with a log line saying what to set. If you run an older install that you set up by hand, update and check that log.
+Then I made it impossible to repeat. In the next update to both editions, the fallback is gone, and the server refuses its internal routes outright if the secret is a known default or shorter than 16 characters, with a log line saying what to set. If you run an older install that you set up by hand, update and check that log.
 
 ## What else shipped this week
 

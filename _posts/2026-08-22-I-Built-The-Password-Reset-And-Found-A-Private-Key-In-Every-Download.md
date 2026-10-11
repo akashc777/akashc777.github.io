@@ -82,7 +82,7 @@ Which is exactly the message I'd just written to mean *it worked*. So I tagged t
 
 The container was still exiting. There was a **second** `godotenv.Load()` in `main.go`, and it killed the process immediately after that reassuring line. I had read the logs and never run `echo $?`.
 
-I did the same thing twice — two published tags, `v2.4.2` and `v2.4.3`, neither of which would start on a customer install. Both compiled. Both passed every unit test. Nothing in the pipeline had ever asked whether the thing it built **runs**.
+I did the same thing twice — two published releases in a row, neither of which would start on a customer install. Both compiled. Both passed every unit test. Nothing in the pipeline had ever asked whether the thing it built **runs**.
 
 There are now three assertions in CI on the image a customer receives: it contains no `.env` and no credential file; given configuration in the environment and no file, it gets past every configuration gate and stops only for want of a database; and given nothing at all, it says so plainly. It checks the **failure reason**, not just the exit code — because a container with no database is *supposed* to die, and what must not happen is dying at configuration while claiming the environment was fine.
 

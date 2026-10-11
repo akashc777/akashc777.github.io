@@ -20,7 +20,7 @@ A passkey signs you in with what your device already uses to unlock: a fingerpri
 
 **Use it.** On the sign-in page, press **Sign in with a passkey** and confirm with your device. That's all. OneCamp doesn't then ask for a two-step code: a passkey is already two factors, the device you hold and you.
 
-> **Update, 5 October:** on v2.46.0 to v2.48.0 the button did nothing, because the web app's own security header told the browser not to allow passkeys. It's fixed in v2.48.1 (and v1.33.1 without AI): update and it works. If you press it without a passkey on that device, the page now tells you how to add one.
+> **Update, 5 October:** at first the button did nothing, because the web app's own security header told the browser not to allow passkeys. It's fixed in the latest release of both editions: update and it works. If you press it without a passkey on that device, the page now tells you how to add one.
 
 **Rename or remove one** with the pencil and bin beside it. Removing it stops it signing you in to OneCamp; delete it from the device or password manager too.
 
@@ -48,4 +48,4 @@ These are small, and each one could end a trial:
 
 The [live demo](https://onecamp.onemana.dev/?start_demo=1) has everything except passkeys, because the demo is one account shared by everyone who opens it, and a passkey added there would sit in the next visitor's settings. On your own server they work from the first sign-in: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 
-Passkeys and the Activity filter arrived in OneCamp v2.46.0 (with AI) and v1.31.0 (without AI); the first-run fixes in v2.47.0 and v1.32.0.
+Passkeys and the Activity filter arrived in both editions of OneCamp on 5 October, and the first-run fixes in the release after.

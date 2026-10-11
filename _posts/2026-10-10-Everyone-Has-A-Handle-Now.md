@@ -3,7 +3,7 @@ title: "Everyone has a handle now"
 image: "/assets/images/post/onecamp-handles.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 11:20:00 +0530
-description: "OneCamp people have three names: a display name, a full name and an @handle. Until v2.71.0 the app picked between them differently on every screen, and anyone who joined before handles existed had none. Now there is one rule, everyone has a handle, and you can find a teammate by any of their names."
+description: "OneCamp people have three names: a display name, a full name and an @handle. Until this release the app picked between them differently on every screen, and anyone who joined before handles existed had none. Now there is one rule, everyone has a handle, and you can find a teammate by any of their names."
 tags: ["OneCamp", "Profiles", "Mentions", "Slack Alternative", "Self-Hosted", "OpenSource"]
 ---
 
@@ -11,7 +11,7 @@ If you're new here: [OneCamp](https://onemana.dev) is a self-hosted workspace (c
 
 I opened my own profile and found the handle field empty. Which raised a fair question: what is the difference between a display name, a full name and a handle, and why is mine blank?
 
-The answer was embarrassing. Handles arrived in v2.70.0, but only for accounts made after it. Everyone who joined earlier had none. And the app had no single idea of which name to show: messages used the display name, while activity, admin lists and boards preferred the full name. The same person could be "Sam" in one place and "Samuel Rivera" in the next.
+The answer was embarrassing. Handles arrived in the previous release, but only for accounts made after it. Everyone who joined earlier had none. And the app had no single idea of which name to show: messages used the display name, while activity, admin lists and boards preferred the full name. The same person could be "Sam" in one place and "Samuel Rivera" in the next.
 
 ## Three names, one job each
 
@@ -49,4 +49,4 @@ Clients on a guest link and people in a linked Slack channel now appear under th
 
 - Open the [live demo](https://onemana.dev/demo) and type @ in any channel.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? `make update` brings v2.71.0 (with AI) or v1.56.0 (without AI). Your members get handles at the first start.
+- Already running OneCamp? `make update` brings this release to either edition. Your members get handles at the first start.

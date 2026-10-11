@@ -62,4 +62,4 @@ Client work is the data you least want spread across five vendors: what they ask
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The docs: [Share a project with a client](https://onemana.dev/docs/share-a-project-with-a-client) and [Time tracking](https://onemana.dev/docs/time-tracking).
 
-These arrived in OneCamp v2.46.0 (with AI) and v1.31.0 (without AI). If something you need with clients is still missing, write to support@onemana.dev.
+These arrived in both editions of OneCamp on 5 October. If something you need with clients is still missing, write to support@onemana.dev.

@@ -58,4 +58,4 @@ monday.com keeps its formula column for the [Pro plan and up](https://community.
 
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1) and open the **Launch budget** table: Total and Status are formulas. Open Status's menu to see how it's written.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.68.0 (with AI) or v1.53.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

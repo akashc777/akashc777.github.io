@@ -47,4 +47,4 @@ Changed your mind? **Roll back** takes away what the import brought in, fields i
 
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1) to see custom fields on the Q4 launch project.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.64.0 (with AI) or v1.49.0 (without AI) before importing from Jira or Todoist.
+- Already running OneCamp? Update to the latest release, with AI or without, before importing from Jira or Todoist.

@@ -10,7 +10,7 @@ tags: ["OneCamp", "Project Management", "Gantt", "Timeline", "Dependencies", "Se
 
 If you're new here: [OneCamp](https://onemana.dev) is a self-hosted workspace (chat, tasks, docs, calls, calendar and AI agents) that you install on your own server. It is [open source](https://github.com/OneMana-Soft/OneCamp) and free for up to 25 people.
 
-Since v2.57, a task in OneCamp can [wait on another](https://onemana.dev/docs/project-timeline): the timeline draws an arrow between them, and when the first one slips, the second moves along. But there was only one way to wait. The second task could start once the first was done, and that's not how most plans run. The docs get written while the build is still going. Testing can't end before the build does. Paint needs two days to dry before anyone hangs pictures.
+Since 8 October, a task in OneCamp can [wait on another](https://onemana.dev/docs/project-timeline): the timeline draws an arrow between them, and when the first one slips, the second moves along. But there was only one way to wait. The second task could start once the first was done, and that's not how most plans run. The docs get written while the build is still going. Testing can't end before the build does. Paint needs two days to dry before anyone hangs pictures.
 
 Now a dependency can say how it waits.
 
@@ -48,4 +48,4 @@ To change it, open either task and press the words beside the other task's name:
 
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1) and open the **Q4 launch** project's **Timeline**: the walkthrough is recorded a day behind the announcement, start to start.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.65.0 (with AI) or v1.50.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

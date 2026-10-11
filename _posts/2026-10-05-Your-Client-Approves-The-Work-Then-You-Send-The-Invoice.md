@@ -60,4 +60,4 @@ Also fixed: in shared channels and on project links, a message from a client or 
 
 Leaving another tool? There are now short pages on moving from [Slack](https://onemana.dev/alternatives/slack), [Basecamp](https://onemana.dev/alternatives/basecamp), [Notion](https://onemana.dev/alternatives/notion), [ClickUp](https://onemana.dev/alternatives/clickup) and [Toggl](https://onemana.dev/alternatives/toggl), each with what the other tool does better and how to bring your work across.
 
-These arrived in OneCamp v2.48.0 (with AI) and v1.33.0 (without AI).
+These arrived in both editions of OneCamp on 5 October.

@@ -78,4 +78,4 @@ In OneCamp, estimates, workload in hours and time off are in every edition, incl
 - [Open the workload in the live demo](https://onecamp.onemana.dev/?start_demo=workload), switch to **Hours**, and give a task an estimate from its panel.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guides: [Workload](https://onemana.dev/docs/workload), [Time tracking](https://onemana.dev/docs/time-tracking) and [Import from other tools](https://onemana.dev/docs/import-from-other-tools).
-- Already running OneCamp? Update to v2.58.0 (with AI) or v1.43.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

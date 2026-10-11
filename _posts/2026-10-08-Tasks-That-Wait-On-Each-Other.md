@@ -84,4 +84,4 @@ In OneCamp, all of it is in every edition, including the free one for up to 25 p
 - [Open the projects page](https://onecamp.onemana.dev/?start_demo=projects), choose **Q4 launch**, then **Timeline**, and drag from the end of one bar to another.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guides: [Timeline and the projects overview](https://onemana.dev/docs/project-timeline) and [Workload](https://onemana.dev/docs/workload).
-- Already running OneCamp? Update to v2.57.0 (with AI) or v1.42.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

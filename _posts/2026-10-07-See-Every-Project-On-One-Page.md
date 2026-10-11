@@ -71,4 +71,4 @@ A timeline is a paid feature almost everywhere: Asana's needs a paid plan, Trell
 - [Open the live demo on the projects page](https://onecamp.onemana.dev/?start_demo=projects), open **Q4 launch**, and choose **Timeline**.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
 - The guide: [Timeline and the projects overview](https://onemana.dev/docs/project-timeline).
-- Already running OneCamp? Update to v2.56.0 (with AI) or v1.41.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

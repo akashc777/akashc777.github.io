@@ -40,4 +40,4 @@ Slack and Mattermost don't have read receipts. [Microsoft Teams](https://tomtalk
 
 - [Open the live demo](https://onecamp.onemana.dev/?start_demo=1) and open your DM with **Maya Chen**: she has read your last message, so it says **Seen**.
 - On your own server: [onemana.dev/free](https://onemana.dev/free) gives you the install command, no email needed.
-- Already running OneCamp? Update to v2.66.0 (with AI) or v1.51.0 (without AI).
+- Already running OneCamp? Update to the latest release, with AI or without.

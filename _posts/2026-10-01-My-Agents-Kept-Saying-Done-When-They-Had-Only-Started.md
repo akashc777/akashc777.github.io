@@ -65,4 +65,4 @@ Admins can now choose a **model per job** under **Admin, AI models**: say, a fas
 - **You can see and end** the assistants you have connected to OneCamp (Claude, ChatGPT, and others), from your own settings.
 - **Backups now include search**, so a restored workspace can find things again straight away.
 
-All of this is in OneCamp **v2.38**. To see an agent hold the line on "done", open `#engineering` in the [live demo](https://onemana.dev) and ask Release Captain whether the checklist is finished.
+All of this is in the latest OneCamp release. To see an agent hold the line on "done", open `#engineering` in the [live demo](https://onemana.dev) and ask Release Captain whether the checklist is finished.
