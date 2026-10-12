@@ -1,5 +1,5 @@
 ---
-title: "Start A Project With Its Plan Already In It"
+title: "Start a project with its plan already in it"
 image: "/assets/images/post/onecamp-project-templates.jpg"
 author: "Akash Hadagali"
 date: 2026-10-07 18:30:00 +0530

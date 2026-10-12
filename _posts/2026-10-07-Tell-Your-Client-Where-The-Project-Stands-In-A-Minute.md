@@ -1,5 +1,5 @@
 ---
-title: "Tell Your Client Where The Project Stands, In A Minute"
+title: "Tell your client where the project stands, in a minute"
 image: "/assets/images/post/onecamp-project-updates.jpg"
 author: "Akash Hadagali"
 date: 2026-10-07 03:30:00 +0530

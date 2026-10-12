@@ -1,5 +1,5 @@
 ---
-title: "Link Your Tables, And Add Up What's Linked"
+title: "Link your tables, and add up what's linked"
 image: "/assets/images/post/onecamp-linked-tables.jpg"
 author: "Akash Hadagali"
 date: 2026-10-09 17:00:00 +0530

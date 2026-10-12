@@ -1,5 +1,5 @@
 ---
-title: "Stop Writing Status Emails. Send Your Client The Project"
+title: "Stop writing status emails. Send your client the project"
 image: "/assets/images/post/onecamp-client-project.jpg"
 author: "Akash Hadagali"
 date: 2026-10-05 18:30:00 +0530

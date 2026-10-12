@@ -1,5 +1,5 @@
 ---
-title: "Seen: Read Receipts In DMs And Group Chats"
+title: "Seen: read receipts in DMs and group chats"
 image: "/assets/images/post/onecamp-read-receipts.jpg"
 author: "Akash Hadagali"
 date: 2026-10-09 12:00:00 +0530

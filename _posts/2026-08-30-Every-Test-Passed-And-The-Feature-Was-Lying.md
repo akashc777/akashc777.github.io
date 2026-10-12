@@ -1,5 +1,5 @@
 ---
-title: "Every Test Passed and the Feature Was Lying"
+title: "Every test passed and the feature was lying"
 image: "/assets/images/post/onecamp-feature-lying.jpg"
 author: "Akash Hadagali"
 date: 2026-08-30 12:00:00 +0530

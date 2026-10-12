@@ -1,5 +1,5 @@
 ---
-title: "What We Fixed So You Never Notice: A Search Outage, a Coding Agent That Couldn't Run, and 31 Screens That Lied to You"
+title: "What we fixed so you never notice: a search outage, a coding agent that couldn't run, and 31 screens that lied to you"
 image: "/assets/images/post/onecamp-reliability-fixes.jpg"
 author: "Akash Hadagali"
 date: 2026-08-01 10:00:00 +0530

@@ -1,5 +1,5 @@
 ---
-title: "Workflows in OneCamp: Slack-Class Automation Without the Sprawl"
+title: "Workflows in OneCamp: Slack-class automation without the sprawl"
 image: "/assets/images/post/onecamp-workflows-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-15 11:00:00 +0530

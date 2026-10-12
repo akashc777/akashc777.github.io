@@ -1,5 +1,5 @@
 ---
-title: "Dependencies For Plans That Overlap"
+title: "Dependencies for plans that overlap"
 image: "/assets/images/post/onecamp-dependency-kinds.jpg"
 author: "Akash Hadagali"
 date: 2026-10-09 11:00:00 +0530

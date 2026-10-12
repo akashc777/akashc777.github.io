@@ -1,5 +1,5 @@
 ---
-title : "Why I Used MQTT for Team Chat (Not WebSockets)  -  And What That Taught Me About Broker-Based Architectures"
+title : "Why I used MQTT for team chat (not WebSockets)  -  and what that taught me about broker-based architectures"
 image : "/assets/images/post/onecamp-realtime-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-02-14 12:00:00 +0530

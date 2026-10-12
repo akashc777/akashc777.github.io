@@ -1,5 +1,5 @@
 ---
-title: "Your Client Approves The Work, Then You Send The Invoice"
+title: "Your client approves the work, then you send the invoice"
 image: "/assets/images/post/onecamp-client-approval.jpg"
 author: "Akash Hadagali"
 date: 2026-10-05 21:00:00 +0530

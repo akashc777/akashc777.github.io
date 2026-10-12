@@ -1,5 +1,5 @@
 ---
-title: "See Who Has What, And Hand It Over With A Drag"
+title: "See who has what, and hand it over with a drag"
 image: "/assets/images/post/onecamp-board-by-person.jpg"
 author: "Akash Hadagali"
 date: 2026-10-06 21:00:00 +0530

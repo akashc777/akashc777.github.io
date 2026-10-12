@@ -1,5 +1,5 @@
 ---
-title: "Our Clients Lived In Four Other Tools. Now They Get A Link"
+title: "Our clients lived in four other tools. Now they get a link"
 image: "/assets/images/post/onecamp-agencies.jpg"
 author: "Akash Hadagali"
 date: 2026-10-05 11:30:00 +0530

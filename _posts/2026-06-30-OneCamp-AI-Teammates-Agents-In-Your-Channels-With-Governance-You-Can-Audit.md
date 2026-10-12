@@ -1,5 +1,5 @@
 ---
-title: "OneCamp AI Teammates: Agents That Live in Your Channels, With Governance You Can Audit"
+title: "OneCamp AI teammates: agents that live in your channels, with governance you can audit"
 image: "/assets/images/post/onecamp-ai-teammates-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-30 10:00:00 +0530

@@ -1,5 +1,5 @@
 ---
-title: "Every Health Check Was Green and Nobody Could Download My Product"
+title: "Every health check was green and nobody could download my product"
 image: "/assets/images/post/onecamp-health-check.jpg"
 author: "Akash Hadagali"
 date: 2026-08-23 18:00:00 +0530

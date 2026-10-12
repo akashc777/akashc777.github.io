@@ -1,5 +1,5 @@
 ---
-title: "Every Agent Row Said Who It Acted For. None Said Whether Anyone Was Watching."
+title: "Every agent row said who it acted for. None said whether anyone was watching."
 image: "/assets/images/post/onecamp-nobody-watching.jpg"
 author: "Akash Hadagali"
 date: 2026-09-19 12:00:00 +0530

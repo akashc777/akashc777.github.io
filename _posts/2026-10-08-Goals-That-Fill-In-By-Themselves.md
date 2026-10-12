@@ -1,5 +1,5 @@
 ---
-title: "Goals That Fill In By Themselves"
+title: "Goals that fill in by themselves"
 image: "/assets/images/post/onecamp-goals.jpg"
 author: "Akash Hadagali"
 date: 2026-10-08 12:00:00 +0530

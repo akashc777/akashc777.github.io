@@ -1,5 +1,5 @@
 ---
-title : "Why OneCamp Uses Both Postgres AND Dgraph (And Whether That Was a Mistake)"
+title : "Why OneCamp uses both Postgres AND Dgraph (and whether that was a mistake)"
 image : "/assets/images/post/onecamp-databases-improved.jpg"
 author : "Akash Hadagali"
 date: 2025-12-10 12:00:00 +0530

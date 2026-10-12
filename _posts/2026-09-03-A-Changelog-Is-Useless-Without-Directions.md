@@ -1,5 +1,5 @@
 ---
-title: "A Changelog Is Useless Without Directions"
+title: "A changelog is useless without directions"
 image: "/assets/images/post/onecamp-directions.jpg"
 author: "Akash Hadagali"
 date: 2026-09-03 12:00:00 +0530

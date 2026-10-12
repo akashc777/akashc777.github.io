@@ -1,5 +1,5 @@
 ---
-title: "See Where Work Piles Up"
+title: "See where work piles up"
 image: "/assets/images/post/onecamp-flow-of-work.jpg"
 author: "Akash Hadagali"
 date: 2026-10-09 13:00:00 +0530

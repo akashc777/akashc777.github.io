@@ -1,5 +1,5 @@
 ---
-title: "Describe A Project In A Sentence, Start With Its Plan"
+title: "Describe a project in a sentence, start with its plan"
 image: "/assets/images/post/onecamp-describe-a-project.jpg"
 author: "Akash Hadagali"
 date: 2026-10-07 22:30:00 +0530

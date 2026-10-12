@@ -1,5 +1,5 @@
 ---
-title: "Shipping Two Editions, And The Customer Install That Actually Works"
+title: "Shipping two editions, and the customer install that actually works"
 image: "/assets/images/post/onecamp-release-editions.jpg"
 author: "Akash Hadagali"
 date: 2026-08-19 12:00:00 +0530

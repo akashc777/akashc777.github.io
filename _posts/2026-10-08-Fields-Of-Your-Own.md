@@ -1,5 +1,5 @@
 ---
-title: "Fields Of Your Own, And A Burndown For Every Cycle"
+title: "Fields of your own, and a burndown for every cycle"
 image: "/assets/images/post/onecamp-custom-fields.jpg"
 author: "Akash Hadagali"
 date: 2026-10-08 23:00:00 +0530

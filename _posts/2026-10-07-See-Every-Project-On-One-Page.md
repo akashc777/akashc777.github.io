@@ -1,5 +1,5 @@
 ---
-title: "See Every Project On One Page, And Every Plan On A Timeline"
+title: "See every project on one page, and every plan on a timeline"
 image: "/assets/images/post/onecamp-project-timeline.jpg"
 author: "Akash Hadagali"
 date: 2026-10-07 23:45:00 +0530

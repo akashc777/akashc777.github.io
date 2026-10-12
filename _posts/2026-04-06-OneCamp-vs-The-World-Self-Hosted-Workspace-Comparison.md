@@ -1,5 +1,5 @@
 ---
-title : "OneCamp vs. The World: A Deep Technical Comparison of Self-Hosted Workspace Tools"
+title : "OneCamp vs. the world: a deep technical comparison of self-hosted workspace tools"
 image : "/assets/images/post/onecamp-vs-world-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-04-06 12:00:00 +0530

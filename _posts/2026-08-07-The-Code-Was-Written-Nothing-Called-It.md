@@ -1,5 +1,5 @@
 ---
-title: "The Code Was Written. Nothing Called It."
+title: "The code was written. Nothing called it."
 image: "/assets/images/post/onecamp-dead-code.jpg"
 author: "Akash Hadagali"
 date: 2026-08-07 10:00:00 +0530

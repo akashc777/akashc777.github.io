@@ -1,5 +1,5 @@
 ---
-title : "I Spent a Year Building OneCamp. Here's the Complete Architecture."
+title : "I spent a year building OneCamp. Here's the complete architecture."
 image : "/assets/images/post/onecamp-hero-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-03-30 12:00:00 +0530

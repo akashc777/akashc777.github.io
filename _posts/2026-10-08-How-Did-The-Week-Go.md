@@ -1,5 +1,5 @@
 ---
-title: "How Did The Week Go?"
+title: "How did the week go?"
 image: "/assets/images/post/onecamp-reports.jpg"
 author: "Akash Hadagali"
 date: 2026-10-08 21:00:00 +0530

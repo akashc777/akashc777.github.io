@@ -1,5 +1,5 @@
 ---
-title: "Deleting A Doc Said Done And Kept The Doc"
+title: "Deleting a doc said done and kept the doc"
 image: "/assets/images/post/onecamp-link-cards.jpg"
 author: "Akash Hadagali"
 date: 2026-10-06 13:00:00 +0530

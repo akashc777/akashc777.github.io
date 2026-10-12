@@ -1,5 +1,5 @@
 ---
-title: "AI Governance Is Mostly Boring Plumbing"
+title: "AI governance is mostly boring plumbing"
 image: "/assets/images/post/onecamp-governance.jpg"
 author: "Akash Hadagali"
 date: 2026-09-02 12:00:00 +0530

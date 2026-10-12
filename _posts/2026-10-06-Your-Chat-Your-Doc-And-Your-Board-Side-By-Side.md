@@ -1,5 +1,5 @@
 ---
-title: "Your Chat, Your Doc And Your Board, Side By Side"
+title: "Your chat, your doc and your board, side by side"
 image: "/assets/images/post/onecamp-side-by-side.jpg"
 author: "Akash Hadagali"
 date: 2026-10-06 23:30:00 +0530

@@ -1,5 +1,5 @@
 ---
-title: "We Opened OneCamp to Outside AI Agents, and Every Gate We Added Found a Bug"
+title: "We opened OneCamp to outside AI agents, and every gate we added found a bug"
 image: "/assets/images/post/onecamp-mcp-gates.jpg"
 author: "Akash Hadagali"
 date: 2026-08-07 12:00:00 +0530

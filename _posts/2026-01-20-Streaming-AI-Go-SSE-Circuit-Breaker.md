@@ -1,5 +1,5 @@
 ---
-title : "Streaming AI in Go: SSE, Circuit Breakers, and the nginx Buffering Bug That Aged Me"
+title : "Streaming AI in Go: SSE, circuit breakers, and the nginx buffering bug that aged me"
 image : "/assets/images/post/onecamp-streaming-ai-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-01-20 12:00:00 +0530

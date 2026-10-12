@@ -1,5 +1,5 @@
 ---
-title: "My Agents Kept Saying Done When They Had Only Started"
+title: "My agents kept saying done when they had only started"
 image: "/assets/images/post/onecamp-agents-finish.jpg"
 author: "Akash Hadagali"
 date: 2026-10-01 19:20:00 +0530

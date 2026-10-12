@@ -1,5 +1,5 @@
 ---
-title: "Putting a Budget on AI: Workspace and Per-User Token Caps for a Self-Hosted Workspace"
+title: "Putting a budget on AI: workspace and per-user token caps for a self-hosted workspace"
 image: "/assets/images/post/onecamp-ai-budget.jpg"
 author: "Akash Hadagali"
 date: 2026-06-26 16:00:00 +0530

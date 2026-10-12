@@ -1,5 +1,5 @@
 ---
-title: "Work Through Your Tasks From The Keyboard"
+title: "Work through your tasks from the keyboard"
 image: "/assets/images/post/onecamp-keyboard-lists.jpg"
 author: "Akash Hadagali"
 date: 2026-10-07 03:40:00 +0530

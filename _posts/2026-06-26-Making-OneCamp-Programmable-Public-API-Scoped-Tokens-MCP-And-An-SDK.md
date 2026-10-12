@@ -1,5 +1,5 @@
 ---
-title: "Making OneCamp Programmable: A Public API, Scoped Tokens, an MCP Server, and a TypeScript SDK"
+title: "Making OneCamp programmable: a public API, scoped tokens, an MCP server, and a TypeScript SDK"
 image: "/assets/images/post/onecamp-api-programmable.jpg"
 author: "Akash Hadagali"
 date: 2026-06-26 10:00:00 +0530

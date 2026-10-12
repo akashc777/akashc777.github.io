@@ -1,5 +1,5 @@
 ---
-title: "The Demo Worked. Every Install Didn't."
+title: "The demo worked. Every install didn't."
 image: "/assets/images/post/onecamp-install-fixes.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 01:00:00 +0530

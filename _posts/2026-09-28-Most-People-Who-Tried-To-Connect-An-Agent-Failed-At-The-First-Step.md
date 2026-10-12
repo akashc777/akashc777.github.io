@@ -1,5 +1,5 @@
 ---
-title: "Most People Who Tried To Connect An Agent Failed At The First Step"
+title: "Most people who tried to connect an agent failed at the first step"
 image: "/assets/images/post/onecamp-agents-by-url.jpg"
 author: "Akash Hadagali"
 date: 2026-09-28 21:00:00 +0530

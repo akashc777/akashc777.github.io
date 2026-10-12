@@ -1,5 +1,5 @@
 ---
-title: "Every Team Had Its Own Steps. My Board Had Six."
+title: "Every team had its own steps. My board had six."
 image: "/assets/images/post/onecamp-your-own-statuses.jpg"
 author: "Akash Hadagali"
 date: 2026-09-28 20:30:00 +0530

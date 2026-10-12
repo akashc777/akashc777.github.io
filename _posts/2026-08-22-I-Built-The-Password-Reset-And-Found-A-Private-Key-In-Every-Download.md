@@ -1,5 +1,5 @@
 ---
-title: "I Built the Password Reset and Found a Private Key in Every Download"
+title: "I built the password reset and found a private key in every download"
 image: "/assets/images/post/onecamp-recovery-week.jpg"
 author: "Akash Hadagali"
 date: 2026-08-22 12:00:00 +0530

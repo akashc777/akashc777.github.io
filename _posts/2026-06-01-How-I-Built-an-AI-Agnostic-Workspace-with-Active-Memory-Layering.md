@@ -1,5 +1,5 @@
 ---
-title: "How I Built a Self-Hosted, AI-Agnostic Workspace with Active Memory Layering"
+title: "How I built a self-hosted, AI-agnostic workspace with active memory layering"
 image: "/assets/images/post/onecamp-ai-memory-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-01 16:30:00 +0530

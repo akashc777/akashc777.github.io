@@ -1,5 +1,5 @@
 ---
-title: "AI Teammates You Can Interrupt: Stop It, Steer It, and Actually Watch It Work"
+title: "AI teammates you can interrupt: stop it, steer it, and actually watch it work"
 image: "/assets/images/post/onecamp-ai-interrupt.jpg"
 author: "Akash Hadagali"
 date: 2026-07-31 10:00:00 +0530

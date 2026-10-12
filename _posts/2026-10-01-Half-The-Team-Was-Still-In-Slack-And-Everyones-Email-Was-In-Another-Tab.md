@@ -1,5 +1,5 @@
 ---
-title: "Half The Team Was Still In Slack, And Everyone's Email Was In Another Tab"
+title: "Half the team was still in Slack, and everyone's email was in another tab"
 image: "/assets/images/post/onecamp-inbox.jpg"
 author: "Akash Hadagali"
 date: 2026-10-01 19:10:00 +0530

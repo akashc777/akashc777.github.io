@@ -1,5 +1,5 @@
 ---
-title: "A Failed Signup Burned the Email Address Forever"
+title: "A failed signup burned the email address forever"
 image: "/assets/images/post/onecamp-failed-signup.jpg"
 author: "Akash Hadagali"
 date: 2026-08-12 10:00:00 +0530

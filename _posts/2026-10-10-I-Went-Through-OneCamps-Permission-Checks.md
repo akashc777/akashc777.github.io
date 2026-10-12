@@ -1,5 +1,5 @@
 ---
-title: "I Went Through OneCamp's Permission Checks. Over Thirty Were Wrong."
+title: "I went through OneCamp's permission checks. Over thirty were wrong."
 image: "/assets/images/post/onecamp-permissions-audit.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 00:30:00 +0530

@@ -1,5 +1,5 @@
 ---
-title: "Sign In With Your Fingerprint, And Other Things That Stopped Getting In The Way"
+title: "Sign in with your fingerprint, and other things that stopped getting in the way"
 image: "/assets/images/post/onecamp-passkeys.jpg"
 author: "Akash Hadagali"
 date: 2026-10-05 19:00:00 +0530

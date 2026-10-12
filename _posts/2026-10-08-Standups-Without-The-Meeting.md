@@ -1,5 +1,5 @@
 ---
-title: "Standups Without The Meeting"
+title: "Standups without the meeting"
 image: "/assets/images/post/onecamp-checkins.jpg"
 author: "Akash Hadagali"
 date: 2026-10-08 18:00:00 +0530

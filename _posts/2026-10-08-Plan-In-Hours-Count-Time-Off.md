@@ -1,5 +1,5 @@
 ---
-title: "Plan In Hours, Count Time Off, And Bring Your monday.com Boards"
+title: "Plan in hours, count time off, and bring your monday.com boards"
 image: "/assets/images/post/onecamp-workload-hours.jpg"
 author: "Akash Hadagali"
 date: 2026-10-08 05:50:00 +0530

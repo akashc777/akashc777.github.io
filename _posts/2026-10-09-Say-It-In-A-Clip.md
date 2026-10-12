@@ -1,5 +1,5 @@
 ---
-title: "Say It In A Clip"
+title: "Say it in a clip"
 image: "/assets/images/post/onecamp-clips.jpg"
 author: "Akash Hadagali"
 date: 2026-10-09 15:00:00 +0530

@@ -1,5 +1,5 @@
 ---
-title: "The AI That Sits In Your Calls: How OneCamp Turns Meetings Into Notes, Decisions, and Memory"
+title: "The AI that sits in your calls: how OneCamp turns meetings into notes, decisions, and memory"
 image: "/assets/images/post/onecamp-meeting-assistant-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-12 11:00:00 +0530

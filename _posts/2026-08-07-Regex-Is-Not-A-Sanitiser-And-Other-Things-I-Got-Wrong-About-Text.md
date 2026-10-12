@@ -1,5 +1,5 @@
 ---
-title: "Regex Is Not a Sanitiser, and Other Things I Got Wrong About Text"
+title: "Regex is not a sanitiser, and other things I got wrong about text"
 image: "/assets/images/post/onecamp-text-security.jpg"
 author: "Akash Hadagali"
 date: 2026-08-07 09:00:00 +0530

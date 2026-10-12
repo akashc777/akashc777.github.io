@@ -1,5 +1,5 @@
 ---
-title: "I Spent A Week Comparing My Agents To Everyone Else's. Then I Let Theirs In."
+title: "I spent a week comparing my agents to everyone else's. Then I let theirs in."
 image: "/assets/images/post/onecamp-remote-agents.jpg"
 author: "Akash Hadagali"
 date: 2026-09-19 10:00:00 +0530

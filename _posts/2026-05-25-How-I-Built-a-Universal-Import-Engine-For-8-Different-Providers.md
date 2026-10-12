@@ -1,5 +1,5 @@
 ---
-title : "How I Built a Universal Import Engine Supporting 8 Different Productivity Platforms"
+title : "How I built a universal import engine supporting 8 different productivity platforms"
 image : "/assets/images/post/onecamp-importer-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-05-25 12:00:00 +0530

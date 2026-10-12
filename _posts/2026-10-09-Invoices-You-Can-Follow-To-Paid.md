@@ -1,5 +1,5 @@
 ---
-title: "Invoices You Can Follow To Paid"
+title: "Invoices you can follow to paid"
 image: "/assets/images/post/onecamp-invoices.jpg"
 author: "Akash Hadagali"
 date: 2026-10-09 10:00:00 +0530

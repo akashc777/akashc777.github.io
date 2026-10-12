@@ -1,5 +1,5 @@
 ---
-title: "Formulas, Sorting And Filters For Your Tables"
+title: "Formulas, sorting and filters for your tables"
 image: "/assets/images/post/onecamp-formulas.jpg"
 author: "Akash Hadagali"
 date: 2026-10-09 16:00:00 +0530

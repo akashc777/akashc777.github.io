@@ -1,5 +1,5 @@
 ---
-title: "My Agents Could Already Ask A Question. They Just Couldn't Offer The Answers."
+title: "My agents could already ask a question. They just couldn't offer the answers."
 image: "/assets/images/post/onecamp-elicitation.jpg"
 author: "Akash Hadagali"
 date: 2026-09-07 10:00:00 +0530

@@ -1,5 +1,5 @@
 ---
-title: "OneCamp AI Agents: From a Chatbot That Answers to a Coworker That Does the Work"
+title: "OneCamp AI agents: from a chatbot that answers to a coworker that does the work"
 image: "/assets/images/post/onecamp-ai-agents-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-21 14:00:00 +0530

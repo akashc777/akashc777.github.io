@@ -1,5 +1,5 @@
 ---
-title: "Move Your Team Over, And Bring Everyone With It"
+title: "Move your team over, and bring everyone with it"
 image: "/assets/images/post/onecamp-imports-invite.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 01:30:00 +0530

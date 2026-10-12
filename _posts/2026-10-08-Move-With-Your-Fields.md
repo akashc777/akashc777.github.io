@@ -1,5 +1,5 @@
 ---
-title: "Move To OneCamp With Your Fields Intact"
+title: "Move to OneCamp with your fields intact"
 image: "/assets/images/post/onecamp-import-fields.jpg"
 author: "Akash Hadagali"
 date: 2026-10-08 23:45:00 +0530

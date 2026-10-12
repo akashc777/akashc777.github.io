@@ -1,5 +1,5 @@
 ---
-title: "Tasks That Wait On Each Other, And Who Has Too Much This Week"
+title: "Tasks that wait on each other, and who has too much this week"
 image: "/assets/images/post/onecamp-workload.jpg"
 author: "Akash Hadagali"
 date: 2026-10-08 00:30:00 +0530

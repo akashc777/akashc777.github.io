@@ -1,5 +1,5 @@
 ---
-title: "I Built a Full Slack-Style App Platform for OneCamp. Here's Every Decision I Made."
+title: "I built a full Slack-style app platform for OneCamp. Here's every decision I made."
 image: "/assets/images/post/onecamp-app-platform-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-08 10:00:00 +0530

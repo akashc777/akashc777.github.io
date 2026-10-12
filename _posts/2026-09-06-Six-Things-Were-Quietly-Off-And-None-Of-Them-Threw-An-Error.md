@@ -1,5 +1,5 @@
 ---
-title: "Six Things Were Quietly Off And None Of Them Threw An Error"
+title: "Six things were quietly off and none of them threw an error"
 image: "/assets/images/post/onecamp-quietly-off.jpg"
 author: "Akash Hadagali"
 date: 2026-09-06 12:00:00 +0530

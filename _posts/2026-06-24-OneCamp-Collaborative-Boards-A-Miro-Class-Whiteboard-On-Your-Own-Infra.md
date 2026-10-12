@@ -1,5 +1,5 @@
 ---
-title: "OneCamp Collaborative Boards: A Miro-Class Whiteboard On Your Own Infrastructure"
+title: "OneCamp collaborative boards: a Miro-class whiteboard on your own infrastructure"
 image: "/assets/images/post/onecamp-boards-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-24 14:00:00 +0530

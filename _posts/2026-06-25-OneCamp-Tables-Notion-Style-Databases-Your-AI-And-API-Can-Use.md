@@ -1,5 +1,5 @@
 ---
-title: "OneCamp Tables: Notion-Style Databases Your AI and API Can Actually Use"
+title: "OneCamp tables: Notion-style databases your AI and API can actually use"
 image: "/assets/images/post/onecamp-tables-modern.jpg"
 author: "Akash Hadagali"
 date: 2026-06-25 11:00:00 +0530

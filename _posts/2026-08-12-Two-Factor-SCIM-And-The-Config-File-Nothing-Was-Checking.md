@@ -1,5 +1,5 @@
 ---
-title: "Two-Factor, SCIM, and the Config File Nothing Was Checking"
+title: "Two-factor, SCIM, and the config file nothing was checking"
 image: "/assets/images/post/onecamp-2fa-scim.jpg"
 author: "Akash Hadagali"
 date: 2026-08-12 12:00:00 +0530

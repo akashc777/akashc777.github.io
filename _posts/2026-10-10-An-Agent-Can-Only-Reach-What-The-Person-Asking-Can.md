@@ -1,5 +1,5 @@
 ---
-title: "An Agent Can Only Reach What The Person Asking Can"
+title: "An agent can only reach what the person asking can"
 image: "/assets/images/post/onecamp-agent-reach.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 02:00:00 +0530

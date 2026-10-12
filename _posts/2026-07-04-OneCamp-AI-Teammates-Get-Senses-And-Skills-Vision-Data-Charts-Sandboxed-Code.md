@@ -1,5 +1,5 @@
 ---
-title: "OneCamp AI Teammates Get Senses and Skills: Vision, Data Analysis, Sandboxed Code, and Agents That Watch Your Work"
+title: "OneCamp AI teammates get senses and skills: vision, data analysis, sandboxed code, and agents that watch your work"
 image: "/assets/images/post/onecamp-ai-skills-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-07-04 10:00:00 +0530

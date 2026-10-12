@@ -1,5 +1,5 @@
 ---
-title: "OneCamp Connectors: I Gave the Workspace AI Access to Gmail, Google Calendar, and GitHub"
+title: "OneCamp connectors: I gave the workspace AI access to Gmail, Google Calendar, and GitHub"
 image: "/assets/images/post/onecamp-connectors-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-08 14:00:00 +0530

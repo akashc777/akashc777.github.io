@@ -1,5 +1,5 @@
 ---
-title: "One Server Per Customer, and the Four Times the Obvious Design Was Wrong"
+title: "One server per customer, and the four times the obvious design was wrong"
 image: "/assets/images/post/onecamp-managed-hosting.jpg"
 author: "Akash Hadagali"
 date: 2026-08-21 12:00:00 +0530

@@ -1,5 +1,5 @@
 ---
-title: "One Dead Hostname Took Video Calls Down for 26 Days"
+title: "One dead hostname took video calls down for 26 days"
 image: "/assets/images/post/onecamp-dead-hostname.jpg"
 author: "Akash Hadagali"
 date: 2026-08-29 12:00:00 +0530

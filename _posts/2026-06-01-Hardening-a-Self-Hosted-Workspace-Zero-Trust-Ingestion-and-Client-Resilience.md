@@ -1,5 +1,5 @@
 ---
-title: "Hardening a Self-Hosted Workspace: Zero-Trust Ingestion and Client Resilience"
+title: "Hardening a self-hosted workspace: zero-trust ingestion and client resilience"
 image: "/assets/images/post/onecamp-security-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-01 16:45:00 +0530

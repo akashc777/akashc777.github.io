@@ -1,5 +1,5 @@
 ---
-title: "The Same One-Line Fault, Five Times, and the Test That Missed It Too"
+title: "The same one-line fault, five times, and the test that missed it too"
 image: "/assets/images/post/onecamp-one-line-fault.jpg"
 author: "Akash Hadagali"
 date: 2026-08-12 11:00:00 +0530

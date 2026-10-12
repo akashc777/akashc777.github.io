@@ -1,5 +1,5 @@
 ---
-title: "OneCamp AI Teammates Open Pull Requests: A Coding Agent That Ships on Your Own Infra, Not Someone Else's Cloud"
+title: "OneCamp AI teammates open pull requests: a coding agent that ships on your own infra, not someone else's cloud"
 image: "/assets/images/post/onecamp-ai-code-pr.jpg"
 author: "Akash Hadagali"
 date: 2026-07-06 10:00:00 +0530

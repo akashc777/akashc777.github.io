@@ -1,5 +1,5 @@
 ---
-title: "Every Feature Worked and Nobody Could Reach It"
+title: "Every feature worked and nobody could reach it"
 image: "/assets/images/post/onecamp-unreachable.jpg"
 author: "Akash Hadagali"
 date: 2026-09-01 12:00:00 +0530

@@ -1,5 +1,5 @@
 ---
-title: "Your Team Arrives Ready To Write"
+title: "Your team arrives ready to write"
 image: "/assets/images/post/onecamp-teammates-ready.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 02:30:00 +0530

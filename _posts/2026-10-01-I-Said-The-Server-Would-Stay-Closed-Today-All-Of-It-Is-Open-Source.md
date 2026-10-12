@@ -1,5 +1,5 @@
 ---
-title: "I Said The Server Would Stay Closed. Today All Of It Is Open Source"
+title: "I said the server would stay closed. Today all of it is open source"
 image: "/assets/images/post/onecamp-open-source-plans.jpg"
 author: "Akash Hadagali"
 date: 2026-10-01 19:00:00 +0530

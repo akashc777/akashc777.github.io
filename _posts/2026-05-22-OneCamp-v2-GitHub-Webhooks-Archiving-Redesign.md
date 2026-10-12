@@ -1,5 +1,5 @@
 ---
-title : "OneCamp: GitHub Sync, Custom Webhooks, Data Archiving, and a Complete Frontend Redesign"
+title : "OneCamp: GitHub sync, custom webhooks, data archiving, and a complete frontend redesign"
 image : "/assets/images/post/onecamp-v2-improved.jpg"
 author : "Akash Hadagali"
 date: 2026-05-22 12:00:00 +0530

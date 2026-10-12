@@ -1,5 +1,5 @@
 ---
-title: "OneCamp AI Teammates Reach Your Whole Workspace: External Databases, Documents, Voice, and Governed Code"
+title: "OneCamp AI teammates reach your whole workspace: external databases, documents, voice, and governed code"
 image: "/assets/images/post/onecamp-ai-reach.jpg"
 author: "Akash Hadagali"
 date: 2026-07-14 10:00:00 +0530

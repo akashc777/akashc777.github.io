@@ -1,5 +1,5 @@
 ---
-title: "Agents That Can Ask Each Other For Help — Without Laundering Permissions"
+title: "Agents that can ask each other for help — without laundering permissions"
 image: "/assets/images/post/onecamp-agent-delegation.jpg"
 author: "Akash Hadagali"
 date: 2026-07-31 16:00:00 +0530

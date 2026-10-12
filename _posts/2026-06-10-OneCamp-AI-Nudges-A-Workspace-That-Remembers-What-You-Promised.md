@@ -1,5 +1,5 @@
 ---
-title: "AI Nudges in OneCamp: A Workspace That Remembers What You Promised"
+title: "AI nudges in OneCamp: a workspace that remembers what you promised"
 image: "/assets/images/post/onecamp-nudges-improved.jpg"
 author: "Akash Hadagali"
 date: 2026-06-10 11:00:00 +0530

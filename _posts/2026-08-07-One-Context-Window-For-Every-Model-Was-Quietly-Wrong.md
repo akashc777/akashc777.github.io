@@ -1,5 +1,5 @@
 ---
-title: "One Context Window for Every Model Was Quietly Wrong"
+title: "One context window for every model was quietly wrong"
 image: "/assets/images/post/onecamp-context-window.jpg"
 author: "Akash Hadagali"
 date: 2026-08-07 11:00:00 +0530

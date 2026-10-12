@@ -1,5 +1,5 @@
 ---
-title: "Bill Your Time At The Right Rate"
+title: "Bill your time at the right rate"
 image: "/assets/images/post/onecamp-rates.jpg"
 author: "Akash Hadagali"
 date: 2026-10-08 14:00:00 +0530
