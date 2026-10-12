@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-colour.jpg"
 author: "Akash Hadagali"
 date: 2026-10-11 09:00:00 +0530
 description: "A colour for every person, project and channel. Themes that recolour the whole frame. Illustrations where a screen is empty. Then the speed work: a sent message shows in 16 ms instead of 489, and typing in a long doc does a thirty-seventh of the work. Then every screen held to one standard, which turned up a Mentions tab that had never shown anyone a mention."
+canonical_url: "https://onemana.dev/blog/onecamp-has-colour-now"
 tags: ["OneCamp", "Design", "UX", "Performance", "Slack Alternative", "Self-Hosted", "OpenSource"]
 ---
 

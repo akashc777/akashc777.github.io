@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-handles.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 11:20:00 +0530
 description: "OneCamp people have three names: a display name, a full name and an @handle. Until this release the app picked between them differently on every screen, and anyone who joined before handles existed had none. Now there is one rule, everyone has a handle, and you can find a teammate by any of their names."
+canonical_url: "https://onemana.dev/blog/everyone-has-a-handle-now"
 tags: ["OneCamp", "Profiles", "Mentions", "Slack Alternative", "Self-Hosted", "OpenSource"]
 ---
 

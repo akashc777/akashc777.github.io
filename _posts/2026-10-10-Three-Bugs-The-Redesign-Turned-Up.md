@@ -4,12 +4,13 @@ image: "/assets/images/post/onecamp-three-bugs.jpg"
 author: "Akash Hadagali"
 date: 2026-10-10 11:40:00 +0530
 description: "Going through every OneCamp screen for the redesign meant opening a lot of tasks and running a lot of imports. Three things happened that shouldn't have: opening a task could record an edit nobody made, an import could run twice at once, and undoing a Slack import failed halfway. All three are fixed in this release, with tests that fail if they ever come back."
+canonical_url: "https://onemana.dev/blog/three-bugs-the-redesign-turned-up"
 tags: ["OneCamp", "Reliability", "Imports", "Tasks", "Self-Hosted", "OpenSource"]
 ---
 
 If you're new here: [OneCamp](https://onemana.dev) is a self-hosted workspace (chat, tasks, docs, calls, calendar and AI agents) that you install on your own server. It is [open source](https://github.com/OneMana-Soft/OneCamp) and free for up to 25 people.
 
-This release's [redesign](https://github.com/OneMana-Soft/OneCamp/releases/tag/v2.71.0) meant opening nearly every screen in the app, many times, in two themes and at two sizes. Most of what turned up was visual. Three things were not.
+This release's [redesign](https://onemana.dev/changelog/2026-10-10-a-calmer-workspace) meant opening nearly every screen in the app, many times, in two themes and at two sizes. Most of what turned up was visual. Three things were not.
 
 ## Opening a task could record an edit
 
