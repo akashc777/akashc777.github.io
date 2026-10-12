@@ -4,6 +4,7 @@ image: "/assets/images/post/onecamp-v3.jpg"
 author: "Akash Hadagali"
 date: 2026-10-13 00:30:00 +0530
 description: "OneCamp's third look: no top bar, one sidebar that holds the workspace, search and you, a single command palette that can also answer, and every screen rebuilt to one standard. Typing in a message box does a third of the work it did, scrolling a long channel less than half, and the app is busy for 0.7 s instead of 4.5 s while it opens."
+canonical_url: "https://onemana.dev/blog/a-workspace-with-nothing-in-the-way"
 tags: ["OneCamp", "Design", "UX", "Performance", "Slack Alternative", "Self-Hosted", "OpenSource"]
 ---
 
