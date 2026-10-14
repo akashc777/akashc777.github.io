@@ -1,8 +1,8 @@
 ---
 layout: contact
-title: "Contact Me 📬"
+title: "Get in touch"
 description : "Get in touch with Akash Hadagali regarding OneMana, technical consultations, or distributed systems architecture."
 image: "/assets/images/blogging-2.svg"
 ---
 
-✍🏻 Fill this form to reach out to me ! 
+Questions about OneMana or OneCamp, a consultation, or a distributed systems problem: write to me here, or at [hey@akash.page](mailto:hey@akash.page).

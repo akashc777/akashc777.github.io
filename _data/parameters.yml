@@ -1,33 +1,25 @@
 ########################### Navigation ###################################
+# `match` lists the URL prefixes that mark a menu item as the current page.
 menu:
-  # main menu
   main:
-  - {name: Home, url: '/'}
-  - {name: contact, url: '/contact'}
-  - {name: Projects, url: '/projects'}
-  - {name: Blog, url: '/blog'}
-  - {name: About, url: '/about/akash-hadagali'}
-  # - {name: Blogs, url: '/tools'}
+  - {name: Blog, url: '/blog', match: ['/blog', '/post/', '/tag']}
+  - {name: Projects, url: '/projects', match: ['/projects']}
+  - {name: About, url: '/about/akash-hadagali', match: ['/about/']}
+  - {name: Contact, url: '/contact', match: ['/contact']}
 
-##### Dropdown menu ######
-
-  # - name: dropdown
-  #   submenu:
-  #   - name : "d1"
-  #     url : "#"
-  #   - name : "d2"
-  #     url : "#"
-
-##########################
-  
-  # Footer menu
+  # Footer columns; a third, "Elsewhere", is built from `social` below.
   footer:
-  - {name: Home, url: '/'}
-  - {name: contact, url: '/contact'}
-  - {name: Projects, url: '/projects'}
-  - {name: Blog, url: '/blog'}
-  - {name: About, url: '/about/akash-hadagali'}
-
+  - title: Read
+    links:
+    - {name: All posts, url: '/blog'}
+    - {name: Tags, url: '/tags'}
+    - {name: Search, url: '/search'}
+    - {name: RSS feed, url: '/feed.xml'}
+  - title: About
+    links:
+    - {name: About me, url: '/about/akash-hadagali'}
+    - {name: Projects, url: '/projects'}
+    - {name: Contact, url: '/contact'}
 
 ######################### Default Parameters ###########################
 
@@ -36,17 +28,13 @@ logo : "/assets/images/logo.svg"
 # meta data
 author : "Akash Hadagali"
 description : "Akash Hadagali — Founder of OneMana, Engineer, and Builder. Obsessed with self-hosted, anti-SaaS software that gives teams their ownership back."
+footer_blurb : "Notes from building OneCamp, a self-hosted workspace, and the things that broke on the way."
 # google analitycs ID
 google_analitycs_id : "G-PEV0XKD8YF" # your id
 # contact form action
 contact_form_action : "https://send.pageclip.co/jchtAGVYlwyiFbID88OX6R3iwYtWl6pL" # contact form works with : https://formspree.io
 # copyright
-copyright : "Built with ❤️ by [Akash Hadagali](https://twitter.com/akashc777) · [OneMana](https://onemana.dev)"
-
-# preloader
-preloader:
-  enable : true
-  preloader : "" # use png, jpg, svg or gif format
+copyright : "Built by [Akash Hadagali](https://twitter.com/akashc777) · [OneMana](https://onemana.dev)"
 
 # search
 search:
@@ -54,18 +42,14 @@ search:
 
 ############################## Social Site ##########################
 social:
-  # - name : "facebook"
-  #   icon : "ti-facebook" # themify icon pack https://themify.me/themify-icons
-  #   link : "#"
-    
-  - name : "twitter"
-    icon : "ti-twitter-alt" # themify icon pack https://themify.me/themify-icons
+  - name : "X (Twitter)"
     link : "https://twitter.com/akashc777"
+    marker : "cyan"
 
-  - name : "github"
-    icon : "ti-github" # themify icon pack https://themify.me/themify-icons
+  - name : "GitHub"
     link : "https://github.com/akashc777"
+    marker : "violet"
 
-  - name : "linkedin"
-    icon : "ti-linkedin" # themify icon pack https://themify.me/themify-icons
+  - name : "LinkedIn"
     link : "https://www.linkedin.com/in/akashhadagali/"
+    marker : "blue"

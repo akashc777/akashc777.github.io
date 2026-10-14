@@ -1,22 +1,23 @@
 ---
 layout: default
 ---
-
-<!-- blog -->
-<section class="section">
-  
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto px-0">
-          
-          <div class="bg-white shadow block bradius">
-            <h2>{{ page.title }}</h2><br>
-            {% for post in site.posts %}
-            {% include post.html %}
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </div>
+{%- assign total = site.posts | size -%}
+{%- assign _mh = "blue,pink,lemon,mint,violet,tangerine,cyan" | split: "," -%}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Archive</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+    <div class="stats"><span class="chip m-blue">{{ total }} posts</span><a class="chip m-violet" href="{{ '/tags' | relative_url }}">Browse by tag</a><a class="chip m-mint" href="{{ '/search' | relative_url }}">Search</a><a class="chip m-tangerine" href="{{ '/feed.xml' | relative_url }}">RSS feed</a></div>
+  </header>
+  {%- assign months = site.posts | group_by_exp: "post", "post.date | date: '%B %Y'" -%}
+  {% for month in months %}
+  {%- assign _i = forloop.index0 | modulo: 7 -%}
+  <section class="archive-month m-{{ _mh[_i] }}">
+    <h2>{{ month.name }}</h2>
+    <ul class="post-list">
+      {% for post in month.items %}{% include post.html %}{% endfor %}
+    </ul>
   </section>
-  <!-- /blog -->
+  {% endfor %}
+</div>

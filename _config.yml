@@ -21,11 +21,8 @@ description: >- # this means to ignore newlines until "baseurl:"
 #################### Comment Section (Disqus) ################
 disqus_shortname: "akash-hadagali" # Add your shortname for Disqus Comment. For example : mr-brown
 
-# Scss Directory
-sass:
-  sass_dir: assets/scss
-  style: compressed
-  
+# Styles are one hand-written file, assets/css/site.css; there is no Sass.
+
 # Build settings
 future: true
 markdown: kramdown
@@ -41,6 +38,13 @@ plugins:
   - jekyll-sitemap
   - jekyll/tagging
   - jemoji
+  - jekyll-feed
+
+# Atom feed at /feed.xml (jekyll-feed ships with GitHub Pages). Links in the
+# feed point at akash.page; each post's canonical still names onemana.dev.
+feed:
+  path: feed.xml
+author: Akash Hadagali
 
 
 # include
@@ -79,3 +83,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - .sass-cache

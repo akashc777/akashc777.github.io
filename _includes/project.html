@@ -1,0 +1,11 @@
+<article class="project m-{{ include.hue | default: 'blue' }}">
+  <div class="project-top">
+    <div class="project-art" aria-hidden="true">{{ project.mark | default: project.title | slice: 0 }}</div>
+    <h3><a href="{{ project.button.link | relative_url }}">{{ project.title }}</a></h3>
+  </div>
+  <p>{{ project.description }}</p>
+  <div class="project-links">
+    {% if project.button.enable %}<a href="{{ project.button.link | relative_url }}">{{ project.button.label }}</a>{% endif %}
+    {% if project.github %}<a class="plain" href="{{ project.github }}" rel="noopener">Code on GitHub</a>{% endif %}
+  </div>
+</article>

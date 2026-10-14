@@ -1,5 +1,5 @@
 ---
 layout: blog
-title: "💻 My Blog 🎧"
-
+title: "All posts"
+description: "Engineering notes from building OneCamp: what I shipped, what broke, and what I learned fixing it."
 ---

@@ -1,0 +1,9 @@
+{%- comment -%}
+  One tag. It links to the tag's own page where one exists (the six under
+  /tag/ that were always there) and to its section of /tags otherwise, so no
+  chip is a dead link. Pass count= to show how many posts carry it.
+{%- endcomment -%}
+{%- include tag-hue.html tag=include.tag -%}
+{%- assign _tp = site.pages | where: "tag", include.tag | first -%}
+{%- if _tp -%}{%- assign _href = _tp.url | relative_url -%}{%- else -%}{%- assign _href = include.tag | slugify | prepend: '/tags.html#' | relative_url -%}{%- endif -%}
+<a class="chip m-{{ _hue }}" href="{{ _href }}">{{ include.tag }}{% if include.count %} <span class="count">{{ include.count }}</span>{% endif %}</a>

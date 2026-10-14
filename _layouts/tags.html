@@ -1,20 +1,16 @@
 ---
 layout: default
 ---
-
-<!-- blog -->
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto px-0">
-        <h2 class="mb-4">Posts are showing from <span class="text-primary">{{ page.tag }}</span></h2>
-        <div class="bg-white shadow block bradius">
-          {% for post in page.posts %}
-          {% include post.html %}
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /blog -->
+{%- comment -%} A tag's own page. jekyll-tagging would pass page.posts; on GitHub Pages it is the six pages under /tag/. {%- endcomment -%}
+{%- assign posts = page.posts | default: site.tags[page.tag] -%}
+{%- include tag-hue.html tag=page.tag -%}
+<div class="wrap m-{{ _hue }}">
+  <header class="page-head">
+    <p class="eyebrow">Tag</p>
+    <h1 class="tag-title"><span class="hash" aria-hidden="true">#</span>{{ page.tag }}</h1>
+    <p>{{ posts | size }} post{% if posts.size != 1 %}s{% endif %} tagged {{ page.tag }}. <a href="{{ '/tags' | relative_url }}">See every tag</a>.</p>
+  </header>
+  <ul class="post-list">
+    {% for post in posts %}{% include post.html level=2 %}{% endfor %}
+  </ul>
+</div>

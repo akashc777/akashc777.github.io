@@ -1,34 +1,78 @@
 ---
-layout : default
+layout: default
 ---
-
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto block shadow mb-5 bradius">
-        <h2>{{ page.title }}</h2>
-        <div class="mb-3 post-meta">
-          {% if page.author %}
-          <a href="{{ 'about/' | relative_url }}{{ page.author | slugify }}">{{ page.author }}</a>{%endif%},
-          {{ page.date | date: '%b %d, %Y' }},
-          {% if page.tags.size >= 1 %}
-          {% for tag in page.tags %}
-          <a href="{{ '/tag/' | relative_url }}{{ tag }}">{{ tag }}</a>
-          {% endfor %}
-          {% endif %}
-        </div>
-        {% if page.image %}
-        <img src="{{ page.image | relative_url }}" class="img-fluid w-100 mb-4" alt="{{ page.title }}">
-        {% endif %}
-        <div class="content mb-5">
-          {{ page.content }}
-        </div>
-        <!-- comments -->
-        {% if site.disqus_shortname %}
-          {% include disqus-comments.html %}
-        {% endif %}
-        <!-- /comments -->
+{%- assign words = content | number_of_words -%}
+{%- assign minutes = words | divided_by: 230 | plus: 1 -%}
+{%- comment -%}
+  The contents rail is read off the post's own h2s (kramdown gives each an id).
+  It only appears when there are three or more, and only on wide screens.
+{%- endcomment -%}
+{%- assign _sections = content | split: '<h2 id="' -%}
+<div class="progress" aria-hidden="true"></div>
+<article class="post post-grid">
+  <header class="post-head">
+    {%- assign _n = 0 -%}
+    {%- capture _chips -%}{%- for _t in page.tags -%}{%- if site.data.topics.quiet contains _t -%}{%- continue -%}{%- endif -%}{%- if _n >= 3 -%}{%- break -%}{%- endif -%}<li>{% include tag-chip.html tag=_t %}</li>{%- assign _n = _n | plus: 1 -%}{%- endfor -%}{%- endcapture -%}
+    {% if _n > 0 %}<ul class="chips rise" aria-label="Topics">{{ _chips }}</ul>{% endif %}
+    <h1 class="rise" style="--i:1">{{ page.title }}</h1>
+    {% if page.description %}<p class="dek rise" style="--i:2">{{ page.description | strip_html }}</p>{% endif %}
+    <div class="byline rise" style="--i:3">
+      {%- assign _author = site.pages | where: "fname", page.author | first -%}
+      {% if _author.image %}<img src="{{ _author.image }}" alt="" width="40" height="40">{% endif %}
+      <div>
+        {% if page.author %}<a href="{{ 'about/' | relative_url }}{{ page.author | slugify }}">{{ page.author }}</a>{% endif %}
+        <span class="byline-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time><span class="dot" aria-hidden="true"></span><span>{{ minutes }} min read</span></span>
       </div>
     </div>
+  </header>
+
+  {% if page.image %}
+  <figure class="post-cover rise" style="--i:3">
+    <img src="{{ page.image | relative_url }}" alt="" decoding="async" fetchpriority="high">
+  </figure>
+  {% endif %}
+
+  {% if page.canonical_url %}
+  <aside class="also-on">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+    <span>This post also lives on <a href="{{ page.canonical_url }}">onemana.dev</a>, OneCamp's home.</span>
+  </aside>
+  {% endif %}
+
+  <div class="post-body">
+    <div class="content">
+      {{ content }}
+    </div>
+    {% if _sections.size > 3 %}
+    <nav class="toc" aria-label="In this post">
+      <p class="toc-title">In this post</p>
+      <ol>
+        {%- for _s in _sections offset: 1 -%}
+        {%- assign _id = _s | split: '"' | first -%}
+        {%- assign _label = _s | split: '</h2>' | first | remove_first: _id | remove_first: '">' | strip_html | strip -%}
+        <li><a href="#{{ _id }}">{{ _label }}</a></li>
+        {%- endfor -%}
+      </ol>
+    </nav>
+    {% endif %}
   </div>
-</section>
+
+  <footer class="post-foot">
+    {% if page.tags.size > 0 %}
+    <div>
+      <p class="post-foot-label">Filed under</p>
+      <ul class="chips" aria-label="Tags">{% for tag in page.tags %}<li>{% include tag-chip.html tag=tag %}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+    {% if page.previous or page.next %}
+    <nav class="pager" aria-label="More posts">
+      {% if page.previous %}<a class="prev" href="{{ page.previous.url | relative_url }}"><span>Older post</span><b>{{ page.previous.title }}</b></a>{% endif %}
+      {% if page.next %}<a class="next" href="{{ page.next.url | relative_url }}"><span>Newer post</span><b>{{ page.next.title }}</b></a>{% endif %}
+    </nav>
+    {% endif %}
+  </footer>
+
+  {% if site.disqus_shortname %}
+    {% include disqus-comments.html %}
+  {% endif %}
+</article>

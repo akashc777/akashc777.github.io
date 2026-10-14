@@ -1,126 +1,106 @@
 ---
 layout: default
-
 ---
-
-<!-- banner -->
-{% if site.data.homepage.banner.enable %}
-<section class="banner bg-cover"
-  style="background-image: url('{{ site.data.homepage.banner.bg_image | relative_url }}');">
-  
-  <div class="container">
-    <div class="row">
-      <div class="profile">
-        <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid illustration" alt="">
-        <div class="col-lg-6 illustration-mobile">
-          <img src="{{ site.data.homepage.banner.image | relative_url }}" class="img-fluid" alt="">
-        </div>
-        <ul class="list-inline social-icon mb-0" style="display: flex; justify-content: center; ">
-          {% for social in site.data.parameters.social %}
-          <li class="list-inline-item "><a href="{{ social.link | relative_url }}" target="_blank"><i class="{{ social.icon }}"></i></a></li>
-          {% endfor %}
-        </ul>
+{%- assign hero = site.data.homepage.banner -%}
+{%- assign arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>' -%}
+<section class="hero paper">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow rise">{{ hero.eyebrow }}</p>
+      <h1 class="rise" style="--i:1">{{ hero.title }}</h1>
+      <p class="lede rise" style="--i:2">{{ hero.lede }}</p>
+      <div class="hero-actions rise" style="--i:3">
+        <a class="btn btn-primary" href="{{ '/blog' | relative_url }}">Read the blog {{ arrow }}</a>
+        <a class="btn btn-quiet" href="{{ hero.know_more | relative_url }}">More about me</a>
       </div>
-      
-      <div class="col-lg-8 mb-5 mb-lg-0 ">
-        <h1>{{ site.data.homepage.banner.title }}<br><a href="{{ site.data.homepage.banner.know_more | relative_url }}"  class="btn btn-primary">Know more about me</a></h1>
-        
-        
-      </div>
-      
-      
+      <ul class="socials rise" style="--i:4" aria-label="Elsewhere">
+        {%- for social in site.data.parameters.social %}
+        <li><a class="m-{{ social.marker | default: 'blue' }}" href="{{ social.link }}" rel="me noopener">{{ social.name }}</a></li>
+        {%- endfor %}
+        <li><a class="m-tangerine" href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+      </ul>
     </div>
-    
+    <div class="hero-art rise" style="--i:2">
+      <div class="portrait">
+        {% include rings.html %}
+        <img src="{{ hero.image }}" alt="Akash Hadagali" width="460" height="460" fetchpriority="high">
+      </div>
+      <span class="sticker sticker-count">{{ site.posts | size }} posts so far</span>
+      {% if hero.sticker %}<span class="sticker sticker-ship">{{ hero.sticker }}</span>{% endif %}
+      <svg class="doodle doodle-spark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20 2c1.6 11.5 6.5 16.4 18 18-11.5 1.6-16.4 6.5-18 18-1.6-11.5-6.5-16.4-18-18 11.5-1.6 16.4-6.5 18-18Z"/></svg>
+      <svg class="doodle doodle-squiggle" viewBox="0 0 70 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"><path d="M3 12c6-9 11-9 16 0s10 9 16 0 11-9 16 0 10 9 16 0"/></svg>
+    </div>
+  </div>
+</section>
+
+{%- assign latest = site.posts.first -%}
+{% if latest %}
+{%- assign _now = site.time | date: '%s' | plus: 0 -%}
+{%- assign _then = latest.date | date: '%s' | plus: 0 -%}
+{%- assign _age = _now | minus: _then -%}
+<section class="section" aria-labelledby="latest-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="latest-h">Latest post</h2></div>
+    <article class="feature">
+      {% if latest.image %}<div class="feature-media"><img src="{{ latest.image | relative_url }}" alt="" loading="lazy" decoding="async"></div>{% endif %}
+      <div class="feature-body">
+        <div class="feature-meta">{% if _age < 2592000 %}<span class="badge-new">New</span>{% endif %}<time datetime="{{ latest.date | date_to_xmlschema }}">{{ latest.date | date: '%-d %B %Y' }}</time></div>
+        <h3><a href="{{ latest.url | relative_url }}">{{ latest.title }}</a></h3>
+        {% if latest.description %}<p>{{ latest.description | strip_html | truncate: 240 }}</p>{% endif %}
+        {%- assign _n = 0 -%}
+        {%- capture _chips -%}{%- for _t in latest.tags -%}{%- if site.data.topics.quiet contains _t -%}{%- continue -%}{%- endif -%}{%- if _n >= 4 -%}{%- break -%}{%- endif -%}<li>{% include tag-chip.html tag=_t %}</li>{%- assign _n = _n | plus: 1 -%}{%- endfor -%}{%- endcapture -%}
+        {% if _n > 0 %}<ul class="chips" aria-label="Tags">{{ _chips }}</ul>{% endif %}
+      </div>
+    </article>
   </div>
 </section>
 {% endif %}
-<!-- /banner -->
 
-
-
-<!-- call_to_action -->
-
-
-
-
-
-<section class="section pt-0">
-
-  <div class="container">
-    
-    <div class="row">
-
-      <div class="col-lg-8 mx-auto">
-        
-        
-        <div class="row shadow bg-white p-5 bradius">
-          <h2 >Main Projects 👨🏽‍💻</h2>
-          {% for project in site.data.projects.all_projects%}
-          {% if project.main %}
-
-          <div class="row p-5">
-          <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
-            
-            <img src="{{ project.image | relative_url }}" class="mr-4" alt="">
-            
-          
-          </div>
-          <div class="col-md-8 text-center text-md-left">
-            <a href="{{ project.button.link | relative_url }}"><h3 class="mt-0 text-primary" >{{ project.title }}</h3></a>
-            
-            
-            <p>{{ project.description }}</p>
-            {% if project.button.enable %}
-            <a href="{{ project.button.link | relative_url }}"
-              class="btn btn-primary">{{ project.button.label }}</a>
-            {% endif %}
-            <span class="list-inline social-icon mb-0" style="margin-left: 20px;">
-            
-              <span class="list-inline-item"><a href="{{ project.github }}" target="_blank"><i class="ti-github"></i></a></span>
-             
-            </span>
-            
-          </div>
-        </div>
-        {% endif %}
-          {% endfor %}
-
-
-   
-          <a href="/projects" class="btn btn-sm btn-transparent pl-0 mt-2">View all projects</a>
-          
-        </div>
-        
-        
-      </div>
-      
-    </div>
-    
+<section class="section" aria-labelledby="recent-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="recent-h">Recent posts</h2><a href="{{ '/blog' | relative_url }}">All {{ site.posts | size }} posts {{ arrow }}</a></div>
+    <ul class="post-list">
+      {% for post in site.posts offset: 1 limit: 6 %}{% include post.html %}{% endfor %}
+    </ul>
   </div>
-  
-  
 </section>
 
+<section class="section" aria-labelledby="topics-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="topics-h">Read by topic</h2><a href="{{ '/tags' | relative_url }}">Every tag {{ arrow }}</a></div>
+    <ul class="topics">
+      {%- for t in site.data.topics.featured -%}
+      {%- assign _c = site.tags[t] | size -%}
+      {%- if _c > 0 %}
+      <li>{% include tag-chip.html tag=t count=_c %}</li>
+      {%- endif -%}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
 
-<!-- /call_to_action -->
+<section class="section" aria-labelledby="projects-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="projects-h">Things I've built</h2><a href="{{ '/projects' | relative_url }}">All projects {{ arrow }}</a></div>
+    <div class="projects">
+      {%- assign mains = site.data.projects.all_projects | where: "main", true -%}
+      {%- assign _ph = "blue,pink,lemon,mint,violet,cyan" | split: "," -%}
+      {% for project in mains limit: 4 %}{% assign _h = forloop.index0 | modulo: 6 %}{% assign _hn = _ph[_h] %}{% include project.html hue=_hn %}{% endfor %}
+    </div>
+  </div>
+</section>
 
-
-<!-- blog -->
-<section class="section">
-  
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 mx-auto px-0">
-        
-        <div class="bg-white shadow block bradius">
-          <h2>Posts 📝</h2><br>
-          {% for post in site.posts limit: 6 %}
-          {% include post.html %}
-          {% endfor %}
-          <a href="{{ '/blog.html' | relative_url }}" class="btn btn-sm btn-transparent pl-0 mt-2">View all posts</a>
-        </div>
+<section class="section" aria-labelledby="follow-h">
+  <div class="wrap">
+    <div class="note-card">
+      <div>
+        <h2 id="follow-h">New posts, as they land</h2>
+        <p>I write when something ships or breaks, which is often. Follow along in your feed reader, or on X.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn" href="{{ '/feed.xml' | relative_url }}">Subscribe by RSS</a>
+        <a class="btn btn-quiet" href="https://twitter.com/akashc777" rel="me noopener">Follow on X</a>
       </div>
     </div>
   </div>
 </section>
-<!-- /blog -->

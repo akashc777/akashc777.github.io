@@ -24,7 +24,7 @@
 
   <title>{% if page.title %}{{ page.title | strip_html }} | {{ site.brand }}{% else %}{{ site.title }}{% endif %}</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{{ page_desc | strip_html | strip_newlines }}">
   <link rel="canonical" href="{{ canonical }}">
 
@@ -55,24 +55,41 @@
   {% if page_image %}<meta name="twitter:image" content="{{ page_image | absolute_url }}">{% endif %}
 
 
-  {% for css in site.data.plugins.css %}
-  <link rel="stylesheet" href="{{ css | relative_url }}">
-  {% endfor %}
+  {%- comment -%}
+    The theme is settled before first paint: a saved choice wins, otherwise the
+    OS preference. The CSS reads [data-theme] and falls back to
+    prefers-color-scheme, so with no script at all the page still follows the OS.
+  {%- endcomment -%}
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0e0f14" media="(prefers-color-scheme: dark)">
 
-  <!-- Main Stylesheet -->
-  <link href="{{ '/assets/scss/style.css' | relative_url }}" rel="stylesheet">
+  {%- comment -%}
+    Fonts are served from this site (Inter, Bricolage Grotesque and JetBrains
+    Mono, all SIL OFL; licences sit next to them in assets/fonts), so a page
+    makes no request to anyone else before it can paint. The two faces every
+    page shows above the fold are preloaded.
+  {%- endcomment -%}
+  <link rel="preload" href="{{ '/assets/fonts/inter-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/bricolage-grotesque-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
 
-  <!--Favicon-->
-  <link rel="shortcut icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
-  <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }} " type="image/x-icon">
+  {% feed_meta %}
+
+  <link rel="icon" href="{{ '/assets/images/mark.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/assets/images/favicon-64.png' | relative_url }}" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 
   <!-- google-analytics -->
   {% if site.google-analytics %}
     {% include google-analytics.html %}
   {% endif %}
-
-  {% if site.tags != "" %}
-  {% include collecttags.html %}
-  {% endif %}
-
 </head>

@@ -1,38 +1,26 @@
 ---
 layout: default
 ---
-
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-3">
-        <div class="nav nav-tab flex-column" role="tablist" aria-orientation="vertical">
-          {% for tooltab in page.tools %}
-          <a class="nav-link {% if forloop.first %} active {% endif %}" data-toggle="pill" href="#{{ tooltab.title | slugify }}" role="tab">{{ tooltab.title }}</a>
-          {% endfor %}
+{%- assign _ph = "blue,pink,lemon,mint,violet,cyan" | split: "," -%}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Toolbox</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+  </header>
+  {% for tools in page.tools %}
+  <section class="section" aria-labelledby="tools-{{ forloop.index }}">
+    <div class="section-head"><h2 id="tools-{{ forloop.index }}">{{ tools.title }}</h2></div>
+    <div class="projects">
+      {% for tool in tools.tool %}{% assign _h = forloop.index0 | modulo: 6 %}
+      <article class="project m-{{ _ph[_h] }}">
+        <div class="project-top">
+          <div class="project-art" aria-hidden="true">{{ tool.name | slice: 0 }}</div>
+          <h3><a href="{{ tool.link }}" rel="noopener">{{ tool.name }}</a></h3>
         </div>
-      </div>
-      <div class="col-9">
-        <div class="tab-content">
-          {% for tools in page.tools %}
-          <div class="tab-pane fade {% if forloop.first %} show active {% endif %}" id="{{ tools.title | slugify }}" role="tabpanel">
-            <div class="row">
-              {% for tool in tools.tool %}
-              <div class="col-md-6 mb-4">
-                <div class="card border-0 shadow">
-                  <img src="{{ tool.image | relative_url }}" alt="{{ tool.name }}" class="card-img-top">
-                  <div class="card-body">
-                    <h4 class="h5 mb-4"><a class="text-dark" href="{{ tool.link }}">{{ tool.name }}</a></h4>
-                    <a href="{{ tool.link }}" class="btn btn-primary">Visit Site</a>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
+      </article>
+      {% endfor %}
     </div>
-  </div>
-</section>
+  </section>
+  {% endfor %}
+</div>

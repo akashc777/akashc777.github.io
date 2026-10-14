@@ -1,0 +1,53 @@
+---
+layout: default
+---
+{%- comment -%}
+  Every tag, with its posts. The tags with three or more posts lead, biggest
+  first, in their colours; the rest follow A to Z in a quieter list, so the
+  page reads as an index rather than confetti. Tags without a page of their
+  own link here, to their section.
+{%- endcomment -%}
+{%- assign tags = site.tags | sort -%}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Archive</p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ tags | size }} tags across {{ site.posts | size }} posts.</p>
+  </header>
+
+  <section class="tag-section" aria-labelledby="most-h">
+    <h2 id="most-h" class="post-foot-label">Most used</h2>
+    <ul class="tag-cloud">
+      {%- for n in (3..200) reversed -%}
+      {%- for t in tags -%}
+      {%- assign _c = t[1] | size -%}
+      {%- if _c == n -%}
+      {%- assign _tn = t[0] -%}{%- include tag-hue.html tag=_tn %}
+      <li><a class="chip m-{{ _hue }}{% if _c >= 10 %} big{% else %} mid{% endif %}" href="#{{ t[0] | slugify }}">{{ t[0] }} <span class="count">{{ _c }}</span></a></li>
+      {%- endif -%}
+      {%- endfor -%}
+      {%- endfor %}
+    </ul>
+  </section>
+
+  <section class="tag-section" aria-labelledby="az-h">
+    <h2 id="az-h" class="post-foot-label">Everything, A to Z</h2>
+    <ul class="tag-cloud quiet">
+      {%- for t in tags -%}
+      {%- assign _tn = t[0] -%}{%- include tag-hue.html tag=_tn %}
+      <li><a class="chip plain m-{{ _hue }}" href="#{{ t[0] | slugify }}">{{ t[0] }} <span class="count">{{ t[1] | size }}</span></a></li>
+      {%- endfor %}
+    </ul>
+  </section>
+
+  {% for t in tags %}
+  {%- assign _tn = t[0] -%}{%- include tag-hue.html tag=_tn -%}
+  {%- assign _tp = site.pages | where: "tag", t[0] | first -%}
+  <section class="tag-group m-{{ _hue }}" id="{{ t[0] | slugify }}">
+    <h2>{% if _tp %}<a class="chip" href="{{ _tp.url | relative_url }}">{{ t[0] }}</a>{% else %}<span class="chip">{{ t[0] }}</span>{% endif %} <span class="post-foot-label">{{ t[1] | size }} post{% if t[1].size != 1 %}s{% endif %}</span></h2>
+    <ul>
+      {% for post in t[1] %}<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%b %Y' }}</time></li>{% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>

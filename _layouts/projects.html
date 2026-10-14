@@ -1,60 +1,14 @@
 ---
 layout: default
 ---
-
-<!-- projects -->
-
-
-<section class="section">
-
-    <div class="container">
-      
-      <div class="row">
-  
-        <div class="col-lg-8 mx-auto">
-          
-          
-          <div class="row shadow bg-white p-5 bradius">
-            <h2 >{{ page.title }}</h2>
-            {% for project in site.data.projects.all_projects%}
-  
-            <div class="row p-5">
-            <div class="col-md-4 text-center text-md-left mb-4 mb-lg-0">
-              
-              <img src="{{ project.image | relative_url }}" class="mr-4" alt="">
-              
-            
-            </div>
-            <div class="col-md-8 text-center text-md-left">
-              <a href="{{ project.button.link | relative_url }}"><h3 class="mt-0 text-primary" >{{ project.title }}</h3></a>
-              
-              
-              <p>{{ project.description }}</p>
-              {% if project.button.enable %}
-              <a href="{{ project.button.link | relative_url }}"
-                class="btn btn-primary">{{ project.button.label }}</a>
-              {% endif %}
-              <span class="list-inline social-icon mb-0" style="margin-left: 20px;">
-              
-                <span class="list-inline-item"><a href="{{project.github}}" target="_blank"><i class="ti-github"></i></a></span>
-               
-              </span>
-              
-            </div>
-          </div>
-            {% endfor %}
-            
-          </div>
-          
-          
-        </div>
-        
-      </div>
-      
-    </div>
-    
-    
-  </section>
-  
-  
-  <!-- plojects -->
+{%- assign _ph = "blue,pink,lemon,mint,violet,cyan" | split: "," -%}
+<div class="wrap">
+  <header class="page-head">
+    <p class="eyebrow">Work</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="projects">
+    {% for project in site.data.projects.all_projects %}{% assign _h = forloop.index0 | modulo: 6 %}{% assign _hn = _ph[_h] %}{% include project.html hue=_hn %}{% endfor %}
+  </div>
+</div>

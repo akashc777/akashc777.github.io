@@ -1,63 +1,68 @@
 ######################## projects ###############################
 all_projects:
 
-    - title : "OneCamp  -  Self-Hosted Workspace (Chat, Tasks, Docs, AI, Video)"
+    - title : "OneCamp: a self-hosted workspace (chat, tasks, docs, AI, video)"
+      mark : "O"
       image : "/assets/images/server_cluster.svg"
       main: true
       github: "https://github.com/OneMana-Soft/OneCamp-fe"
-      description : "The anti-SaaS workspace. Chat, kanban boards, collaborative docs, video meetings, calendar sync, and a local AI assistant  -  all running on your own server. Pay once, own it forever. No per-seat pricing."
+      description : "The anti-SaaS workspace. Chat, kanban boards, collaborative docs, video meetings, calendar sync, and a local AI assistant, all running on your own server. No per-seat pricing."
       button:
         enable : true
-        label : "Check it out"
+        label : "Visit onemana.dev"
         link : "https://onemana.dev"
 
-    - title : "Multiuser Whiteboard"
+    - title : "Multiuser whiteboard"
+      mark : "W"
       image : "/assets/images/whiteboard.svg"
       main: true
       github: "https://github.com/akashc777/hackX_whiteboard_collab"
-      description : "Multiuser whiteboard and chat with not DB and secuirty"
+      description : "A multiuser whiteboard and chat, with no database."
       button:
         enable : true
-        label : "know more"
+        label : "Read more"
         link : "/post/Multiuser-Whiteboard.html"
 
-    - title : "Server Health Monitor Using Raft Algo"
+    - title : "Server health monitor using Raft"
+      mark : "R"
       image : "/assets/images/server_cluster.svg"
       main: true
       github: "https://github.com/akashc777/miniproj.akash.page"
-      description : "Achieving Fault Tolerance in Monitoring Distributed Systems.The Leader Node checks the CPU and Memory Utilization of each Server and Commits this data into every Server."
+      description : "Fault tolerance in monitoring distributed systems. The leader node checks the CPU and memory use of each server and commits that data to every server."
       button:
         enable : true
-        label : "know more"
+        label : "Read more"
         link : "/post/Server-Health-Monitor-Raft-Project-copy.html"
-  
-    - title : "Check Server Health using Pure NodeJS App"
+
+    - title : "Server health checks in pure Node.js"
+      mark : "N"
       image : "/assets/images/server.svg"
       main: true
       github: "https://github.com/akashc777/first_nodejs"
-      description : "The app is a REST API for Making Health Checks and Notifies the User if there is Any Change in the Status of the response code."
+      description : "A REST API that runs health checks and tells the user when the status of a response code changes."
       button:
         enable : true
-        label : "know more"
+        label : "Read more"
         link : "/post/Server-Health-Monitor-NodeJS-Project.html"
 
-    - title : "Blockchain Use Case: Coffee Supply Chain"
+    - title : "Blockchain use case: coffee supply chain"
+      mark : "C"
       image : "/assets/images/eth1.svg"
       main: true
       github: "https://github.com/akashc777/CoffeeSupplyChain"
-      description : "Used by Customer/Buyer to verify the Authenticity of the Coffee Beans by knowing Location of Growth using Blockchain."
+      description : "Lets a customer verify that coffee beans are authentic by tracing where they were grown, on a blockchain."
       button:
         enable : true
-        label : "know more"
+        label : "Read more"
         link : "/post/Coffee-Supply-Chain-Project.html"
 
-    - title : "Simplifying Real State Title Registration Using Ethereum Blockchain"
+    - title : "Real estate title registration on Ethereum"
+      mark : "E"
       image : "/assets/images/eth2.svg"
       github: "https://github.com/akashc777/Capstone"
-      description : "Created ERC 721 token for Real State Registration. Posted at opensea"
+      description : "An ERC-721 token for real estate registration, listed on OpenSea."
       button:
         enable : true
-        label : "know more"
-        link : "/post/Real-State-Title-ETH-Blockchain-Project.html"
-  
-
+        label : "Read more"
+        # was /post/Real-State-Title-ETH-Blockchain-Project.html, which never existed
+        link : "/post/Real-Estate-Title-ETH-Blockchain-Project.html"

@@ -1,178 +1,30 @@
-<!-- footer -->
-<footer class="py-4 bg-light border-top">
-  <div class="container">
-    <div class="row justify-content-between align-items-center">
-      <!-- <div class="col-lg-4 text-center text-lg-left mb-4 mb-lg-0">
-        <a href="{{ site.baseurl }}" class="d-block pb-3"><img src="{{ site.data.parameters.logo | relative_url }}" class="img-fluid" alt="{{ site.title }}"></a>
-      </div> -->
-      <div class="col-lg-4 text-center mb-4 mb-lg-0">
-        <ul class="list-inline mb-0">
-          {% for footer in site.data.parameters.menu.footer %}
-          <li class="list-inline-item"><a class="text-dark d-block p-2" href="{{ footer.url | relative_url }}">{{ footer.name }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="col-lg-4 text-lg-right text-center mb-4 mb-lg-0">
-        <ul class="list-inline social-icon mb-0">
-          {% for social in site.data.parameters.social %}
-          <li class="list-inline-item"><a href="{{ social.link | relative_url }}" target="_blank"><i class="{{ social.icon }}"></i></a></li>
-          {% endfor %}
-        </ul>
-      </div>
+<footer class="site-footer">
+  <div class="ink-strip" aria-hidden="true"><i class="m-lemon"></i><i class="m-pink"></i><i class="m-mint"></i><i class="m-blue"></i><i class="m-tangerine"></i><i class="m-violet"></i><i class="m-cyan"></i></div>
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="brand" href="{{ '/' | relative_url }}">{% include mark.html %}<span>{{ site.brand }}</span></a>
+      <p>{{ site.data.parameters.footer_blurb }}</p>
     </div>
-    <div class="text-center mt-4">
-      <span>{{ site.data.parameters.copyright | markdownify }}</span>
+    {%- for col in site.data.parameters.menu.footer %}
+    <div class="footer-col">
+      <h2>{{ col.title }}</h2>
+      <ul>
+        {%- for item in col.links %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+        {%- endfor %}
+      </ul>
     </div>
+    {%- endfor %}
+    <div class="footer-col">
+      <h2>Elsewhere</h2>
+      <ul>
+        {%- for social in site.data.parameters.social %}
+        <li><a href="{{ social.link }}" rel="me noopener">{{ social.name }}</a></li>
+        {%- endfor %}
+        <li><a href="https://onemana.dev">OneMana</a></li>
+      </ul>
+    </div>
+    <div class="footer-bar">{{ site.data.parameters.copyright | markdownify }}</div>
   </div>
 </footer>
-<!-- /footer -->
-
-<!-- JS Plugins -->
-{% for js in site.data.plugins.js %}
-<script src="{{ js | relative_url }}"></script>
-{% endfor %}
-
-<!-- Main Script -->
-<script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-
-<!-- Mermaid JS -->
-<script type="module">
-  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  mermaid.initialize({ startOnLoad: false, theme: 'default' });
-
-  // Load panzoom library for dynamic SVG zooming
-  const loadPanZoom = () => {
-    return new Promise((resolve) => {
-      const script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js';
-      script.onload = resolve;
-      document.head.appendChild(script);
-    });
-  };
-
-  document.addEventListener('DOMContentLoaded', async () => {
-    const blocks = document.querySelectorAll('code.language-mermaid, [class*="language-mermaid"] code');
-    if (blocks.length === 0) return;
-    
-    const style = document.createElement('style');
-    style.innerHTML = `
-      .mermaid-wrapper {
-        border: 1px solid #eaeaea;
-        border-radius: 8px;
-        margin: 2rem 0;
-        background: #fafafa;
-        overflow: hidden;
-        position: relative;
-        transition: all 0.2s ease;
-      }
-      .mermaid-wrapper.fullscreen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 99999;
-        margin: 0;
-        border-radius: 0;
-        display: flex;
-        flex-direction: column;
-      }
-      .mermaid-wrapper.fullscreen svg {
-        height: 100vh !important;
-      }
-      .mermaid svg { cursor: grab; }
-      .mermaid svg:active { cursor: grabbing; }
-      .mermaid-hint {
-        text-align: center;
-        font-size: 0.8rem;
-        color: #666;
-        padding: 5px;
-        background: #f1f1f1;
-        border-bottom: 1px solid #eaeaea;
-        font-weight: 500;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-      }
-      .mermaid-fullscreen-btn {
-        position: absolute;
-        right: 15px;
-        background: white;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 2px 8px;
-        font-size: 0.75rem;
-        cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      }
-      .mermaid-fullscreen-btn:hover { background: #eee; }
-    `;
-    document.head.appendChild(style);
-
-    await loadPanZoom();
-
-    blocks.forEach((block) => {
-      let codeText = block.textContent;
-      let targetNode = block.closest('.highlighter-rouge') || block.parentElement;
-
-      const wrapper = document.createElement('div');
-      wrapper.className = 'mermaid-wrapper';
-      
-      const hint = document.createElement('div');
-      hint.className = 'mermaid-hint';
-      hint.innerHTML = '🔍 Use mouse wheel to zoom. Click & drag to pan.';
-      
-      const fullscreenBtn = document.createElement('button');
-      fullscreenBtn.className = 'mermaid-fullscreen-btn';
-      fullscreenBtn.innerHTML = '⛶ Fullscreen';
-      
-      fullscreenBtn.onclick = () => {
-         wrapper.classList.toggle('fullscreen');
-         if (wrapper.classList.contains('fullscreen')) {
-             fullscreenBtn.innerHTML = '✖ Exit Fullscreen';
-             document.body.style.overflow = 'hidden'; // prevent background scrolling
-         } else {
-             fullscreenBtn.innerHTML = '⛶ Fullscreen';
-             document.body.style.overflow = '';
-         }
-         // trigger window resize to let svg-pan-zoom fix its boundaries
-         setTimeout(() => window.dispatchEvent(new Event('resize')), 50);
-      };
-      
-      hint.appendChild(fullscreenBtn);
-      
-      const mermaidDiv = document.createElement('div');
-      mermaidDiv.className = 'mermaid';
-      mermaidDiv.textContent = codeText;
-      
-      wrapper.appendChild(hint);
-      wrapper.appendChild(mermaidDiv);
-      targetNode.replaceWith(wrapper);
-    });
-    
-    await mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
-
-    // Enable svg-pan-zoom on the newly generated SVGs
-    setTimeout(() => {
-        document.querySelectorAll('.mermaid svg').forEach(svg => {
-            let boundingHeight = svg.getBoundingClientRect().height;
-            // Floor height at 450px so there's enough room to zoom and pan around
-            if (boundingHeight < 450) boundingHeight = 450; 
-            
-            svg.style.width = '100%';
-            svg.style.height = boundingHeight + 'px';
-            svg.style.maxWidth = 'none';
-            
-            svgPanZoom(svg, {
-              zoomEnabled: true,
-              controlIconsEnabled: true,
-              fit: true,
-              center: true,
-              minZoom: 0.5,
-              maxZoom: 10
-            });
-        });
-    }, 200);
-  });
-</script>
+<script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>

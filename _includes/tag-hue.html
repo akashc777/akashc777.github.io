@@ -1,0 +1,6 @@
+{%- comment -%}
+  Sets _hue to the marker for include.tag: the one _data/topics.yml names, or
+  else one picked by the length of the tag, so it never changes page to page.
+{%- endcomment -%}
+{%- assign _hue = site.data.topics.hues[include.tag] -%}
+{%- unless _hue -%}{%- assign _hi = include.tag | size | modulo: 6 -%}{%- assign _hue = site.data.topics.fallback[_hi] -%}{%- endunless -%}

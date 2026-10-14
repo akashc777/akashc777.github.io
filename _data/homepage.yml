@@ -1,28 +1,10 @@
-####################### banner #######################################
+####################### hero #######################################
 banner:
   enable : true
-  title : "Hi 👋 I'm Akash  -  I left a cushy tech job to build the anti-SaaS. It's going great. 🚀"
+  eyebrow : "Founder of OneMana · engineer · builder"
+  # The words wrapped in <span class="swipe"> get the highlighter stroke.
+  title : "I left a cushy tech job to build <span class=\"swipe\">the anti-SaaS</span>. It's going great."
+  lede : "I build things that help teams work together without paying a per-seat SaaS tax every month. Right now that's OneCamp: a self-hosted, open-source workspace with chat, tasks, docs, video calls, a calendar and AI. This is where I write down what I shipped and what broke."
   image : "https://avatars0.githubusercontent.com/u/32003795?s=460&u=80a93697dc85a7c49078821780a5adcd7aaaac83&v=4"
-  bg_image : ""
-
+  sticker : "shipping <b>OneCamp</b>"
   know_more : "/about/akash-hadagali"
-
-
-######################## call to action ###############################
-call_to_action:
-  - title : "Project 1"
-    image : "/assets/images/hugo-muscot.svg"
-    description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
-    button:
-      enable : true
-      label : "know more"
-      link : "https://gethugothemes.com/shop/"
-
-  - title : "Project 2"
-    image : "/assets/images/hugo-muscot.svg"
-    description : "Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
-    button:
-      enable : true
-      label : "know more"
-      link : "https://gethugothemes.com/shop/"
-  

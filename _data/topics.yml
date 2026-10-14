@@ -1,0 +1,92 @@
+############################ Topics ###################################
+# How tags look and which ones the home page offers.
+#
+# The six markers are lemon, pink, mint, tangerine, violet and cyan (their
+# colours live in assets/css/site.css). A tag listed under `hues` always wears
+# that marker. Any other tag gets one from `fallback`, picked by the length of
+# its name, so a new tag is at least the same colour on every page.
+
+# On nearly every post, so a list row that showed them would say nothing.
+# They still show on the post itself.
+quiet: [OneCamp, Self-Hosted, OpenSource, SelfHosted, Open Source]
+
+# The topic chips on the home page, in this order.
+featured: [Go, AI, NextJS, Architecture, Project Management, Security, Governance, Agents, Slack Alternative, Reliability, Docker, PostgreSQL]
+
+fallback: [lemon, pink, mint, tangerine, violet, cyan]
+
+hues:
+  # languages, data and infrastructure
+  Go: cyan
+  NodeJS: cyan
+  API: cyan
+  Docker: cyan
+  DevOps: cyan
+  Operations: cyan
+  PostgreSQL: cyan
+  Postgres: cyan
+  Dgraph: cyan
+  OpenSearch: cyan
+  MQTT: cyan
+  Realtime: cyan
+  Debugging: cyan
+  # AI and agents
+  AI: violet
+  AI Agents: violet
+  Agents: violet
+  MCP: violet
+  Ollama: violet
+  LLM: violet
+  A2A: violet
+  AI Governance: violet
+  Sandbox: violet
+  CodePR: violet
+  Blockchain: violet
+  Ethereum: violet
+  # the front end, design and chat
+  NextJS: pink
+  TypeScript: pink
+  UX: pink
+  Design: pink
+  Performance: pink
+  Chat: pink
+  Slack Alternative: pink
+  Slack: pink
+  # how it is built and shipped
+  Architecture: mint
+  Reliability: mint
+  Testing: mint
+  Release: mint
+  Silent Failure: mint
+  GitHub: mint
+  Onboarding: mint
+  # planning and work
+  Project Management: lemon
+  Project: lemon
+  Product: lemon
+  Productivity: lemon
+  Kanban: lemon
+  Gantt: lemon
+  Timeline: lemon
+  Time Tracking: lemon
+  Workload: lemon
+  Templates: lemon
+  Tables: lemon
+  Custom Fields: lemon
+  Reports: lemon
+  Dependencies: lemon
+  Import: lemon
+  Airtable Alternative: lemon
+  # trust, money and the business
+  Security: tangerine
+  Governance: tangerine
+  Audit: tangerine
+  EU AI Act: tangerine
+  Enterprise: tangerine
+  SCIM: tangerine
+  OAuth: tangerine
+  Agencies: tangerine
+  Client Portal: tangerine
+  Invoicing: tangerine
+  SaaS: tangerine
+  Gmail: tangerine

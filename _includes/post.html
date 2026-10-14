@@ -1,15 +1,21 @@
-<article class="mb-5">
-  <h2 class="h4"><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-  <div class="mb-3 post-meta">
-    {% if post.author %}
-    <a href="{{ 'about/' | relative_url }}{{ post.author | slugify }}">{{ post.author}}</a>{%endif%},
-    {{ post.date | date: '%b %d, %Y' }},
-    {% if post.tags.size >= 1 %}
-    {% for tag in post.tags %}
-    <a href="{{ 'tag/' | relative_url }}{{ tag }}">{{ tag }}</a>
-    {% endfor %}
-    {% endif %}
+{%- comment -%}
+  A post in a list. The row shows the post's own description (the opening
+  paragraph is the same boilerplate on most posts) and up to three tags,
+  leaving out the ones on nearly every post. Its marker colour is its first
+  telling tag's. level= sets the heading level (3 unless the list sits
+  directly under the page's h1).
+{%- endcomment -%}
+{%- assign _rowhue = "cyan" -%}
+{%- for _t in post.tags -%}{%- if site.data.topics.quiet contains _t -%}{%- continue -%}{%- endif -%}{%- include tag-hue.html tag=_t -%}{%- assign _rowhue = _hue -%}{%- break -%}{%- endfor -%}
+{%- assign _lv = include.level | default: 3 -%}
+{%- assign _d = post.description | default: post.excerpt | strip_html | strip_newlines -%}
+<li class="post-row m-{{ _rowhue }}">
+  <time class="post-row-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%-d %b %Y' }}</time>
+  <div class="post-row-main">
+    <h{{ _lv }}><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h{{ _lv }}>
+    {% if _d != "" %}<p>{{ _d | truncate: 220 }}</p>{% endif %}
+    {%- assign _n = 0 -%}
+    {%- capture _chips -%}{%- for _t in post.tags -%}{%- if site.data.topics.quiet contains _t -%}{%- continue -%}{%- endif -%}{%- if _n >= 3 -%}{%- break -%}{%- endif -%}<li>{% include tag-chip.html tag=_t %}</li>{%- assign _n = _n | plus: 1 -%}{%- endfor -%}{%- endcapture -%}
+    {% if _n > 0 %}<ul class="chips" aria-label="Tags">{{ _chips }}</ul>{% endif %}
   </div>
-  <p>{% assign curlyend = '}' %}{{ post.content | markdownify | strip_html | replace: "{% include JB/setup %", "" | replace: curlyend, "" | truncatewords: 30 }}</p>
-  <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-transparent pl-0">read more</a>
-</article>
+</li>
