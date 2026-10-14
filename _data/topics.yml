@@ -77,6 +77,8 @@ hues:
   Dependencies: lemon
   Import: lemon
   Airtable Alternative: lemon
+  Notion Alternative: lemon
+  Docs: lemon
   # trust, money and the business
   Security: tangerine
   Governance: tangerine
