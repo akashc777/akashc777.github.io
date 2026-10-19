@@ -2,9 +2,8 @@
 title: "Projects with roles, tables with undo, events that repeat"
 image: "/assets/images/post/onecamp-roles-undo-repeat.jpg"
 author: "Akash Hadagali"
-date: 2026-10-19 12:00:00 +0530
-published: false
-description: "Everyone in a project now has a role, and its members add and change its tasks without waiting for an admin. Tables keep every change, so you can undo it, read a row's history and bring back what was deleted, and a row can carry comments and a page of its own. The calendar gains repeating events, and an all-day event sits on the same date for everyone. Groups become fixed sets of people, calls get a dock, and every page loads lighter. It's in the latest release, with AI or without."
+date: 2026-10-19 20:57:00 +0530
+description: "Everyone in a project now has a role, and its members add and change its tasks without waiting for an admin. Tables keep every change, so you can undo it, read a row's history and bring back what was deleted, and a row can carry comments and a page of its own. The calendar gains repeating events, guests who answer and reminders, and an all-day event sits on the same date for everyone. Groups become fixed sets of people, calls get a dock, and every page loads lighter. It's in the latest release, with AI or without."
 canonical_url: "https://onemana.dev/blog/projects-with-roles-tables-with-undo-events-that-repeat"
 tags: ["OneCamp", "Project Management", "Tables", "Release", "Airtable Alternative", "Self-Hosted", "OpenSource"]
 ---
@@ -39,6 +38,8 @@ A new event can repeat weekly, monthly, yearly, every weekday or on a pattern of
 
 Underneath, the calendar now keeps all its events in one store. An event and its guests are saved together, so the calendar, focus time, time off and guest lists always agree, and an all-day event sits on the same date for everyone, wherever they are. The week opens on what comes next, and Join appears only for a call's link.
 
+Guests answer now. Anyone can be invited by email address, and a guest answers yes, no or maybe, with a note, for the whole event or a single occurrence, from their own page. A guest can be optional, and the organiser can let guests invite others or change the event. A meeting you declined no longer counts as busy in Find a time or on booking pages. Everyone also sets their own reminders, up to five for an event or a whole series. With none set, you're reminded 10 minutes before an event you said yes or maybe to, or at 09:00 the day before an all-day one. A reminder of an event you said yes to still reaches you during a pause, quiet hours or focus time, and nobody is reminded of what they declined.
+
 ## Groups are fixed sets of people
 
 Earlier messages now stay with the people who were there. Adding someone to a direct message or a group opens the group of everyone together, or the one that already exists for exactly those people, and the old conversation stays as it was, with a line saying where it continues. When you add people, you choose what to bring along (nothing, the last day, the last week or everything) and see exactly how many messages that is. Groups can be named, hidden until someone writes, or made into a private channel.
@@ -69,4 +70,4 @@ If you run OneCamp on your own server, four things change for you. The [changelo
 - **API tokens act as members.** A script that used an admin's token to read private tables, post in an announcement channel or create projects where only team admins may is now refused. Do that work in the app, or give the token's owner access as a member.
 - **Tables send one event for each change.** Anything bound to a row being created or updated still hears single-row edits, but a paste, a bulk delete or duplicate, an undo or a restore from the trash now sends one table.rows.changed event instead. Bind to that event to hear every change.
 
-The update applies nine database migrations after taking a backup. Going back to the earlier release isn't supported, so that backup is the way back. Update the web app with the server, and if you host the web app yourself, deploy the new one at the same time.
+The update applies eleven database migrations after taking a backup. Going back to the earlier release isn't supported, so that backup is the way back. Update the web app with the server, and if you host the web app yourself, deploy the new one at the same time.
