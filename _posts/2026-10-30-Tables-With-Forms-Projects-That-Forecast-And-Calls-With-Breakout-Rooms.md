@@ -38,7 +38,7 @@ Task lists keep working when the network goes. Add a task, a comment or a sub-ta
 
 Day, Week, Month, Agenda and Year views, a range of as many days as you like, three densities and a printable page. An event keeps the time zone it was made in, the week can show up to three other zones beside yours, and Find a time shows each person's local time and working hours.
 
-Guests can answer yes, no or maybe with a note, or propose another time from their own page without an account. A new view shows where your week goes: focus time, one-to-ones, group meetings, meetings you still have to answer, and the people you meet most. Drag a task onto the calendar to block time for it.
+Guests can answer yes, no or maybe with a note, or propose another time from their own page without an account. A new view shows where your week goes: focus time, one-to-ones, group meetings, meetings you still have to answer, and the people you meet most. Drag a task onto the calendar to block time for it. An out of office can now decline invitations for you, only new ones or new and existing ones, each with your own message.
 
 ## Calls with a lobby, polls and breakout rooms
 
