@@ -54,6 +54,8 @@ Docs have a suggesting mode, comments that become tasks, and an approve or reque
 
 Deleting a custom field, a status, a cycle, a milestone, a form, a time entry or a draft invoice can now be undone from the message that confirms it. A status comes back with its tasks in it.
 
+Docs now count their views by day, and anyone can turn off the recording of their own views. When someone leaves, an admin can hand their docs to someone else, and the shared links that person made stop working. And Basecamp joins the tools you can import from.
+
 ## What's next
 
 The live demo keeps moving, and the next post will say what reached it. If you run OneCamp, update to get all of the above; if you don't yet, the [live demo](https://onemana.dev/demo) is the quickest way to try it.
