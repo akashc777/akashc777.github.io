@@ -2,7 +2,7 @@
 title: "Tables with forms, projects that forecast and calls with breakout rooms"
 image: "/assets/images/post/onecamp-forms-forecasts-breakouts.jpg"
 author: "Akash Hadagali"
-date: 2026-10-30 20:00:00 +0530
+date: 2026-10-31 10:42:00 +0530
 description: "A new release you can install: tables with forms, views and rollups, projects with approvals, milestones and forecasts that work offline, a calendar with a year view and time zones, and calls with a lobby, polls, Q&A and breakout rooms. Boards get templates and export, and deleting a status or a field can be undone."
 canonical_url: "https://onemana.dev/blog/tables-with-forms-projects-that-forecast-and-calls-with-breakout-rooms"
 tags: ["OneCamp", "Tables", "Project Management", "Productivity", "Self-Hosted", "OpenSource"]
