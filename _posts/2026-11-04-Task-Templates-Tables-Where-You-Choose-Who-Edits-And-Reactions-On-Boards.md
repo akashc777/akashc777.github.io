@@ -12,7 +12,7 @@ If you're new here: [OneCamp](https://onemana.dev) is a self-hosted workspace (c
 
 Everything in this post is in a new release you can install today, with AI or without: the [release notes](https://onemana.dev/changelog) list it all, and the [installation guide's Updating section](https://onemana.dev/docs/installation#updating) has the steps.
 
-The [last post](https://onemana.dev/blog/projects-with-plans-tables-with-find-and-replace-and-an-update-to-install-now), two days ago, gave every project a plan and every table find and replace. This one builds on both: tasks that start from a template, plans you can compare across projects, tables where you choose who edits, and boards you can react on.
+The [last post](https://onemana.dev/blog/projects-with-plans-tables-with-find-and-replace-and-an-update-to-install-now) gave every project a plan and every table find and replace. This one builds on both: tasks that start from a template, plans you can compare across projects, tables where you choose who edits, and boards you can react on.
 
 ## Tasks that start from a template
 
